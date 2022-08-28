@@ -1,0 +1,31 @@
+<!-- Toolbar -->
+<nav class="toolbar" role="banner">
+    <a (click)="navegacao()">
+        <img class="nav-logo" alt="Angular Logo" src="../../assets/img/header/logo-bonApt-nome.svg" />
+    </a>
+    <div class="spacer"></div>
+    <ul>
+        <li>
+            <!-- Dropdown Trigger -->
+            <a a class='dropdown-trigger' href='#' data-target='dropdown-menu'>
+                <span>{{ user.nome }}</span>
+                <img class="responsive-img circle avatar" src="../../assets/img/header/perfil.jpg" alt="">
+                <i class="material-icons right">arrow_drop_down</i>
+            </a>
+                
+
+                <!-- Dropdown Structure -->
+                <ul id='dropdown-menu' class='dropdown-content'>
+                    <li><a href="#!"><i class="material-icons">account_circle</i>Meu Perfil</a></li>
+                    <li><a href="#!"><i class="material-icons">settings</i>Configurações</a></li>
+                    <li><a (click)="logout()"><i class="material-icons">logout</i>Sair</a></li>
+                </ul>
+
+        </li>
+    </ul>
+</nav>
+<app-sidebar id="sidebar" class="hide"></app-sidebar>
+<app-button-menu (situationSidebar)="onChangeSidebar()" id="menu" class="show"></app-button-menu>
+<div style="margin-bottom: 200px;"></div>
+
+<!-- Toolbar -->

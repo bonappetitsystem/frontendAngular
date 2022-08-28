@@ -1,0 +1,165 @@
+*{
+    font-family: 'Manrope';
+}
+
+.container{
+    margin-top: -30px;
+}
+
+.banner-func{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #B2DFDB;
+    height: 90px;
+}
+
+.banner-func .img img{
+    display: block;
+    width: 65px;
+    border-radius: 100%;
+}
+
+.dados-pessoais, .dados-funcionais{
+    background-color: #F2F2F2;
+    padding: 20px 20px 20px 30px;
+    height: 300px;
+}
+
+h4, h5{
+    font-family: 'Agrandir';
+}
+
+h4{
+    font-size: 40px;
+}
+
+.negrito{
+    font-family: 'Agrandir';
+}
+
+.text-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-banner img{
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF5722;
+    margin-left: 15px;
+    height: 55PX;
+    width: 55px;
+}
+.buttons{
+    margin-top: 40px;
+}
+
+.btn-large{
+    width: 200px;
+}
+
+.btn img{
+    display: block;
+    width: 100%;
+}
+
+.btn-voltar{
+    background-color: #FF5722;
+    font-family: 'Agrandir';
+}
+
+.btn-editar{
+    background-color: #00796B;
+    font-family: 'Agrandir';
+}
+
+/* Input */
+.form-input input.form-input, .file-box {
+    color: rgba(0, 0, 0, .87);
+    background: #D9D9D9;
+  }
+  
+  .form-input{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  input.form-input {
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 8px 24px 8px 24px;
+    transition: all .2s ease;
+    border-radius: 3px;
+    outline: 0;
+    border: none;
+    appearance: textfield;
+    height: 30px;
+  }
+
+  select{
+    height: 30px;
+    width: 30%;
+  }
+  
+  .form-input input.form-input[type=text]:focus {
+    border-bottom: none;
+    box-shadow: none;
+  }
+
+  .spacer{
+    margin-left: 20px;
+  }
+
+  .inputfile-box {
+    position: relative;
+  }
+  
+  .inputfile {
+    display: none;
+  }
+  
+  .file-box {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0px 5px 5px;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 3px;
+  }
+  
+  .file-button {
+    background: #FF5722;
+    padding: 5px;
+    position: absolute;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 0px 3px 3px 0px;
+  }
+  
+  .file-button img{
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .label{
+    width: 100%;
+    font-family: 'Agrandir';
+  }

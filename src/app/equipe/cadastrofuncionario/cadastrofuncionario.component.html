@@ -1,0 +1,104 @@
+<app-header></app-header>
+
+<div class="container">
+
+    <div class="row" style="margin-top: -80px; margin-bottom: 30px;">
+        <img class="responsive-img icone left" src="../../assets/img/equipe/cadastro_funcionario.svg">
+        <h4 class=" col s12 m10 l10">Cadastro de usuários</h4>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="enviar(f.value)">
+        <div class="row card">
+            <div class="col s12 m6 l6">
+                <h4>Dados pessoais</h4>
+
+                <div class="col s12 m12 l12">
+                    <div class="form-input">
+                        <label for="nome">Nome</label>
+                        <input id="nome" class="form-input z-depth-2" type="text" required ngModel name="nome">
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l7">
+                    <div class="form-input">
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" class="form-input z-depth-2" type="text" required ngModel name="cpf">
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l5">
+                    <div class="form-input">
+                        <label for="genero">Gênero</label>
+                        <select name="genero" class="browser-default">
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="nao-binario">Não-binário</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l6" style="padding-right: 0;">
+                    <div class="form-input">
+                        <label for="data-nascimento">Data de Nascimento</label>
+                        <input id="data-nascimento" class="form-input z-depth-2" type="text" required ngModel
+                            name="data-nascimento">
+                    </div>
+                </div>
+                <img src="../../assets/img/equipe/calendar.svg" class="responsive-img icone"
+                    style="margin-bottom: -40px;">
+
+            </div>
+            <div class="col s12 m6 l6">
+                <h4>Dados funcionais</h4>
+
+                <div class="col s12 m12 l6">
+                    <div class="form-input">
+                        <label for="nome">Código da empresa</label>
+                        <input id="codigo-empresa" class="form-input z-depth-2" type="text" disabled required ngModel
+                            name="codigo-empresa">
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l6">
+                    <div class="form-input">
+                        <label for="matricula">Matrícula</label>
+                        <input id="matricula" class="form-input z-depth-2" type="text" required ngModel
+                            name="matricula">
+                    </div>
+                </div>
+
+
+                <div class="col s12 m6 l6">
+                    <label for="perfil">Perfil</label>
+                    <select id="perfil" name="perfil" class="browser-default">
+                        <option value="gerente">Gerente</option>
+                        <option value="cozinheiro">Cozinheiro</option>
+                        <option value="vendedor">Vendedor</option>
+                    </select>
+
+                </div>
+
+                <div class="col s12 m6 l6">
+                    <div class="inputfile-box">
+                        <label for="cpf">Foto/Avatar:</label>
+                        <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
+                        <label for="file">
+                          <span id="file-name" class="file-box"></span>
+                          <span class="file-button">
+                            <i class="fa fa-upload" aria-hidden="true"></i>
+                            <img src="../../assets/img/equipe/upload.svg">
+                          </span>
+                        </label>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col s12 buttons">
+            <a class="btn-cancelar btn-large voltar" (click)="cancelar()">CANCELAR</a>
+            <a class="btn-salvar btn-large right editar">SALVAR</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,237 @@
+h6, .tabs-personal, .btn{
+
+  font-family: 'Agrandir';
+
+}
+
+label, span{
+
+    font-family: 'Manrope-SemiBold';
+
+}
+
+.botao{
+  float: right;
+}
+
+span{
+  font-size: 10px;
+}
+
+.spacer{
+  flex:1;
+}
+
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+}
+
+.btnTotal {
+  background-color: #00796B;
+}
+
+.btnTotal:hover {
+  background-color: #fff;
+  color: #00796B;
+}
+
+.btnAdd {
+  background-color: #e8ba7fe7;
+  margin-right: 10px;
+}
+
+.btnAdd:hover {
+  background-color: #F69110;
+}
+
+.pagination li.active {
+  background-color: #00796B;
+}
+
+.tabs .tab a {
+  color: #00796B;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: color .28s ease, background-color .28s ease;
+  transition: color .28s ease, background-color .28s ease;
+}
+
+.tabs[_ngcontent-gge-c52] .tab[_ngcontent-gge-c52] a[_ngcontent-gge-c52]:focus,
+.tabs[_ngcontent-gge-c52] .tab[_ngcontent-gge-c52] a[_ngcontent-gge-c52]:focus.active {
+  background-color: rgba(117, 0, 0, 0.2);
+  outline: none;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  background-color: transparent;
+  color: #00796B;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: rgba(246, 178, 181, 0.2);
+  outline: none;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+
+.card .card-action {
+  padding: 0px;
+}
+
+.card-content {
+  height: 50px;
+}
+.card-title{
+  font-size: medium;
+  font-weight: 600;
+}
+.card .card-content{
+  padding: 0px;
+}
+
+.card .card-content .card-title{
+  line-height: 1.5;
+}
+
+
+.form-input input.form-input {
+  color: rgba(0, 0, 0, .87);
+  background: #D9D9D9;
+}
+
+.form-input{
+  margin-bottom: 20px;
+}
+
+input.form-input {
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding: 8px 24px 8px 24px;
+  transition: all .2s ease;
+  border-radius: 3px;
+  outline: 0;
+  border: none;
+  appearance: textfield;
+}
+
+.form-input input.form-input[type=text]:focus {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+
+.containerBuscar {
+  background: #F6F6F6;
+  margin-top: 30px;
+  /* height: 160px; */
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.titulo {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+
+.btnNovo:hover {
+  background: #00796B;
+  color: #D9D9D9;
+}
+
+.btnVoltar:hover {
+  background: #B2DFDB;
+  color: #000;
+}
+
+.btnNovo, .btnVoltar{
+  height: 40px;
+  width: 150px;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.btnNovo {
+  background: #00796B;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.btnVoltar {
+  background: #B2DFDB;
+  color: #7C7C7C; 
+}
+
+.search {
+  background-color: #FF5722;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0px 10px; */
+  margin-top: 22px;
+  border-radius: 5px;
+}
+
+.search i {
+  margin: 15%;
+  font-size: 250%;
+}
+
+.tabs .indicator {
+  background-color:#f6a20d;
+}
+
+
+
+.tabs .tab a:focus.active, .tabs .tab a:focus {
+  color:#26a69a;
+  background-color: rgba(38, 166, 154, 0.2);
+}
+
+
+
+.tab .indicator{
+  background: color #00796b !important;
+}
+
+.white {
+   background-color: transparent !important; 
+}
+
+.tabs {
+  background-color: transparent !important;
+}
+@media screen and (max-width: 600px) {
+  
+  .botao{
+    float: none;
+  }
+
+  .row .col.s10 {
+    width: 81%;
+  }
+}
+

@@ -1,0 +1,57 @@
+<app-header></app-header>
+<main class="container">
+  <div class="containerBuscar">
+    <div class="titulo">
+      <img class="responsive-img icone" src="../../assets/img/equipe/buscar_usuario.svg">
+      <h6>Buscar cliente</h6>
+    </div>
+    <div class="row">
+      <div class="form-input col s12 m3 l3">
+        <label>CNPJ/Código de registro</label>
+        <input class="form-input z-depth-2" type="text" required ngModel name="cpf">
+      </div>
+      <div class="col s10 m4 l4">
+        <div class="form-input">
+          <label>Razão Social</label>
+          <input class="form-input z-depth-2" type="text" required ngModel name="nome">
+        </div>
+      </div>
+      <div class="col s10 m4 l4">
+        <div class="form-input">
+          <label>Nome Fantasia:</label>
+          <input class="form-input z-depth-2" type="text" required ngModel name="nome">
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="col s2 m1 l1">
+        <a class="waves-effect waves-light btn search bottom"><i class="material-icons centered white-text btnSearch">search</i></a>
+      </div>
+    </div>
+  </div>
+  <div style="display: flex;" class="botao">
+    <a routerLink="/cadastro-cliente" class="waves-effect waves-light btn btnNovoCliente right">CADASTRAR NOVO
+      CLIENTE</a>
+  </div>
+  <h4>Usuários encontrados (1)</h4>
+  <div class="card card-meio">
+      <div class="content-texto">
+          <div class="alinhar">
+            <div class="empresa">
+              <img class="responsive-img iconePredio" src="../../assets/img/equipe/empresa.svg" alt="">
+            </div>
+              <div class="linha-1">
+                  <span class="span">SOVACO DE COBRA LTDA</span>
+                  <span>Representante: Penny Hofstadter</span>
+                  <span>CNPJ: 81.468.392/0001-10</span>  
+              </div>
+              <div class="lapisEditar">
+                    <img class="responsive-img icone" src="../../assets/img/vendas/lapisEditar.svg" alt=""  routerLink="">
+              </div>
+              <div class="visualizar">
+                <img class="responsive-img icone" src="../../assets/img/vendas/visualizar.svg" alt=""  routerLink="/visualizar-cliente">
+              </div>
+          </div>
+      </div>
+
+  </div>
+</main>

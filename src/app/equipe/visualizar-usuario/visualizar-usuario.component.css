@@ -1,0 +1,159 @@
+*{
+    font-family: 'Manrope';
+}
+
+.container{
+    margin-top: -30px;
+}
+
+.banner-func{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #B2DFDB;
+    height: 90px;
+}
+
+.banner-func .img img{
+    display: block;
+    width: 65px;
+    border-radius: 100%;
+}
+
+.dados-pessoais, .dados-funcionais{
+    background-color: #F2F2F2;
+    padding: 20px 20px 20px 30px;
+    height: 300px;
+}
+
+h4, h5{
+    font-family: 'Agrandir';
+  
+}
+
+h4{
+    font-size: 40px;
+}
+
+b{
+    font-family: 'Agrandir';
+}
+.text-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-banner img{
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF5722;
+    margin-left: 15px;
+    height: 55PX;
+    width: 55px;
+    
+}
+.buttons{
+    margin-top: 40px;
+}
+
+.btn-large{
+    width: 200px;
+}
+
+.btn img{
+    display: block;
+    width: 100%;
+}
+
+.btn-voltar{
+    background-color: #FF5722;
+    font-family: 'Agrandir';
+}
+
+.btn-editar{
+    background-color: #00796B;
+    font-family: 'Agrandir';
+}
+
+
+/* .nome_func{
+    background-color: #B2DFDB;
+    padding: 15px;
+    margin-top: 30px;
+    color: black;
+    height: 90px;
+    
+}
+
+.nome_func #foto{
+    width: 30%;
+    border-radius: 100px;
+} 
+
+.nome_func #delete{
+    width: 30px;
+    margin-top: 10px;  
+} 
+
+.nome_func h4{
+    text-align: right;
+    margin-top: 10px;
+}
+
+.card{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #F2F2F2;
+} 
+
+.dados{
+    display: flex;
+   
+} */
+/* .spacer{
+    flex: 1;
+} */
+
+/*Edição de botões*/
+/* .btn-large {
+    line-height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    height: 40px;
+}
+.voltar{
+    background-color: #FF5722;
+}
+.voltar:hover{
+    background-color: #00796B;
+}
+
+.editar{
+    background-color: #00796B;
+}
+
+.editar:hover {
+    color: #00796B;
+    background-color: #B2DFDB;
+}
+
+.btn-small {
+    background-color: #FF5722;
+    border-radius: 5px;
+    height: 50px;  
+}
+
+.btn-small:hover {
+    background-color: #00796B;  
+} */

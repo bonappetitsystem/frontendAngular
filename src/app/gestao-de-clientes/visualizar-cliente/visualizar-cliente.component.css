@@ -1,0 +1,87 @@
+*{
+    font-family: 'Manrope';
+}
+
+.container{
+    margin-top: -50px;
+}
+
+.banner-func{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #B2DFDB;
+    height: 90px;
+}
+
+.banner-func .img img{
+    display: block;
+    width: 65px;
+}
+
+.dados-pessoais{
+    background-color: #F2F2F2;
+    padding: 20px 20px 20px 30px;
+}
+
+h4, h5{
+    font-family: 'Agrandir';
+  
+}
+
+h4{
+    font-size: 35px;
+}
+
+b{
+    font-family: 'Agrandir';
+}
+.text-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-banner img{
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF5722;
+    margin-left: 15px;
+    height: 55PX;
+    width: 55px;
+}
+.buttons{
+    margin-top: 40px;
+}
+
+.btn-large{
+    width: 200px;
+}
+
+.btn img{
+    display: block;
+    width: 100%;
+}
+
+.btn-voltar{
+    background-color: #FF5722;
+}
+
+.btn-editar{
+    background-color: #00796B;
+}
+
+.btn-editar:hover, .btn-voltar:hover{
+    background: #B2DFDB;
+    color: black;
+}

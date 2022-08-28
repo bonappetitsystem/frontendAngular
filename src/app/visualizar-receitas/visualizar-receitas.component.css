@@ -1,0 +1,15 @@
+blockquote {
+    border-left: 5px solid #750000;
+}
+.btnEdt {
+    background-color: #e8ba7fe7;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+.btnEdt:hover {
+    background-color: #F69110;
+}
+table td,
+table th {
+    width: 50%;
+}

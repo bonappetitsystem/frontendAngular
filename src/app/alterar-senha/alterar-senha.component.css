@@ -1,0 +1,107 @@
+  .login main {
+    flex: 1 0 auto;
+    padding: 130px 0px;
+
+  }
+  
+  /*aumento da logo*/
+  .login .brand-logo img {
+    width: 50%;
+  }
+  .login #logo2{
+    width: 20%;
+    margin-left: 20px;
+  }
+  /*muda a cor do card que guarda o forms-login*/
+  .login .card-panel {
+    color: #B2DFDB;
+    background-color: #00796B;
+    padding: 20px 100px;
+    margin: 10px 20px;
+   
+  }
+  
+  /*cor do botão*/
+  .login .btn {
+    text-decoration: none;
+    color: #00796B;
+    background-color: #B2DFDB;
+  }
+  
+  /*cor do botão selecionado*/
+  .login .btn:hover {
+    color: #00796B;
+    background-color: #fff;
+  }
+  
+  
+  /*cor do texto digitado*/
+  .login .input-field input {
+    color: #fff;
+  }
+  
+  /* label color */
+  .login .input-field label {
+    color: #B2DFDB;
+  }
+  
+  /* label focus color usuario*/
+  .login .input-field input[type=text]:focus+label {
+    color: #fff;
+  }
+  
+  /* label focus color senha*/
+  .login .input-field input[type=password]:focus+label {
+    color: #fff;
+  }
+  
+  /* label underline focus color usuario*/
+  .login .input-field input[type=text]:focus {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+  }
+  
+  /* label underline focus color senha */
+  .login .input-field input[type=password]:focus {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+  }
+  
+  /* valid color usuario*/
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+  }
+  
+  /* valid color senha*/
+  .input-field input[type=password].valid {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+  }
+  
+  /*padronização de cor de links*/
+  .login a {
+    color: #F69110;
+  }
+  
+  /*cor do link selecionado*/
+  .login a:hover {
+    color: #fff;
+  }
+  
+  /*modificação da cor do ícones quando selecionados*/
+  .login .input-field .prefix.active {
+    color: #fff;
+  }
+  
+  
+  /*margem dos campos de entrada*/
+  .login .campo {
+    margin-top: 10%;
+  }
+  
+  /*margem para depois do botão entrar*/
+  .login .row {
+    margin: 0;
+  }
+  

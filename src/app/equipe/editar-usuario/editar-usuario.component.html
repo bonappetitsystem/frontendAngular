@@ -1,0 +1,215 @@
+<!-- <app-header></app-header>
+
+<main class="container">
+
+    <div class="row col 12">
+        <nav class="nome_func">
+
+            <div class="nav-wrapper col s3">
+                <img src="../../assets/img/equipe/icone-de-perfil-de-pessoas_24877-40756.webp" id="foto">
+
+            </div>
+
+            <div class="nav-wrapper col s7">
+                
+                <h4><b>{{ usuario.nome }}</b></h4>
+
+            </div>
+            <div class="nav-wrapper col s2">
+                <a class="waves-effect waves-light btn btn-small" (click)="deletarUsuario()">
+                    <img src="../../assets/img/equipe/delete.svg" id="delete">
+                </a>
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="row dados col s12">
+    
+        <div class="card col s5">
+
+            <h5>Dados Pessoais</h5>
+            <table class="responsive-table striped">
+                <tr>
+                    <th>Nome</th>
+                    <td><input type="text" [(ngModel)]="usuario.nome" /></td>
+                </tr>
+                <tr>
+                    <th>CPF</th>
+                    <td>{{ usuario.cpf }}</td>
+                </tr>
+                <tr>
+                    <th>Genero</th>
+                    <td> <select name="genero" [(ngModel)]="usuario.genero" class="browser-default">
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="não-binário">Não-binário</option>
+                        <option value="outros">Outros</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th>Data de Nascimento</th>
+                    <td><input type="text" [(ngModel)]="usuario.data_nasc"/></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="spacer">
+
+        </div>
+        <div class="card col s5">
+
+            <h5>Dados Funcionais</h5>
+
+            <table class="responsive-table striped">
+
+                <tr>
+                    <th>Usuário</th>
+                    <td>{{ usuario.id }}</td>
+                </tr>
+                <tr>
+                    <th>Perfil</th>
+                    <td><select name="perfil" [(ngModel)]="usuario.perfil" class="browser-default">
+                        <option value="gerente">Gerente</option>
+                        <option value="cozinheiro">Cozinheiro</option>
+                        <option value="vendedor">Vendedor</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th>Matrícula</th>
+                    <td>{{ usuario.matricula }}</td>
+                </tr>
+                <tr>
+                    <th>Data de cadastro</th>
+                    <td>{{ usuario.data_cadastro }}</td>
+                </tr>
+
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="row col s12">
+        <a class="btn modal-trigger btn-large right editar" (click)="efetivarAlteracao()">
+            <span id="editar">Salvar</span> </a>
+        <a class="btn-large left voltar" (click)="cancelar()">Cancelar</a>
+    </div>
+</main> -->
+
+<app-header></app-header>
+
+<main class="container">
+    <div class="row">
+        <div class="col s12 m12 l12">
+
+            <div class="card banner-func">
+
+                <div class="img">
+                    <img src="../../assets/img/equipe/icone-de-perfil-de-pessoas_24877-40756.webp" id="foto">
+
+                </div>
+                <div class="text-banner">
+                    <h4>{{ usuario.nome }}</h4>
+                    <a routerLink="/cadastro-funcionario" class="waves-effect waves-light btn right"
+                        (click)="deletarUsuario()"><img src="../../assets/img/equipe/delete.svg" id="delete"></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6 l6">
+
+            <div class="card dados-pessoais">
+                <h5>Dados Pessoais</h5>
+                <div>
+                    <div class="row">
+                        <div class=" col s12 form-input">
+                            <span class="negrito">Nome: </span>
+                            <div class="spacer"></div>
+                            <input class="form-input z-depth-2" type="text" [(ngModel)]="usuario.nome">
+                        </div>
+                        <div class=" col s12 form-input">
+                            <span class="negrito">CPF: </span>
+                            <div class="spacer"></div>
+                            <span>{{usuario.cpf}}</span>
+                        </div>
+                        <div class=" col s12 form-input">
+                            <span class="negrito">Genero: </span>
+                            <div class="spacer"></div>
+                            <select name="genero" [(ngModel)]="usuario.genero" class="browser-default">
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="nao-binario">Não-binário</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class=" col s12 form-input">
+                            <span class="negrito">Data de Nascimento: </span> 
+                            <div class="spacer"></div>                     
+                            <input class="form-input z-depth-2" type="text" [(ngModel)]="usuario.data_nasc">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col s12 m6 l6">
+
+            <div class="card dados-funcionais">
+                <h5>Dados Funcionais</h5>
+                <div>
+                    <div class="row">
+                        <div class=" col s12 form-input">
+                            <span class="negrito">Usuário:</span>
+                            <div class="spacer"></div>
+                            <span>{{usuario.cpf}}</span>
+                        </div>
+                        <div class=" col s12 form-input">
+                            <span class="negrito">Perfil: </span>
+                            <div class="spacer"></div>
+                            <select name="perfil" [(ngModel)]="usuario.perfil" class="browser-default">
+                                <option value="gerente">Gerente</option>
+                                <option value="cozinheiro">Cozinheiro</option>
+                                <option value="vendedor">Vendedor</option>
+                            </select>
+                        </div>
+                        <div class=" col s12 form-input">
+                            <span class="negrito">Matrícula: </span>
+                            <div class="spacer"></div>
+                            <span>{{usuario.matricula}}</span>
+                        </div>
+                        
+                        <div class=" col s12 form-input">
+                            <span class="negrito">Foto/Avatar:</span>
+                            <div class="spacer"></div>
+                            <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
+                            <label for="file" class="label">
+                                <span id="file-name" class="file-box"></span>
+                                <span class="file-button">
+                                    <img src="../../assets/icones/upload.svg">
+                                  </span>
+                            </label>
+                        </div>
+                        <div class=" col s12 form-input">
+                            <span class="negrito">Data de cadastro: </span>
+                            <div class="spacer"></div>
+                            <span>{{usuario.data_cadastro | date:'dd/MM/yyyy'}}</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col s12 buttons">
+            <a class="btn-voltar btn-large voltar" (click)="voltar()">CANCELAR</a>
+            <a class="btn-editar btn-large right editar" (click)="efetivarAlteracao()">SALVAR</a>
+        </div>
+    </div>
+
+</main>

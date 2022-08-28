@@ -1,0 +1,38 @@
+.theme-cutomizer-trigger {
+    position: fixed;
+    z-index: 9999;
+    top: 15%;
+    right: -2px;
+  }
+  
+  .btn-customizer{
+    padding: 0 1rem;
+    cursor: pointer;
+    background-color: #FF5722;
+  }
+  
+  .btn-customizer i {
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    -webkit-animation-name: spin;
+    animation-name: spin;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  
+    
+  }
+  
+  @-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+  }

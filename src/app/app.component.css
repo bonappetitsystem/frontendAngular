@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../../src/app/fonts/Agrandir-TextBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Agrandir-Regular';
+  src: url('../../src/app/fonts/Agrandir-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../../src/app/fonts/manrope-regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Manrope-SemiBold';
+  src: url('../../src/app/fonts/manrope-semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Manrope-Bold';
+  src: url('../../src/app/fonts/manrope-bold.otf') format('opentype');
+}
+
+.content {
+    display: flex;
+    margin: 110px 0 0 0;
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: center;
+}
+
+

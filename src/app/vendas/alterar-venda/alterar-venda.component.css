@@ -1,0 +1,101 @@
+h6, h5 {
+    font-family: 'Agrandir';
+    margin-left: 5px;
+}
+
+label, span {
+    font-family: 'Manrope-SemiBold';
+}
+
+span {
+    font-size: 10px;
+    line-height: 25px;
+    margin-left: 30px;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.form-input input.form-input {
+    color: rgba(0, 0, 0, .87);
+    background: #D9D9D9;
+}
+
+.form-input {
+    margin-bottom: 20px;
+}
+
+input.form-input {
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 8px 24px 8px 24px;
+    transition: all .2s ease;
+    border-radius: 3px;
+    outline: 0;
+    border: none;
+    appearance: textfield;
+}
+
+.form-input input.form-input[type=text]:focus {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.containerBuscar {
+    background: #F6F6F6;
+    margin-top: 30px;
+    /* height: 160px; */
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search {
+    background-color: #FF5722;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px 10px; */
+    margin-top: 22px;
+    border-radius: 5px;
+}
+
+.search i {
+    margin: 15%;
+    font-size: 250%;
+}
+
+.titulo {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.lapisEditar{
+    background: #FF5722;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2px;
+    
+}
+
+.visualizar{
+    background: #00796B;
+    margin-left: 10px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2px;
+}
+
+.acoes{
+    display: flex;
+    justify-content: center;
+}
+td, th{
+    text-align: center;
+}

@@ -1,0 +1,132 @@
+h4, h6,
+.btn {
+    font-family: 'Agrandir';
+}
+
+label {
+    font-family: 'Manrope-SemiBold';
+
+}
+input.form-input {
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 8px 24px 8px 24px;
+    transition: all .2s ease;
+    border-radius: 6px;
+    outline: 0;
+    border: none;
+    appearance: textfield;
+}
+
+.form-input input.form-input[type=text]:focus {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.form-input input.form-input {
+    color: rgba(0, 0, 0, .87);
+    background: #fff;
+}
+
+.form-input {
+    margin-bottom: 20px;
+}
+.containerCadastro {
+    background: #F2F2F2;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+label{
+    color: rgb(49, 45, 45);
+}
+.endereco{
+    width: 500px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    padding: 20px;
+}
+h6{
+    padding: 20px;
+    margin-left: -10px;
+}
+h5{
+    margin: 48px;
+}
+.dadosPessoais{
+   margin-top: -30px;
+}
+/* botôes */
+
+.button-cadastrar, .button-cancelar{
+    height: 50px;
+    width: 200px;
+    text-transform: uppercase;
+    border: none;
+  }
+  .button-cancelar{
+    background: #FF5722;
+    color: #fff;
+    margin-left: -10px;
+  }
+  .button-cadastrar{
+    background: #00796B;
+    color: #fff;
+    margin-right: -10px;
+  }
+.button-cadastrar:hover{
+    background:  #B2DFDB;;
+    color: #000;
+  }
+.button-cancelar:hover{
+    background: #B2DFDB;
+    color: #000;
+  }
+.buttons-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.inputfile-box {
+    position: relative;
+  }
+  
+  .inputfile {
+    display: none;
+  }
+  
+  .file-box {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0px 5px 5px;
+    box-sizing: border-box;
+    height: 35px;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  .file-box{
+    height: 3rem;
+    border-radius: 6px 0px 0px 6px;
+  }
+  
+  .file-button {
+    background: #FF5722;
+    padding: 5px;
+    position: absolute;
+    top: 22px;
+    right: 0px;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0px 6px 6px 0px;
+  }
+  
+  .file-button img{
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
