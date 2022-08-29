@@ -29,6 +29,15 @@ h4{
   padding: 20px;
   margin-right: -20px; 
 }
+
+.calendar{
+  display:flex;
+  align-items: bottom;
+  margin-left: -20px;
+  margin-top: 23px;
+  height: 3rem;
+  width: 100%;
+}
 .btnLote{
   height: 3rem;
   background-color:#4DB6AC;
