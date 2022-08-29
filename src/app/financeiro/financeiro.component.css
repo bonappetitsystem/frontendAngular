@@ -5,14 +5,17 @@
 }
 
 h1 {
+  font-family: 'Agrandir';
   font-size: 1em;
   color: #000;
   margin-top: 20%;
 }
 
-h2 {
+h3 {
+  font-family: 'Agrandir';
   text-align: center;
   color: white;
+  
 }
 
 h5 {
@@ -35,6 +38,7 @@ h5 {
 
 .card-panel {
   height: 218px;
+  padding: 45px;
 }
 
 .content-menu {
