@@ -1,5 +1,5 @@
 import { UsuariosService } from './usuarios.service';
-import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { CanActivate, Router, ActivatedRouteSnapshot } from '@angular/router';
 import { Injectable } from '@angular/core';
 
 @Injectable({

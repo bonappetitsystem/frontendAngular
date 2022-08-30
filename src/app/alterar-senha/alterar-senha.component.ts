@@ -13,9 +13,7 @@ export class AlterarSenhaComponent implements OnInit {
 
   constructor(private service: UsuariosService, private router: Router) { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 
   esqueciMinhaSenha(dados: any) {
     this.service.esqueciMinhaSenha(dados).subscribe(data => {

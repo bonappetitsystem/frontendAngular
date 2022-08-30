@@ -30,10 +30,6 @@ h5 {
   width: 4em;
   height: 4em;
   margin-top: 40px;
-}
-
-
-.card-menu img {
   display: block;
   width: 35%;
 }
@@ -75,7 +71,6 @@ th, td{
 
 .card-menu:hover {
   box-shadow: 0px 0px 10px #00796B;
-  ;
 }
 
 .content-painel-encomendas {

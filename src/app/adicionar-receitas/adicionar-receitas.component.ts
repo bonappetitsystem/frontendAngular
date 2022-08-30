@@ -1,12 +1,5 @@
-import { BinaryOperatorExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ReceitaService } from '../receita.service';
-
-// interface IReceita {
-//   title: string;
-//   ingredientes: string;
-//   modoPreparo: string;
-// }
 
 @Component({
   selector: 'app-adicionar-receitas',
@@ -34,10 +27,10 @@ export class AdicionarReceitasComponent implements OnInit {
     );  
 
 
-    var btn_ingredientes = document.getElementById('ingrediente');
-    var box = document.getElementById('box');
+    let btn_ingredientes = document.getElementById('ingrediente');
+    let box = document.getElementById('box');
 
-    var contador = 0
+    let contador = 0
 
     btn_ingredientes?.addEventListener('click', function(){
       contador++

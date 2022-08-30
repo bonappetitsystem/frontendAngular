@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReceitasComponent } from './dashboard-cozinha/receitas/receitas.component';
 import { AdicionarReceitasComponent } from './adicionar-receitas/adicionar-receitas.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EquipeComponent } from './equipe/equipe.component';
 import { LoginComponent } from './login/login.component';
