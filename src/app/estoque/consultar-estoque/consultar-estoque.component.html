@@ -3,7 +3,7 @@
 <main class="container">
     <h4>Consultar Estoque</h4>
 
-    <div class="card card-meio">
+    <div class="card card-meio" *ngFor="let produto of estoque">
         <div class="img">
             <img class="img-meio" src="../../assets/img/estoque/product.svg" alt="cozinha">
         </div>
@@ -11,9 +11,9 @@
         <div class="content-texto">
             <div class="alinhar">
                 <div class="linha-1">
-                    <span class="span">MORANGO</span>
-                    <span>Data para entrega: 12/08/2022</span>
-                    <span>Horário: 16h45m</span>
+                    <span class="span">{{produto.id_produto.descricao}}</span>
+                    <span>{{produto.lote}}</span>
+                    <span>{{produto.quantidade}}</span>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
         </div>
 
         <div>
-            <a routerLink="/atualizar-estoque" class="waves-effect waves-light btn edit">
+            <a [routerLink]="['/atualizar-estoque', produto.id_estoque]"  class="waves-effect waves-light btn edit">
                 <img src="../../assets/img/estoque/edit.svg" alt="ícone-edit"></a>
         </div>
 

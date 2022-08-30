@@ -27,14 +27,13 @@
             <div class="col s12 m2 l2">
                 <div class="form-input">
                     <label for="codigo">Código</label>
-                    <input id="codigo" class="form-input z-depth-2" type="text" name="codigo">
+                    <input id="codigo" class="form-input z-depth-2" type="text" name="codigo" [(ngModel)]="produto.id_estoque">
                 </div>
             </div>
             <div class="col s12 m5 l5 select">
                 <label for="nome-produto">Nome do produto</label>
-                <select id="id_produto" name="id_produto" class="browser-default" ngModel>
-                    <option value="outros">Outros</option>
-                    <option></option>
+                <select id="id_produto" name="id_produto" class="browser-default" ngModel [(ngModel)]="produto.id_produto.descricao">
+                    <option value="outros">Outro</option>
                 </select>
             </div>
 
@@ -42,7 +41,7 @@
                 <div class="form-input">
                     <label for="quantidade-de-medida">Quantidade de medida</label>
                     <input id="quantidade" class="form-input z-depth-2" type="number" required ngModel
-                        name="quantidade">
+                        name="quantidade" [(ngModel)]="produto.quantidade">
                 </div>
             </div>
 

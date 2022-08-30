@@ -9,10 +9,16 @@ export class EstoqueService {
   constructor(private http: HttpClient) { }
 
   getProdutos(){
-    return this.http.get(`http://localhost:9000/produtos`)
+    return this.http.get(`http://localhost:8080/produtos`)
   }
   postEstoque(dados:any){
     return this.http.post(`http://localhost:8080/estoque`, dados)
+  }
+  getEstoque(){
+    return this.http.get(`http://localhost:8080/estoque`)
+  }
+  getEstoqueById(id: any){
+    return this.http.get(`http://localhost:8080/estoque/${id}`)
   }
 
 }
