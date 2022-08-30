@@ -60,7 +60,6 @@ span {
 }
 
 
-
 .linha-1 .span{
     font-family: 'Manrope-Bold';
     font-style: normal;
@@ -78,6 +77,7 @@ span {
 .btn{
     background-color: #00796B;
 }
+
 .button-voltar{
     height: 50px;
     width: 200px;
