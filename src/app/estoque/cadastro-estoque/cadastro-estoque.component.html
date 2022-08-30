@@ -5,51 +5,50 @@
         <img class="responsive-img icone" src="../../../assets/img/estoque/lupa.svg">
         <h4>Cadastro de matéria-prima</h4>
     </div>
-
-    <form #form="ngForm">
-        <div class="row">
-
-            <div class="col s10 m5 l5">
-                <div class="form-input">
-                    <label>Buscar produto:</label>
-                    <input class="form-input z-depth-2" type="text" required ngModel name="produto">
-                </div>
-            </div>
-            <div class="col s2 m1 l1">
-                <a class="waves-effect waves-light btn search bottom"><i
-                        class="material-icons centered white-text">search</i></a>
-            </div>
-            <div class="botaoLote">
-                <a routerLink="/" class="waves-effect waves-light btn btnLote right">ATUALIZAR LOTE CADASTRADO</a>
+    <div class="row">
+        <div class="col s10 m5 l5">
+            <div class="form-input">
+                <label>Buscar produto:</label>
+                <input class="form-input z-depth-2" type="text" required ngModel name="produto">
             </div>
         </div>
+        <div class="col s2 m1 l1">
+            <a class="waves-effect waves-light btn search bottom"><i
+                    class="material-icons centered white-text">search</i></a>
+        </div>
+        <div class="botaoLote">
+            <a routerLink="/" class="waves-effect waves-light btn btnLote right">ATUALIZAR LOTE CADASTRADO</a>
+        </div>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="cadastrarEstoque(f.value)">
 
         <div class="row">
             <div class="col s12 m2 l2">
                 <div class="form-input">
                     <label for="codigo">Código</label>
-                    <input id="codigo" class="form-input z-depth-2" type="text" required ngModel name="codigo">
+                    <input id="codigo" class="form-input z-depth-2" type="text" name="codigo">
                 </div>
             </div>
             <div class="col s12 m5 l5 select">
                 <label for="nome-produto">Nome do produto</label>
-                <select id="nome-produto" name="produtos" class="browser-default" [(ngModel)]="selectedValue">
-                    <option *ngFor=" let produto of produtos" value="produto.nome">{{produto.descricao}}</option>
+                <select id="id_produto" name="id_produto" class="browser-default" ngModel>
                     <option value="outros">Outros</option>
+                    <option *ngFor=" let produto of produtos" value="{{produto.id_produto}}">{{produto.descricao}}</option>
                 </select>
             </div>
 
             <div class="col s12 m3 l3">
                 <div class="form-input">
                     <label for="quantidade-de-medida">Quantidade de medida</label>
-                    <input id="quantidade-de-medida" class="form-input z-depth-2" type="text" required ngModel
-                        name="quantidade-de-medida">
+                    <input id="quantidade" class="form-input z-depth-2" type="number" required ngModel
+                        name="quantidade">
                 </div>
             </div>
 
             <div class="col s12 m2 l2">
                 <label for="unidade-medida">Unidade de medida</label>
-                <select id="unidade-medida" name="unidade-medida" class="browser-default">
+                <select id="unidade_medida" name="unidade_medida" class="browser-default" ngModel>
                     <option value="kg">kg</option>
                     <option value="g">g</option>
                     <option value="l">l</option>
@@ -71,47 +70,43 @@
             <div class="col s12 m1 l2">
                 <div class="form-input">
                     <label for="N-do-lote">Nº do lote </label>
-                    <input class="form-input z-depth-2" type="text" nrequired ngModel name=">N-do-lote">
+                    <input class="form-input z-depth-2" type="text" ngModel name="lote">
                 </div>
             </div>
 
             <div class="col s12 m2 l2">
                 <div class="form-input">
-                    <label for="quantidade-unitaria">Quantidade unitária</label>
-                    <input class="form-input z-depth-2" type="text" required ngModel name="quantidade-unitaria">
+                    <label for="quantidade_unitaria">Quantidade unitária</label>
+                    <input class="form-input z-depth-2" type="number" required ngModel name="quantidade_unitaria">
                 </div>
             </div>
 
             <div class="col s12 m2 l2" style="padding-right: 0;">
                 <div class="form-input">
-                    <label for="data-validade">Data de validade</label>
-                    <input id="data-validade" class="form-input z-depth-2 datepicker" type="text" required ngModel
-                        name="data-validade">
+                    <label for="validade">Data de validade</label>
+                    <input id="validade" class="form-input z-depth-2" type="date" required ngModel
+                        name="validade">
                 </div>
-
-
             </div>
 
             <div class="col s1 m1 l1">
                 <img src="../../assets/img/estoque/calendar.svg" class="responsive-img calendar">
             </div>
 
-
-
             <div class="col s12 m2 l3">
                 <div class="form-input">
                     <label for="preco">Preço unitário do produto</label>
-                    <input class="form-input z-depth-2" type="text" required name="preco" placeholder="R$">
+                    <input class="form-input z-depth-2" type="number" ngModel required name="preco" placeholder="R$">
                 </div>
             </div>
         </div>
 
+        <div class="row">
+            <div class="col s12 m12 l12 buttons-content">
+                <button class="button-salvar buttons right submit">SALVAR PRODUTO</button>
+            </div>
+        </div>
     </form>
 
 
-    <div class="row">
-        <div class="col s12 m12 l12 buttons-content">
-            <button class="button-salvar buttons right">SALVAR PRODUTO</button>
-        </div>
-    </div>
 </main>

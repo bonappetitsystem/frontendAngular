@@ -11,5 +11,9 @@ export class EstoqueService {
   getProdutos(){
     return this.http.get(`http://localhost:9000/produtos`)
   }
+  postEstoque(dados:any){
+    return this.http.post(`http://localhost:8080/estoque`, dados)
+  }
+
 }
 
