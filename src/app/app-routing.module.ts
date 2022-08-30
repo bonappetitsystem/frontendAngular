@@ -66,7 +66,7 @@ const routes: Routes = [
   {path: 'pedidos-andamento', component: PedidosAndamentoComponent, canActivate: [AuthguardCozinheiroService]},
   {path: 'pedidos-finalizados', component: PedidosFinalizadosComponent, canActivate: [AuthguardCozinheiroService]},
   {path: 'alterar-venda', component: AlterarVendaComponent, canActivate: [AuthguardVendedorService] },
-  {path: 'atualizar-estoque', component : AtualizarEstoqueComponent, canActivate:[AuthguardGerenteService]},
+  {path: 'atualizar-estoque/:idestoque', component : AtualizarEstoqueComponent, canActivate:[AuthguardGerenteService]},
   {path: 'consultar-estoque', component: ConsultarEstoqueComponent, canActivate:[AuthguardGerenteService]}
 ];
 

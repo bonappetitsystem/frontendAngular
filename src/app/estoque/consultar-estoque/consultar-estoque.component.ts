@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EstoqueService } from '../../estoque.service';
 
 @Component({
   selector: 'app-consultar-estoque',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consultar-estoque.component.css']
 })
 export class ConsultarEstoqueComponent implements OnInit {
-
-  constructor() { }
+  estoque: any = []
+  constructor(private service: EstoqueService) { }
 
   ngOnInit(): void {
+    this.consultarEstoque()
+  }
+  consultarEstoque(){
+    this.service.getEstoque().subscribe(data => {
+      console.log(data)
+      this.estoque = data})
   }
 
 }
