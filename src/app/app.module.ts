@@ -36,6 +36,8 @@ import { PedidosPendentesComponent } from './dashboard-cozinha/pedidos-pendentes
 import { ButtonMenuComponent } from './button-menu/button-menu.component';
 import { PedidosAndamentoComponent } from './dashboard-cozinha/pedidos-andamento/pedidos-andamento.component';
 import { PedidosFinalizadosComponent } from './dashboard-cozinha/pedidos-finalizados/pedidos-finalizados.component';
+import { AtualizarEstoqueComponent } from './estoque/atualizar-estoque/atualizar-estoque.component';
+import { ConsultarEstoqueComponent } from './estoque/consultar-estoque/consultar-estoque.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,9 @@ import { PedidosFinalizadosComponent } from './dashboard-cozinha/pedidos-finaliz
     PedidosPendentesComponent,
     ButtonMenuComponent,
     PedidosAndamentoComponent,
-    PedidosFinalizadosComponent
+    PedidosFinalizadosComponent,
+    AtualizarEstoqueComponent,
+    ConsultarEstoqueComponent
   ],
   imports: [
     BrowserModule,

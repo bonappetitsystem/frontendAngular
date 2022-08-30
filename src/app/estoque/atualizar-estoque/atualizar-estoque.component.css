@@ -91,18 +91,6 @@ input::placeholder{
     color: #000;
   }
 
-  .button-voltar{
-    background: #4DB6AC;
-    color: #fff;
-    height: 58px;
-    width: 200px;
-    cursor: pointer;
-    border: none;
-  }
-  .button-voltar:hover{
-    background:  #B2DFDB;
-    color: #000;
-  }
   [type="radio"].with-gap:checked+span:before,
   [type="radio"].with-gap:checked+span:after{
   

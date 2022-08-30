@@ -1,7 +1,7 @@
 import { AdicionarReceitasComponent } from './adicionar-receitas/adicionar-receitas.component';
 import { ReceitasComponent } from './dashboard-cozinha/receitas/receitas.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { EquipeComponent } from './equipe/equipe.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -31,6 +31,8 @@ import { PedidosPendentesComponent } from './dashboard-cozinha/pedidos-pendentes
 import { AlterarVendaComponent } from './vendas/alterar-venda/alterar-venda.component';
 import { PedidosAndamentoComponent } from './dashboard-cozinha/pedidos-andamento/pedidos-andamento.component';
 import { PedidosFinalizadosComponent } from './dashboard-cozinha/pedidos-finalizados/pedidos-finalizados.component';
+import { AtualizarEstoqueComponent } from './estoque/atualizar-estoque/atualizar-estoque.component';
+import { ConsultarEstoqueComponent } from './estoque/consultar-estoque/consultar-estoque.component';
 
 
 
@@ -63,7 +65,9 @@ const routes: Routes = [
   {path: 'pedidos-pendentes', component: PedidosPendentesComponent, canActivate: [AuthguardCozinheiroService] },
   {path: 'pedidos-andamento', component: PedidosAndamentoComponent, canActivate: [AuthguardCozinheiroService]},
   {path: 'pedidos-finalizados', component: PedidosFinalizadosComponent, canActivate: [AuthguardCozinheiroService]},
-  {path: 'alterar-venda', component: AlterarVendaComponent, canActivate: [AuthguardVendedorService] }
+  {path: 'alterar-venda', component: AlterarVendaComponent, canActivate: [AuthguardVendedorService] },
+  {path: 'atualizar-estoque', component : AtualizarEstoqueComponent, canActivate:[AuthguardGerenteService]},
+  {path: 'consultar-estoque', component: ConsultarEstoqueComponent, canActivate:[AuthguardGerenteService]}
 ];
 
 @NgModule({

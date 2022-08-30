@@ -3,7 +3,7 @@
 
     <div class="titulo">
         <img class="responsive-img icone" src="../../../assets/img/estoque/lupa.svg">
-        <h4>Cadastro de matéria-prima</h4>
+        <h4>Atualizar matéria-prima</h4>
     </div>
     <div class="row">
         <div class="col s10 m5 l5">
@@ -16,12 +16,12 @@
             <a class="waves-effect waves-light btn search bottom"><i
                     class="material-icons centered white-text">search</i></a>
         </div>
-        <!-- <div class="botaoLote">
-            <a routerLink="/atualizar-estoque" class="waves-effect waves-light btn btnLote right">EDITAR CADASTRO</a>
-        </div> -->
+        <div class="botaoLote">
+            <a routerLink="/" class="waves-effect waves-light btn btnLote right">ATUALIZAR LOTE CADASTRADO</a>
+        </div>
     </div>
 
-    <form #f="ngForm" (ngSubmit)="cadastrarEstoque(f.value)">
+    <form #f="ngForm">
 
         <div class="row">
             <div class="col s12 m2 l2">
@@ -34,7 +34,7 @@
                 <label for="nome-produto">Nome do produto</label>
                 <select id="id_produto" name="id_produto" class="browser-default" ngModel>
                     <option value="outros">Outros</option>
-                    <option *ngFor=" let produto of produtos" value="{{produto.id_produto}}">{{produto.descricao}}</option>
+                    <option></option>
                 </select>
             </div>
 
@@ -103,7 +103,6 @@
 
         <div class="row">
             <div class="col s12 m12 l12 buttons-content">
-                <button class="button-voltar buttons left" routerLink="/estoque">VOLTAR</button>
                 <button class="button-salvar buttons right submit">SALVAR PRODUTO</button>
             </div>
         </div>
