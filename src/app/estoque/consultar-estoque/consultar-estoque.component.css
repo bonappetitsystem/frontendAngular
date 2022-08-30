@@ -14,10 +14,6 @@ h4{
     padding: 10px;
 }
 
-.card-meio .img{
-    flex: 1;
-}
-
 .card-meio .content-texto{
     flex: 4;
 }
@@ -27,12 +23,12 @@ h4{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-}
+} 
 
 .card-meio img{
     display: block;
-    width: 40%;
-    border-radius: 100%;
+    width: 80%;
+  
 }
 
 .card-meio span{
@@ -40,11 +36,32 @@ h4{
     margin-left: -80px;
 }
 
+.visualizar{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 4px;
+    background-color: #00796B;
+    
+}
+.edit{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 4px;
+    background-color: #FF5722;
+}
+
 .linha-1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    margin-left: 70px;
 }
 
 .linha-1 .span{
@@ -52,29 +69,6 @@ h4{
     font-style: normal;
     font-size: 18px;
     line-height: 30px;
-}
-.visualizar{
-    background: #00796B;
-    margin-left: 400px;
-    height: 3rem;
-    width: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 22px;
-    border-radius: 2px;
-    
-}
-.check{
-    background: #FF5722;
-    margin-right: 20px;
-    height: 3rem;
-    width: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 22px;
-    border-radius: 2px;
 }
 .button-voltar{
     height: 50px;
