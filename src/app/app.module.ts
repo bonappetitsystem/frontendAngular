@@ -8,7 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReceitasComponent } from './dashboard-cozinha/receitas/receitas.component';
 import { AdicionarReceitasComponent } from './adicionar-receitas/adicionar-receitas.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { EquipeComponent } from './equipe/equipe.component';
 import { LoginComponent } from './login/login.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
@@ -26,8 +26,8 @@ import { MovimentacaoEstoqueComponent } from './estoque/movimentacao-estoque/mov
 import { CancelarVendaComponent } from './vendas/cancelar-venda/cancelar-venda.component';
 import { DashboardCozinhaComponent } from './dashboard-cozinha/dashboard-cozinha.component';
 import { FinalizarVendaComponent } from './vendas/finalizar-venda/finalizar-venda.component';
-import { GestaoDeClientesComponent } from './gestao-de-clientes/gestao-de-clientes.component';
-import { CadastroClienteComponent } from './gestao-de-clientes/cadastro-cliente/cadastro-cliente.component';
+import { GestaoDeClientesComponent } from './master/clientes/gestao-de-clientes/gestao-de-clientes.component';
+import { CadastroClienteComponent } from './master/clientes/cadastro-cliente/cadastro-cliente.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { EditarUsuarioComponent } from './equipe/editar-usuario/editar-usuario.component';
 import { FinanceiroComponent } from './financeiro/financeiro.component';
@@ -38,6 +38,12 @@ import { PedidosAndamentoComponent } from './dashboard-cozinha/pedidos-andamento
 import { PedidosFinalizadosComponent } from './dashboard-cozinha/pedidos-finalizados/pedidos-finalizados.component';
 import { AtualizarEstoqueComponent } from './estoque/atualizar-estoque/atualizar-estoque.component';
 import { ConsultarEstoqueComponent } from './estoque/consultar-estoque/consultar-estoque.component';
+import { DashboardAdminComponent } from './master/dashboard-admin/dashboard-admin.component';
+import { SidebarAdminComponent } from './master/sidebar-admin/sidebar-admin.component';
+import { VisualizarClienteComponent } from './master/clientes/visualizar-cliente/visualizar-cliente.component';
+import { TokenInterceptor } from './core/interceptors/token.interceptor';
+import { NovoAccessTokenInterceptor } from './core/interceptors/novo-access-token.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -72,17 +78,23 @@ import { ConsultarEstoqueComponent } from './estoque/consultar-estoque/consultar
     PedidosPendentesComponent,
     ButtonMenuComponent,
     PedidosAndamentoComponent,
-    PedidosFinalizadosComponent,
     AtualizarEstoqueComponent,
-    ConsultarEstoqueComponent
+    ConsultarEstoqueComponent,
+    PedidosFinalizadosComponent,
+    DashboardAdminComponent,
+    SidebarAdminComponent,
+    VisualizarClienteComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: NovoAccessTokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

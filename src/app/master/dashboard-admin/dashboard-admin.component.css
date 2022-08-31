@@ -1,0 +1,45 @@
+
+.card-1{
+    
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 170px;
+    padding: 10px;
+    margin-bottom: 10px; 
+
+    
+}
+
+.card-2{
+    
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 357px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    
+} 
+
+
+.conteudo{
+  padding-left: 70px;
+  margin-left: 80px;
+  margin-right: 50px;
+  margin-top: -50px;
+}
+
+@media screen and (max-width: 768px) {
+  .conteudo{
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: -50px;
+  }
+  
+}
+  

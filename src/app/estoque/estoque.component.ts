@@ -12,4 +12,6 @@ export class EstoqueComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }

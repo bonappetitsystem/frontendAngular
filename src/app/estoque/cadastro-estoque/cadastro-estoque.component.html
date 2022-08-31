@@ -6,16 +6,22 @@
         <h4>Cadastro de matéria-prima</h4>
     </div>
     <div class="row">
-        <div class="col s10 m5 l5">
-            <div class="form-input">
-                <label>Buscar produto:</label>
-                <input class="form-input z-depth-2" type="text" required ngModel name="produto">
+        <form autocomplete="off" (ngSubmit)="pesquisar()">
+            <div class="col s10 m5 l5">
+                <div class="form-input">
+                    <label>Buscar produto:</label>
+                    <input class="form-input z-depth-2" type="text" required [(ngModel)]="descricao" name="descricao">
+                </div>
             </div>
-        </div>
-        <div class="col s2 m1 l1">
-            <a class="waves-effect waves-light btn search bottom"><i
-                    class="material-icons centered white-text">search</i></a>
-        </div>
+
+            <div class="col s2 m1 l1">
+                <button class="waves-effect waves-light btn search bottom">
+                    <i class="material-icons centered white-text btnSearch">search</i>
+                  </button>
+                <!-- <a class="waves-effect waves-light btn search bottom"><i
+                        class="material-icons centered white-text">search</i></a> -->
+            </div>
+        </form>
         <!-- <div class="botaoLote">
             <a routerLink="/atualizar-estoque" class="waves-effect waves-light btn btnLote right">EDITAR CADASTRO</a>
         </div> -->
@@ -30,8 +36,17 @@
                     <input id="codigo" class="form-input z-depth-2" type="text" name="codigo">
                 </div>
             </div>
+
+            <!-- <div class="col s12 m5 l5">
+                <div class="form-input">
+                    <label for="descricao">Nome do produto</label>
+                    <input id="descricao" class="form-input z-depth-2" type="text" name="descricao">
+                </div>
+            </div> -->
             <div class="col s12 m5 l5 select">
                 <label for="nome-produto">Nome do produto</label>
+                <!-- <input id="nome-produto" class="form-input z-depth-2" type="text" required ngModel
+                name="nome-produto" > -->
                 <select id="id_produto" name="id_produto" class="browser-default" ngModel>
                     <option value="outros">Outros</option>
                     <option *ngFor=" let produto of produtos" value="{{produto.id_produto}}">{{produto.descricao}}</option>

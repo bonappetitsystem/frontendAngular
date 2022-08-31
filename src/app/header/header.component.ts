@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from '../usuarios.service';
+import { AuthService } from '../auth.service';
 
 declare const M: any;
 
@@ -11,7 +12,7 @@ declare const M: any;
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private service: UsuariosService, private router: Router) { }
+  constructor(private service: AuthService, private router: Router) { }
   user = this.service.getDadosToken()
   ngOnInit(): void {
     M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), {
@@ -31,13 +32,13 @@ export class HeaderComponent implements OnInit {
   }
 
   showOnly(perfil: string){
-    if(perfil == 'gerente' || perfil == 'admin'){
+    if(perfil == 'GERENCIA' || perfil == 'ADMIN'){
       document.getElementById("sidebar")?.classList.toggle("hide");
     }
   }
 
   hideMenu(){
-    if(this.router.url == '/dashboard'  && window.innerWidth > 600|| this.service.getDadosToken().perfil != 'gerente'){
+    if(this.router.url == '/dashboard'  && window.innerWidth > 600|| this.service.getDadosToken().perfil != 'GERENCIA' || this.service.getDadosToken().perfil != 'ADMIN'){
       console.log(this.router.url)
       document.getElementById("menu")?.classList.toggle("hide");
     }
@@ -46,13 +47,17 @@ export class HeaderComponent implements OnInit {
 
   navegacao(){
 
-    if(this.service.getDadosToken().perfil == 'gerente'){
+    if(this.service.getDadosToken().perfil == 'ADMIN'){
+      this.router.navigate(['/admin'])
+    }
+
+    else if(this.service.getDadosToken().perfil == 'GERENCIA'){
       this.router.navigate(['/dashboard'])
     }
-    else if(this.service.getDadosToken().perfil == 'cozinheiro'){
+    else if(this.service.getDadosToken().perfil == 'COZINHA'){
       this.router.navigate(['/receitas'])
     }
-    else if(this.service.getDadosToken().perfil == 'vendedor'){
+    else if(this.service.getDadosToken().perfil == 'VENDA'){
       this.router.navigate(['/vendas'])
     }
     

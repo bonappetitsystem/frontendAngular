@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EstoqueService } from '../../estoque.service';
+import { EstoqueFilter, EstoqueService } from '../../estoque.service';
 
 @Component({
   selector: 'app-consultar-estoque',
@@ -8,6 +8,7 @@ import { EstoqueService } from '../../estoque.service';
 })
 export class ConsultarEstoqueComponent implements OnInit {
   estoque: any = []
+  lote: string = '';
   constructor(private service: EstoqueService) { }
 
   ngOnInit(): void {
@@ -15,6 +16,15 @@ export class ConsultarEstoqueComponent implements OnInit {
   }
   consultarEstoque(){
     this.service.getEstoque().subscribe(data => {
+      console.log(data)
+      this.estoque = data})
+  }
+
+  filtrarEstoque(){
+    const filtro: EstoqueFilter = {
+     lote: this.lote
+    }
+    this.service.filtrarEstoque(filtro).subscribe(data => {
       console.log(data)
       this.estoque = data})
   }

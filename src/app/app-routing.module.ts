@@ -22,8 +22,8 @@ import { MovimentacaoEstoqueComponent } from './estoque/movimentacao-estoque/mov
 import { CancelarVendaComponent } from './vendas/cancelar-venda/cancelar-venda.component';
 import { DashboardCozinhaComponent } from './dashboard-cozinha/dashboard-cozinha.component';
 import { FinalizarVendaComponent } from './vendas/finalizar-venda/finalizar-venda.component';
-import { GestaoDeClientesComponent } from './gestao-de-clientes/gestao-de-clientes.component';
-import { CadastroClienteComponent } from './gestao-de-clientes/cadastro-cliente/cadastro-cliente.component';
+import { GestaoDeClientesComponent } from './master/clientes/gestao-de-clientes/gestao-de-clientes.component';
+import { CadastroClienteComponent } from './master/clientes/cadastro-cliente/cadastro-cliente.component';
 import { FinanceiroComponent } from './financeiro/financeiro.component';
 import { EditarUsuarioComponent } from './equipe/editar-usuario/editar-usuario.component';
 import { ExecucaoReceitaComponent } from './dashboard-cozinha/execucao-receita/execucao-receita.component';
@@ -33,6 +33,9 @@ import { PedidosAndamentoComponent } from './dashboard-cozinha/pedidos-andamento
 import { PedidosFinalizadosComponent } from './dashboard-cozinha/pedidos-finalizados/pedidos-finalizados.component';
 import { AtualizarEstoqueComponent } from './estoque/atualizar-estoque/atualizar-estoque.component';
 import { ConsultarEstoqueComponent } from './estoque/consultar-estoque/consultar-estoque.component';
+import { DashboardAdminComponent } from './master/dashboard-admin/dashboard-admin.component';
+import { AuthguardAdminService } from './authguard-admin.service';
+import { VisualizarClienteComponent } from './master/clientes/visualizar-cliente/visualizar-cliente.component';
 
 
 
@@ -57,17 +60,21 @@ const routes: Routes = [
   { path: 'cadastro-estoque', component: CadastroEstoqueComponent, canActivate: [AuthguardGerenteService] },
   { path: 'cancelar-venda', component: CancelarVendaComponent,canActivate: [AuthguardVendedorService] },
   { path: 'finalizar-venda', component: FinalizarVendaComponent,canActivate: [AuthguardVendedorService] },
-  { path: 'gestao-de-clientes', component: GestaoDeClientesComponent,canActivate: [AuthguardGerenteService] },
-  { path: 'cadastro-cliente', component:CadastroClienteComponent,canActivate: [AuthguardGerenteService] },
+  { path: 'gestao-de-clientes', component: GestaoDeClientesComponent,canActivate: [AuthguardAdminService] },
+  { path: 'cadastro-cliente', component:CadastroClienteComponent,canActivate: [AuthguardAdminService] },
   {path: 'financeiro', component: FinanceiroComponent, canActivate: [AuthguardGerenteService] },
   {path:'editar-usuario/:idusuario', component:EditarUsuarioComponent, canActivate: [AuthguardGerenteService]},
   {path: 'execucao-receita', component: ExecucaoReceitaComponent, canActivate: [AuthguardCozinheiroService] },
   {path: 'pedidos-pendentes', component: PedidosPendentesComponent, canActivate: [AuthguardCozinheiroService] },
   {path: 'pedidos-andamento', component: PedidosAndamentoComponent, canActivate: [AuthguardCozinheiroService]},
   {path: 'pedidos-finalizados', component: PedidosFinalizadosComponent, canActivate: [AuthguardCozinheiroService]},
+  {path: 'atualizar-estoque', component : AtualizarEstoqueComponent, canActivate:[AuthguardGerenteService]},
+  {path: 'consultar-estoque', component: ConsultarEstoqueComponent, canActivate:[AuthguardGerenteService]},
   {path: 'alterar-venda', component: AlterarVendaComponent, canActivate: [AuthguardVendedorService] },
   {path: 'atualizar-estoque/:idestoque', component : AtualizarEstoqueComponent, canActivate:[AuthguardGerenteService]},
-  {path: 'consultar-estoque', component: ConsultarEstoqueComponent, canActivate:[AuthguardGerenteService]}
+  {path: 'consultar-estoque', component: ConsultarEstoqueComponent, canActivate:[AuthguardGerenteService]},
+  {path: 'admin', component:DashboardAdminComponent, canActivate: [AuthguardAdminService] },
+  {path:'visualizar-cliente', component:VisualizarClienteComponent, canActivate: [AuthguardAdminService] },
 ];
 
 @NgModule({

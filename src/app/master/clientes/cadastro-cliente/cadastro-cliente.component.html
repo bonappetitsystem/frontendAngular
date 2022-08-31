@@ -4,8 +4,9 @@
         <img class="responsive-img icone left" src="../../assets/img/clientes/cadastroCliente.svg">
         <h4 class="col s12 m10">CADASTRO DE CLIENTE</h4>
     </div>
-    <form #f="ngForm">
+    
         <div class="containerCadastro">
+            <form #f="ngForm" (ngSubmit)="cadastrandoEmpresa(f.value)">
             <div class="row">
                 <h6>Dados da Empresa</h6>
                 <div class="form-input col s12 m4 l4">
@@ -110,82 +111,88 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <h6 class="">Dados do Representante da Empresa</h6>
-                    <h6 class="dadosPessoais">Dados Pessoais</h6>
-                    <div class="form-input col s12 m9 l9">
-                        <label>Nome:</label>
-                        <input class="form-input z-depth-2" type="text" required ngModel name="nome">
-                    </div>
-                    <div class="col s10 m3 l3">
-                        <div class="form-input">
-                            <label>CPF:</label>
-                            <input class="form-input z-depth-2" type="text" required ngModel name="cpf">
+                </div>
+            </form>
+                <form action="">
+
+                    <div class="row">
+                        <h6 class="">Dados do Representante da Empresa</h6>
+                        <h6 class="dadosPessoais">Dados Pessoais</h6>
+                        <div class="form-input col s12 m9 l9">
+                            <label>Nome:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="nome">
                         </div>
-                    </div>
-                    <div class="col s10 m3 l3">
-                        <div class="form-input">
-                            <label>Gênero:</label>
-                            <select name="perfil" ngModel class="browser-default">
-                                <option value="feminino">Feminino</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="não-binário">Não-binário</option>
-                                <option value="outros">Outros</option>
-                            </select>
+                        <div class="col s10 m3 l3">
+                            <div class="form-input">
+                                <label>CPF:</label>
+                                <input class="form-input z-depth-2" type="text" required ngModel name="cpf">
+                            </div>
+                        </div>
+                        <div class="col s10 m3 l3">
+                            <div class="form-input">
+                                <label>Gênero:</label>
+                                <select name="perfil" ngModel class="browser-default">
+                                    <option value="feminino">Feminino</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="não-binário">Não-binário</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m3 l3" style="padding-right: 0;">
+                                <div class="form-input">
+                                    <label for="data-nascimento">Data de Nascimento</label>
+                                    <input id="data-nascimento" class="form-input z-depth-2" type="text" required ngModel
+                                        name="data-nascimento">
+                                </div>
+                            </div>
+                            <img src="../../assets/img/equipe/calendar.svg" class="responsive-img icone"
+                                style="margin-bottom: -50px; width: 44px;">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col s12 m3 l3" style="padding-right: 0;">
+                        <h6 class="">Dados Funcionais</h6>
+                        <div class="form-input col s12 m3 l3">
+                            <label>Matrícula:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="matricula">
+                        </div>
+                        <div class="col s10 m2 l2">
                             <div class="form-input">
-                                <label for="data-nascimento">Data de Nascimento</label>
-                                <input id="data-nascimento" class="form-input z-depth-2" type="text" required ngModel
-                                    name="data-nascimento">
+                                <label>Perfil:</label>
+                                <input class="form-input z-depth-2" type="text" placeholder="Gerente" disabled="" ngModel
+                                    name="perfil">
                             </div>
                         </div>
-                        <img src="../../assets/img/equipe/calendar.svg" class="responsive-img icone"
-                            style="margin-bottom: -50px; width: 44px;">
-                    </div>
-                </div>
-                <div class="row">
-                    <h6 class="">Dados Funcionais</h6>
-                    <div class="form-input col s12 m3 l3">
-                        <label>Matrícula:</label>
-                        <input class="form-input z-depth-2" type="text" required ngModel name="matricula">
-                    </div>
-                    <div class="col s10 m2 l2">
-                        <div class="form-input">
-                            <label>Perfil:</label>
-                            <input class="form-input z-depth-2" type="text" placeholder="Gerente" disabled="" ngModel
-                                name="perfil">
+                        <div class="col s12 m4 l4">
+                            <div class="inputfile-box">
+                                <label for="cpf">Foto/Avatar:</label>
+                                <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
+                                <label for="file">
+                                  <span id="file-name" class="file-box"></span>
+                                  <span class="file-button">
+                                    <i class="fa fa-upload" aria-hidden="true"></i>
+                                    <img src="../../assets/img/equipe/upload.svg">
+                                  </span>
+                                </label>
+                              </div>
+                        </div>
+                        <div class="col s10 m3 l3">
+                            <div class="form-input">
+                                <label>Senha:</label>
+                                <input class="form-input z-depth-2" type="text" required ngModel name="senha">
+                            </div>
                         </div>
                     </div>
-                    <div class="col s12 m4 l4">
-                        <div class="inputfile-box">
-                            <label for="cpf">Foto/Avatar:</label>
-                            <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
-                            <label for="file">
-                              <span id="file-name" class="file-box"></span>
-                              <span class="file-button">
-                                <i class="fa fa-upload" aria-hidden="true"></i>
-                                <img src="../../assets/img/equipe/upload.svg">
-                              </span>
-                            </label>
-                          </div>
-                    </div>
-                    <div class="col s10 m3 l3">
-                        <div class="form-input">
-                            <label>Senha:</label>
-                            <input class="form-input z-depth-2" type="text" required ngModel name="senha">
-                        </div>
-                    </div>
-                </div>
+                </form>
+            
+        
+        <div class="row">
+            <div class="col s12 m12 l12 buttons-content">
+                <button type="reset" class="button-cancelar btn buttons" >CANCELAR</button>
+                <button type="submit" class="button-cadastrar btn buttons">Cadastrar</button>
             </div>
         </div>
-    </form>
-    <div class="row">
-        <div class="col s12 m12 l12 buttons-content">
-            <button class="button-cancelar btn buttons" >CANCELAR</button>
-            <button class="button-cadastrar btn buttons">Cadastrar</button>
-        </div>
-    </div>
+
+
 </div>
