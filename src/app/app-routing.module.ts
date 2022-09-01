@@ -56,7 +56,7 @@ const routes: Routes = [
   { path: 'nova-venda', component: NovaVendaComponent, canActivate: [AuthguardVendedorService] },
   { path: 'visualizar-usuario/:idusuario', component: VisualizarUsuarioComponent, canActivate: [AuthguardGerenteService] },
   { path: 'estoque', component: EstoqueComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'movimento-estoque', component: MovimentacaoEstoqueComponent, canActivate: [AuthguardGerenteService] },
+  { path: 'movimentacao-estoque', component: MovimentacaoEstoqueComponent, canActivate: [AuthguardGerenteService] },
   { path: 'cadastro-estoque', component: CadastroEstoqueComponent, canActivate: [AuthguardGerenteService] },
   { path: 'cancelar-venda', component: CancelarVendaComponent,canActivate: [AuthguardVendedorService] },
   { path: 'finalizar-venda', component: FinalizarVendaComponent,canActivate: [AuthguardVendedorService] },

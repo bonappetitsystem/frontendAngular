@@ -92,8 +92,8 @@ import { NovoAccessTokenInterceptor } from './core/interceptors/novo-access-toke
     HttpClientModule,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: NovoAccessTokenInterceptor, multi: true }
+    // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: NovoAccessTokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
