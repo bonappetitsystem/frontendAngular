@@ -20,7 +20,10 @@ export class EquipeComponent implements OnInit {
 
   }
   consultarFuncionarios(): void{
-    this.service.getFuncionarios().subscribe(data => this.funcionarios = data)
+    this.service.getFuncionarios().subscribe(data => {
+      this.funcionarios = data
+      console.log(data)
+    })
   }
 
 }

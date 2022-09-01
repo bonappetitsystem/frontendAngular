@@ -22,6 +22,7 @@ export class EditarUsuarioComponent implements OnInit {
 
     const routeParams = this.route.snapshot.paramMap;
     this.idusuario = Number(routeParams.get('idusuario'))
+  
     this.service.getUsuarioId(this.idusuario).subscribe(data => {
       this.usuario = data
     }

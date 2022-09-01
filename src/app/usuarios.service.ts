@@ -30,7 +30,7 @@ export class UsuariosService {
 
 
   cadastrarFuncionario(dados:any){
-    return this.http.post('https://bonappetitusuarios.herokuapp.com/usuarios', dados)
+    return this.http.post('https://usuario-bonapt.herokuapp.com/funcionarios', dados)
   }
   
   // getDadosToken(){
@@ -50,18 +50,18 @@ export class UsuariosService {
   }
 
   getFuncionarios(){
-    return this.http.get('https://bonappetitusuarios.herokuapp.com/usuarios')
+    return this.http.get('https://usuario-bonapt.herokuapp.com/funcionarios')
   }
 
   getUsuarioId(id:number){
-    return this.http.get(`https://bonappetitusuarios.herokuapp.com/usuarios/${id}`)
+    return this.http.get(`https://usuario-bonapt.herokuapp.com/funcionarios/${id}`)
   }
 
   alterarUsuario(dados: any){
-    return this.http.put(`https://bonappetitusuarios.herokuapp.com/usuarios/${dados.id}`, dados)
+    return this.http.put(`https://usuario-bonapt.herokuapp.com/funcionarios/${dados.id}`, dados)
   }
 
   deletarUsuarioId(id:number){
-    return this.http.delete(`https://bonappetitusuarios.herokuapp.com/usuarios/${id}`)
+    return this.http.delete(`https://usuario-bonapt.herokuapp.com/funcionarios/${id}`)
   }
 }

@@ -141,16 +141,16 @@
                             <span class="negrito">Genero: </span>
                             <div class="spacer"></div>
                             <select name="genero" [(ngModel)]="usuario.genero" class="browser-default">
-                                <option value="feminino">Feminino</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="nao-binario">Não-binário</option>
-                                <option value="outros">Outros</option>
+                                <option value="FEMININO">Feminino</option>
+                                <option value="MASCULINO">Masculino</option>
+                                <option value="NAO_BINARIO">Não-binário</option>
+                                <option value="OUTROS">Outros</option>
                             </select>
                         </div>
                         <div class=" col s12 form-input">
                             <span class="negrito">Data de Nascimento: </span> 
                             <div class="spacer"></div>                     
-                            <input class="form-input z-depth-2" type="text" [(ngModel)]="usuario.data_nasc">
+                            <input class="form-input z-depth-2" type="text" [(ngModel)]="usuario.dataNascimento">
                         </div>
                     </div>
                 </div>
@@ -172,9 +172,9 @@
                             <span class="negrito">Perfil: </span>
                             <div class="spacer"></div>
                             <select name="perfil" [(ngModel)]="usuario.perfil" class="browser-default">
-                                <option value="gerente">Gerente</option>
-                                <option value="cozinheiro">Cozinheiro</option>
-                                <option value="vendedor">Vendedor</option>
+                                <option value="GERENCIA">GERENCIA</option>
+                                <option value="COZINHA">COZINHA</option>
+                                <option value="VENDA">VENDA</option>
                             </select>
                         </div>
                         <div class=" col s12 form-input">
@@ -197,7 +197,7 @@
                         <div class=" col s12 form-input">
                             <span class="negrito">Data de cadastro: </span>
                             <div class="spacer"></div>
-                            <span>{{usuario.data_cadastro | date:'dd/MM/yyyy'}}</span>
+                            <span>{{usuario.dataCadastro * 1000 | date:'dd/MM/yyyy'}}</span>
                         </div>
                         
                     </div>

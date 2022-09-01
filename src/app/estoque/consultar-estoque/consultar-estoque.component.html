@@ -3,6 +3,26 @@
 <main class="container">
     <h4>Consultar Estoque</h4>
 
+    <div class="row">
+        <form autocomplete="off">
+            <div class="col s10 m5 l5">
+                <div class="form-input">
+                    <label>Buscar produto:</label>
+                    <input class="form-input z-depth-2" type="text" required  name="descricao">
+                </div>
+            </div>
+
+            <div class="col s2 m1 l1">
+                <button class="waves-effect waves-light btn search bottom">
+                    <i class="material-icons centered white-text btnSearch">search</i>
+                  </button>
+                
+            </div>
+        </form>
+
+    </div>
+
+
     <div class="card card-meio" *ngFor="let produto of estoque">
         <div class="img">
             <img class="img-meio" src="../../assets/img/estoque/product.svg" alt="cozinha">

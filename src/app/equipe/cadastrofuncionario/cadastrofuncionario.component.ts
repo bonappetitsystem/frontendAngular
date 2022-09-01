@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { UsuariosService } from '../../usuarios.service';
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 
 declare const M: any;
 
@@ -11,13 +12,35 @@ declare const M: any;
 })
 export class CadastrofuncionarioComponent implements OnInit {
 
-  constructor(private service:UsuariosService, private router: Router) { }
+  codigoEmpresa = this.auth.getDadosToken().empresa
+
+  constructor(private service:UsuariosService, private router: Router, private auth:AuthService) { }
 
   ngOnInit(): void {
     M.AutoInit();
   }
   enviar(dados: any){
-    this.service.cadastrarFuncionario(dados).subscribe(data => {
+    console.log(dados)
+    let data = new Date(dados.dataNascimento)
+    let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+
+    let objeto = {
+      
+    nome: dados.nome,
+    empresa:{
+      id: this.codigoEmpresa
+    },
+    matricula: dados.matricula,
+    cpf: dados.cpf,
+    genero: dados.genero,
+    perfil: dados.perfil,
+    dataNascimento: dataFormatada,
+    senha: dados.senha,
+ 
+  }
+  console.log(objeto)
+    this.service.cadastrarFuncionario(objeto).subscribe(data => {
+      console.log(data)
       M.toast({html: 'Cadastro realizado com sucesso!'});
     })
     this.router.navigate(['/equipe'])

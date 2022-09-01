@@ -29,24 +29,22 @@
                 <div class="col s12 m12 l5">
                     <div class="form-input">
                         <label for="genero">Gênero</label>
-                        <select name="genero" class="browser-default">
-                            <option value="feminino">Feminino</option>
-                            <option value="masculino">Masculino</option>
-                            <option value="nao-binario">Não-binário</option>
-                            <option value="outros">Outros</option>
+                        <select ngModel name="genero" class="browser-default">
+                            <option value="FEMININO">FEMININO</option>
+                            <option value="MASCULINO">MASCULINO</option>
+                            <option value="NAO_BINARIO">NÃO-BINÁRIO</option>
+                            <option value="OUTROS">OUTROS</option>
                         </select>
                     </div>
                 </div>
-
-                <div class="col s12 m12 l6" style="padding-right: 0;">
+                <div class="col s12 m2 l6" style="padding-right: 0;">
                     <div class="form-input">
-                        <label for="data-nascimento">Data de Nascimento</label>
-                        <input id="data-nascimento" class="form-input z-depth-2" type="text" required ngModel
-                            name="data-nascimento">
+                        <label for="dataNascimento">Data de Nascimento</label>
+                        <input id="dataNascimento" class="form-input z-depth-2" type="date" required ngModel
+                            name="dataNascimento">
                     </div>
                 </div>
-                <img src="../../assets/img/equipe/calendar.svg" class="responsive-img icone"
-                    style="margin-bottom: -40px;">
+
 
             </div>
             <div class="col s12 m6 l6">
@@ -55,8 +53,8 @@
                 <div class="col s12 m12 l6">
                     <div class="form-input">
                         <label for="nome">Código da empresa</label>
-                        <input id="codigo-empresa" class="form-input z-depth-2" type="text" disabled required ngModel
-                            name="codigo-empresa">
+                        <input id="codigoEmpresa" class="form-input z-depth-2" type="text" readonly required ngModel [(ngModel)] ="codigoEmpresa"  name="codigoEmpresa">
+                            
                     </div>
                 </div>
 
@@ -71,10 +69,10 @@
 
                 <div class="col s12 m6 l6">
                     <label for="perfil">Perfil</label>
-                    <select id="perfil" name="perfil" class="browser-default">
-                        <option value="gerente">Gerente</option>
-                        <option value="cozinheiro">Cozinheiro</option>
-                        <option value="vendedor">Vendedor</option>
+                    <select id="perfil" ngModel name="perfil" class="browser-default">
+                        <option value="GERENCIA">GERENCIA</option>
+                        <option value="COZINHA">COZINHA</option>
+                        <option value="VENDA">VENDA</option>
                     </select>
 
                 </div>
@@ -92,13 +90,22 @@
                         </label>
                       </div>
                 </div>
+
+                <div class="col s12 m12 l6">
+                    <div class="form-input">
+                        <label for="senha">Senha</label>
+                        <input id="senha" class="form-input z-depth-2" type="password" required ngModel name="senha">
+                    </div>
+                </div>
             </div>
+
+            
 
         </div>
 
         <div class="col s12 buttons">
             <a class="btn-cancelar btn-large voltar" (click)="cancelar()">CANCELAR</a>
-            <a class="btn-salvar btn-large right editar">SALVAR</a>
+            <button  class="btn-salvar btn-large right editar">SALVAR</button>
         </div>
     </form>
 </div>
