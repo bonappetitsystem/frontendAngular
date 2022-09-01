@@ -57,19 +57,30 @@ input.form-input {
   border: none;
 }
 
-.button-venda, .button-salvar, .button-cancelar{
-  background: #B2DFDB;
-  color: #000;
+.button-venda, .button-salvar{
+  background: #00796B;
+  color: #fff;
   height: 50px;
   width: 200px;
   text-transform: uppercase;
+  padding-top: 5px;
+  border-radius: 2px;
 }
+
 .button-cancelar{
-  background: #00796B;
+  height: 50px;
+  width: 200px;
+  text-transform: uppercase;
+  background: #ff5722;
   color: #fff;
-
+  padding-top: 5px;
+  border-radius: 2px;
 }
 
+.button-cancelar:hover{
+  background: #ffccbc;
+  color: #000;
+}
 
 label{
   font-size: 12px;
@@ -96,12 +107,8 @@ select{
 }
 
 .button-salvar:hover, .button-venda:hover{
-  background: #00796B;
-  color: #D9D9D9;
-}
-.button-cancelar:hover{
-  background: #B2DFDB;
-  color: #000;
+  background: #B2DFDB ;
+  color: black;
 }
 
 table{

@@ -41,8 +41,8 @@ import { ConsultarEstoqueComponent } from './estoque/consultar-estoque/consultar
 import { DashboardAdminComponent } from './master/dashboard-admin/dashboard-admin.component';
 import { SidebarAdminComponent } from './master/sidebar-admin/sidebar-admin.component';
 import { VisualizarClienteComponent } from './master/clientes/visualizar-cliente/visualizar-cliente.component';
-// import { TokenInterceptor } from './core/interceptors/token.interceptor';
-// import { NovoAccessTokenInterceptor } from './core/interceptors/novo-access-token.interceptor';
+import { TokenInterceptor } from './core/interceptors/token.interceptor';
+import { NovoAccessTokenInterceptor } from './core/interceptors/novo-access-token.interceptor';
 
 
 @NgModule({
@@ -92,8 +92,8 @@ import { VisualizarClienteComponent } from './master/clientes/visualizar-cliente
     HttpClientModule,
   ],
   providers: [
-    // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-    // { provide: HTTP_INTERCEPTORS, useClass: NovoAccessTokenInterceptor, multi: true }
+     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+     { provide: HTTP_INTERCEPTORS, useClass: NovoAccessTokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

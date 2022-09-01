@@ -53,17 +53,20 @@ h4{
     font-size: 18px;
     line-height: 30px;
 }
+
 .visualizar{
     float: left;
-    width: 100%;
+    width: 80%;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
 } 
+
 .btn {
     background: #00796B;
+    padding: 0px;
 }
 .button-voltar{
     height: 50px;
@@ -75,8 +78,10 @@ h4{
     margin-left: -10px;
     margin-top: 100px;
     font-family: 'Agrandir';
+    border-radius: 2px;
+    padding-top: 5px;
   }
   .button-voltar:hover{
-    background: #B2DFDB;
+    background: #ffccbc;
     color: #000;
   }

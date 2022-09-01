@@ -79,12 +79,14 @@ input::placeholder{
     box-shadow: none;
   }
   .button-salvar{
-    background: #FF5722;
+    background: #4DB6AC;
     color: #fff;
-    height: 58px;
+    height: 50px;
     width: 200px;
     cursor: pointer;
     border: none;
+    border-radius: 2px;
+    padding-top: 5px;
   }
   .button-salvar:hover{
     background:  #B2DFDB;
@@ -92,15 +94,17 @@ input::placeholder{
   }
 
   .button-voltar{
-    background: #4DB6AC;
+    background: #FF5722;
     color: #fff;
-    height: 58px;
+    height: 50px;
     width: 200px;
     cursor: pointer;
     border: none;
+    border-radius: 2px;
+    padding-top: 5px;
   }
   .button-voltar:hover{
-    background:  #B2DFDB;
+    background:  #ffccbc;
     color: #000;
   }
   [type="radio"].with-gap:checked+span:before,

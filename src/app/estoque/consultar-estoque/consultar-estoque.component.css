@@ -78,38 +78,20 @@ color: #000;
   border-bottom: none;
   box-shadow: none;
 }
-.button-salvar{
-  background: #FF5722;
-  color: #fff;
-  height: 58px;
-  width: 200px;
-  cursor: pointer;
-  border: none;
-}
-.button-salvar:hover{
-  background:  #B2DFDB;
-  color: #000;
-}
 
 .button-voltar{
-  background: #4DB6AC;
+  background: #FF5722;
   color: #fff;
-  height: 58px;
+  height: 50px;
   width: 200px;
-  cursor: pointer;
+  text-transform: uppercase;
+  padding-top: 5px;
   border: none;
+  border-radius: 2px;
 }
 .button-voltar:hover{
-  background:  #B2DFDB;
+  background:  #ffccbc;
   color: #000;
-}
-[type="radio"].with-gap:checked+span:before,
-[type="radio"].with-gap:checked+span:after{
-
-  border: 2px solid #750000;
-}
-[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after{
-  background-color: #750000;
 }
 
 @media screen and (max-width: 600px) {

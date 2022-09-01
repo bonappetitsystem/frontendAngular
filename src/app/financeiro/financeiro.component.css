@@ -86,6 +86,10 @@ h5 {
   margin-top: 60px;
 }
 
+.dataInicial{
+  margin-right: 128px;
+}
+
 
 /*Campo INPUT*/
 .form-input input.form-input {
@@ -106,15 +110,6 @@ input.form-input {
   outline: 0;
   border: none;
   appearance: textfield;
-}
-
-.calendar{
-  display:flex;
-  align-items: bottom;
-  margin-left: -65px;
-  margin-top: 23px;
-  height: 3rem;
-  width: 100%;
 }
 
 label{

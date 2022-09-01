@@ -123,10 +123,12 @@ textarea.materialize-textarea {
 }
 
 .button-voltar {
-    background: #B2DFDB;
-    color: #000;
+    background: #ff5722;
+    color: #fff;
     height: 50px;
     width: 150px;
+    padding-top: 5px;
+    border-radius: 2px;
 }
 
 .button-cancelar {
@@ -134,11 +136,13 @@ textarea.materialize-textarea {
     color: #D9D9D9;
     height: 50px;
     width: 200px;
+    padding-top: 5px;
+    border-radius: 2px;
 }
 
 .button-voltar:hover {
-    background: #00796B;
-    color: #D9D9D9;
+    background: #ffccbc;
+    color: #000;
 }
 
 .button-cancelar:hover {

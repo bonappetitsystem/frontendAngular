@@ -5,7 +5,7 @@
         <img class="responsive-img icone" src="../../../assets/img/estoque/lupa.svg">
         <h4>Movimentação de estoque</h4>
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <form autocomplete="off" (ngSubmit)="pesquisar()">
             <div class="col s10 m5 l5">
                 <div class="form-input">
@@ -18,14 +18,9 @@
                 <button class="waves-effect waves-light btn search bottom">
                     <i class="material-icons centered white-text btnSearch">search</i>
                   </button>
-                <!-- <a class="waves-effect waves-light btn search bottom"><i
-                        class="material-icons centered white-text">search</i></a> -->
             </div>
         </form>
-        <!-- <div class="botaoLote">
-            <a routerLink="/atualizar-estoque" class="waves-effect waves-light btn btnLote right">EDITAR CADASTRO</a>
-        </div> -->
-    </div>
+    </div> -->
 
     <form #f="ngForm" (ngSubmit)="cadastrarEstoque(f.value)">
 
@@ -96,16 +91,12 @@
                 </div>
             </div>
 
-            <div class="col s12 m2 l2" style="padding-right: 0;">
+            <div class="col s12 m2 l3" style="padding-right: 0;">
                 <div class="form-input">
                     <label for="validade">Data de validade</label>
                     <input id="validade" class="form-input z-depth-2" type="date" required ngModel
                         name="validade">
                 </div>
-            </div>
-
-            <div class="col s1 m1 l1">
-                <img src="../../assets/img/estoque/calendar.svg" class="responsive-img calendar">
             </div>
 
             <div class="col s12 m2 l3">

@@ -156,20 +156,21 @@ input.form-input {
 
 
 .btnNovo:hover {
-  background: #00796B;
-  color: #D9D9D9;
+  background: #B2DFDB;
+  color: black;
 }
 
 .btnVoltar:hover {
-  background: #B2DFDB;
+  background: #ffccbc;
   color: #000;
 }
 
 .btnNovo, .btnVoltar{
-  height: 40px;
-  width: 150px;
+  height: 50px;
+  width: 200px;
   text-transform: uppercase;
   border-radius: 2px;
+  padding-top: 5px;
 }
 
 .btnNovo {
@@ -179,8 +180,8 @@ input.form-input {
 }
 
 .btnVoltar {
-  background: #B2DFDB;
-  color: #7C7C7C; 
+  background: #FF5722;
+  color: #fff; 
 }
 
 .search {

@@ -1,4 +1,4 @@
-h6, h5 {
+h6, h5, .btn{
     font-family: 'Agrandir';
     margin-left: 5px;
 }
@@ -99,3 +99,18 @@ input.form-input {
 td, th{
     text-align: center;
 }
+
+.button-voltar{
+    background: #FF5722;
+    color: #fff;
+    height: 50px;
+    width: 200px;
+    text-transform: uppercase;
+    padding-top: 5px;
+    border: none;
+    border-radius: 2px;
+  }
+  .button-voltar:hover{
+    background:  #ffccbc;
+    color: #000;
+  }
