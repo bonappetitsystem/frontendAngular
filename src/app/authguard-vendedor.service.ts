@@ -10,7 +10,7 @@ export class AuthguardVendedorService implements CanActivate {
 
   constructor( private router: Router, private service: AuthService) { }
   canActivate(route: ActivatedRouteSnapshot) {
-    if(this.service.getDadosToken().perfil == 'VENDA' || this.service.getDadosToken().perfil == 'gerente'){
+    if(this.service.getDadosToken().perfil == 'VENDA' || this.service.getDadosToken().perfil == 'GERENCIA'){
       return true
   }
   return false
