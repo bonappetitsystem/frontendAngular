@@ -32,8 +32,10 @@
             </div>
             <div class="col s12 m5 l5 select">
                 <label for="nome-produto">Nome do produto</label>
-                <select id="id_produto" name="id_produto" class="browser-default" ngModel [(ngModel)]="produto.id_produto.descricao">
-                    <option value="outros">Outro</option>
+                <select id="id_produto" name="id_produto" class="browser-default" [(ngModel)]="produto.id_produto.descricao">
+                    <option value="outros">Outros</option>
+                    <option [defaultSelected]="" >{{produto.id_produto.descricao}}</option>
+                    <option *ngFor=" let produto of produtos" value="{{produto.id_produto}}">{{produto.descricao}}</option>
                 </select>
             </div>
 

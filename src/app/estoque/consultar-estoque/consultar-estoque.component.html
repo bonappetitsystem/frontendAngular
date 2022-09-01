@@ -4,18 +4,18 @@
     <h4>Consultar Estoque</h4>
 
     <div class="row">
-        <form autocomplete="off">
+        <form autocomplete="off" (ngSubmit)="filtrarEstoque()">
             <div class="col s10 m5 l5">
                 <div class="form-input">
                     <label>Buscar produto:</label>
-                    <input class="form-input z-depth-2" type="text" required  name="descricao">
+                    <input class="form-input z-depth-2" type="text" required [(ngModel)]="lote" name="descricao">
                 </div>
             </div>
 
             <div class="col s2 m1 l1">
-                <button class="waves-effect waves-light btn search bottom">
+                <button class="waves-effect waves-light btn search bottom" >
                     <i class="material-icons centered white-text btnSearch">search</i>
-                  </button>
+                </button>
                 
             </div>
         </form>
@@ -32,8 +32,8 @@
             <div class="alinhar">
                 <div class="linha-1">
                     <span class="span">{{produto.id_produto.descricao}}</span>
-                    <span>{{produto.lote}}</span>
-                    <span>{{produto.quantidade}}</span>
+                    <span>Lote: {{produto.lote}}</span>
+                    <span>Quantidade: {{produto.quantidade}}</span>
                 </div>
             </div>
         </div>

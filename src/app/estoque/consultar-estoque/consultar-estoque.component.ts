@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EstoqueFilter, EstoqueService } from '../../estoque.service';
 
+declare const M: any;
+
 @Component({
   selector: 'app-consultar-estoque',
   templateUrl: './consultar-estoque.component.html',
@@ -12,6 +14,7 @@ export class ConsultarEstoqueComponent implements OnInit {
   constructor(private service: EstoqueService) { }
 
   ngOnInit(): void {
+    M.AutoInit();
     this.consultarEstoque()
   }
   consultarEstoque(){
