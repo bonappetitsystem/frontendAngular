@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
   }
 
   hideMenu(){
-    if(this.router.url == '/dashboard'  && window.innerWidth > 600|| this.service.getDadosToken().perfil != 'GERENCIA' || this.service.getDadosToken().perfil != 'ADMIN'){
+    if(this.router.url == '/dashboard'  && window.innerWidth > 600|| this.service.getDadosToken().perfil != 'GERENCIA'){
       console.log(this.router.url)
       document.getElementById("menu")?.classList.toggle("hide");
     }

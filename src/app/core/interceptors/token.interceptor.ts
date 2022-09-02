@@ -17,6 +17,10 @@ export class TokenInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
       const accessToken = localStorage.getItem("token");
+      
+      if(request.url.includes('oauth/token')){
+        return next.handle(request);
+        }
 
 //Check if accesToken exists, else send request without bearer token
       if (accessToken) {

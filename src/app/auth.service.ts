@@ -11,14 +11,12 @@ export class AuthService {
 
   oauthTokenUrl = 'https://usuario-bonapt.herokuapp.com/oauth/token'
 
-
   logar(dados:any){
     const headers = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': 'Basic YW5ndWxhcjpAbmd1bEByMA=='//angular:@ngul@r0
     }) 
 
-      console.log(dados)
     const body = `username=${dados.cpf}&password=${dados.senha}&grant_type=password`;
     console.log(body)
     return this.http.post(this.oauthTokenUrl, body, {headers})

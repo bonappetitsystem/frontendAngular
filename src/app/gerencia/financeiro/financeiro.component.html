@@ -1,0 +1,127 @@
+<app-header></app-header>
+
+<main class="content">
+    <div class="row">
+
+        <div class="col s12 m12 l12">
+            <div class="col s12 m6 l5 right">
+
+                <div class="col s12 m6 l6">
+                    <div class="form-input">
+                        <label for="data-inicial">Data inicial</label>
+                        <input id="data-inicial" class="form-input z-depth-2 datepicker" type="date" required ngModel
+                            name="data-inicial">
+                    </div>
+    
+                </div>
+    
+    
+                <div class="col s12 m6 l6">
+                    <div class="form-input">
+                        <label for="data-final">Data final</label>
+                        <input id="data-final" class="form-input z-depth-2 datepicker" type="date" required ngModel
+                            name="data-final">
+                    </div>
+    
+                </div>
+            </div>
+
+          
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+
+            <div class="col s12 m4 l4">
+                <div class="col s6 m6 l6">
+                    <div class="card card-menu dados">
+                        <a routerLink="/contas-pagar">
+                            <div class="card-content content-menu">
+                                <img class="responsive-img icone" src="../../assets/img/financeiro/contas-pagar.svg">
+                                <h1>Contas a pagar</h1>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col s6 m6 l6">
+                    <div class="card card-menu">
+                        <a routerLink="/contas-receber">
+                            <div class="card-content content-menu">
+                                <img class="responsive-img icone" src="../../assets/img/financeiro/contas-receber.svg">
+                                <h1>Contas a Receber</h1>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col s6 m6 l6">
+                    <div class="card card-menu">
+                        <a routerLink="/conciliacao-bancaria">
+                            <div class="card-content content-menu">
+                                <img class="responsive-img icone" src="../../assets/img/financeiro/conciliacao.svg">
+                                <h1>Conciliação bancária</h1>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col s6 m6 l6">
+                    <div class="card card-menu">
+                        <a routerLink="/extrato-mensal">
+                            <div class="card-content content-menu">
+                                <img class="responsive-img icone" src="../../assets/img/financeiro/extrato.svg">
+                                <h1>Extrato mensal</h1>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m8 l8">
+         
+                    
+                        <div class="col s12 m6">
+                            <div class="card-panel dados saldoAtual">
+                                <h3>53.678,00</h3>
+                                <p class="indicador white-text">
+                                    SALDO ATUAL
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="col s12 m6">
+                            <div class="card-panel dados aPagar">
+                                <h3>4.589,76</h3>
+                                <p class="indicador white-text">
+                                    À PAGAR
+                                </p>
+                            </div>
+                        </div>
+                   
+                    
+                        <div class="col s12 m6">
+                            <div class="card-panel dados saldoReceber">
+                                <h3>36.853,22</h3>
+                                <p class="indicador white-text">
+                                    SALDO À RECEBER
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="col s12 m6">
+                            <div class="card-panel dados saldoProjetado">
+                                <h3 class="black-text">85.941,46</h3>
+                                <p class="indicador">
+                                    SALDO PROJETADO
+                                </p>
+                            </div>
+                        </div>
+                  
+    
+          
+            </div>
+        </div>
+
+ 
+    </div>
+
+</main>
