@@ -11,6 +11,14 @@ main{
   margin-top: 60px;
 }
 
+h4{
+  margin-left: 20px;
+}
+.titulo {
+  display: flex;
+  margin-bottom: 10px;
+}
+
 .form-input input.form-input {
   color: rgba(0, 0, 0, .87);
   background: #D9D9D9;

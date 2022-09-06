@@ -28,7 +28,6 @@ export class NovaVendaComponent implements OnInit {
   
   }
 
-
   valorTotalPorItem(valorUnitario: number, quantidade: number) {
     return valorUnitario * quantidade;
   }
