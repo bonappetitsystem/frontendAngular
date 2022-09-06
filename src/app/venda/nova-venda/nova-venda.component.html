@@ -12,7 +12,8 @@
             <div class="col s12 m3 l3 select">
     
                 <label>Tipo de Venda</label>
-                <select class="browser-default" [(ngModel)]="selectedValue" name="tipoVenda">
+                <select class="browser-default" name="tipoVenda">
+                    <!-- [(ngModel)]="selectedValue" -->
                     <option value="comum" selected>Comum</option>
                     <option value="encomenda">Encomenda</option>
                 </select>
@@ -21,25 +22,25 @@
             <div class="col s12 m5 l5">
                 <div class="form-input">
                     <label>Número/Nome do produto</label>
-                    <input class="form-input z-depth-2" type="text" required ngModel name="nomeProduto">
+                    <input class="form-input z-depth-2" type="text">
                 </div>
             </div>
             
             <div class="col s12 m4 l4">
                 <div class="form-input">
                     <label for="unidadeVolume">Quantidade</label>
-                    <input class="form-input z-depth-2" type="text" required ngModel name="quantidade">
+                    <input class="form-input z-depth-2" type="text" required ngModel name="quantidadeUnitaria">
                 </div>
             </div>
             <div class="form-input col s12 m4 l4">
                     <label>Valor unitário do produto</label>
                     <input class="form-input z-depth-2" type="text"
-                        required ngModel name="valorUnitario">
+                        required ngModel name="valor">
             </div>
             <div class="col m8 l8">
                 <div class="form-input">
                     <label>Nome do Vendedor</label>
-                    <input class="form-input z-depth-2" type="text" required>
+                    <input class="form-input z-depth-2" type="text" required name="vendedor">
                 </div>
             </div>
     
@@ -48,25 +49,25 @@
                 <div class="col m8 l8">
                     <div class="form-input">
                         <label>Nome do Cliente</label>
-                        <input class="form-input z-depth-2" type="text" required>
+                        <input class="form-input z-depth-2" type="text">
                     </div>
                 </div>
                 <div class="col s12 m4 l4">
                     <div class="form-input">
                         <label>Telefone</label>
-                        <input class="form-input z-depth-2" type="text" required>
+                        <input class="form-input z-depth-2" type="text">
                     </div>
                 </div>
                 <div class="col m3 l3">
                     <div class="form-input">
                         <label>Data de Entrega</label>
-                        <input class="form-input z-depth-2" type="text" required>
+                        <input class="form-input z-depth-2" type="text">
                     </div>
                 </div>
                 <div class="col m3 l3">
                     <div class="form-input">
                         <label>Horário da entrega</label>
-                        <input class="form-input z-depth-2" type="text" required>
+                        <input class="form-input z-depth-2" type="text">
                     </div>
                 </div>
             </div>

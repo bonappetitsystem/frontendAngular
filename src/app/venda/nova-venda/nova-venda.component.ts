@@ -47,9 +47,4 @@ export class NovaVendaComponent implements OnInit {
   //     }
   //   );
   // }
-
-
-
-
-
 }
