@@ -28,7 +28,6 @@ export class MovimentacaoEstoqueComponent implements OnInit {
 
   consultarprodutos() {
     this.service.getProdutos().subscribe(data => {
-      console.log(data)
       this.produtos = data
     })
   }
@@ -40,7 +39,6 @@ export class MovimentacaoEstoqueComponent implements OnInit {
     }
 
     this.service.filtrarProdutos(filtro).subscribe(data => {
-      console.log(data)
       this.produtos = data
     })
   }
