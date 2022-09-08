@@ -74,10 +74,6 @@
   .icon-menu{
     float: left;
     margin-right: 20px;
-  }
-  
-
-  .icon-menu{
     display: flex;
     align-items: center;
   }

@@ -74,16 +74,14 @@
   .icon-menu{
     float: left;
     margin-right: 20px;
+    display: flex;
+    align-items: center;
   }
   
   /* img, p{
     display: inline-block;
   } */
   
-  .icon-menu{
-    display: flex;
-    align-items: center;
-  }
 
 
 
