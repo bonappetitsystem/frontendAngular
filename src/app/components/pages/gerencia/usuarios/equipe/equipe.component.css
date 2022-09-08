@@ -201,10 +201,10 @@ h6, .tabs-personal, .btn{
     font-size: 250%;
   }
   
-  .tabs .indicator {
+  /* .tabs .indicator {
     background-color:#f6a20d;
   }
-  
+   */
   
   
   .tabs .tab a:focus.active, .tabs .tab a:focus {
@@ -215,15 +215,15 @@ h6, .tabs-personal, .btn{
   
   
   .tab .indicator{
-    background: color #00796b !important;
+    background: color #00796b ;
   }
   
   .white {
-     background-color: transparent !important; 
+     background-color: transparent; 
   }
   
   .tabs {
-    background-color: transparent !important;
+    background-color: transparent;
   }
   @media screen and (max-width: 600px) {
     
