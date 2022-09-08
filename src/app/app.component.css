@@ -1,25 +1,25 @@
 @font-face {
     font-family: 'Agrandir';
-    src: url('../../../bonappetit/src/app/fonts/Agrandir-TextBold.otf') format('opentype');
+    src: url('../app/fonts/Agrandir-TextBold.otf') format('opentype');
   }
   
   @font-face {
     font-family: 'Agrandir-Regular';
-    src: url('../../../bonappetit/src/app/fonts/Agrandir-Regular.otf') format('opentype');
+    src: url('../app/fonts/Agrandir-Regular.otf') format('opentype');
   }
   
   @font-face {
     font-family: 'Manrope';
-    src: url('../../../bonappetit/src/app/fonts/manrope-regular.otf') format('opentype');
+    src: url('../app/fonts/manrope-regular.otf') format('opentype');
   }
   
   @font-face {
     font-family: 'Manrope-SemiBold';
-    src: url('../../../bonappetit/src/app/fonts/manrope-semibold.otf') format('opentype');
+    src: url('../app/fonts/manrope-semibold.otf') format('opentype');
   }
   
   @font-face {
     font-family: 'Manrope-Bold';
-    src: url('../../../bonappetit/src/app/fonts/manrope-bold.otf') format('opentype');
+    src: url('../app/fonts/manrope-bold.otf') format('opentype');
   }
   
