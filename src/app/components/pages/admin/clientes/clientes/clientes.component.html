@@ -1,0 +1,74 @@
+<app-header></app-header>
+<main class="container">
+  <div class="containerBuscar">
+    <div class="titulo">
+      <img alt="icon" class="responsive-img icone" src="../../../../../../assets/icon-component/buscar_usuario.svg">
+      <h6>Buscar cliente</h6>
+    </div>
+    <form autocomplete="off" (ngSubmit)="pesquisar()">
+      <div class="row">
+
+        <div class="form-input col s12 m3 l3">
+          <label>CNPJ/Código de registro</label>
+          <input class="form-input z-depth-2" type="text" required [(ngModel)]="cnpj" name="cnpj">
+        </div>
+
+        <div class="col s10 m4 l4">
+
+          <div class="form-input">
+            <label>Razão Social</label>
+            <input class="form-input z-depth-2" type="text" required [(ngModel)]="razaoSocial" name="razaoSocial">
+          </div>
+
+        </div>
+
+        <div class="col s10 m4 l4">
+          <div class="form-input">
+            <label>Nome Fantasia:</label>
+            <input class="form-input z-depth-2" type="text" required ngModel [(ngModel)]="nomeFantasia" name="nomeFantasia">
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="col s2 m1 l1">
+          <button class="waves-effect waves-light btn search bottom">
+            <i class="material-icons centered white-text btnSearch">search</i>
+          </button>
+          
+        </div>
+      </div>
+    </form>
+  </div>
+  <div style="display: flex;" class="botao">
+    <a class="waves-effect waves-light btn btnVoltar right" (click)="back()">Voltar</a>
+    <a routerLink="/cadastro-cliente" class="waves-effect waves-light btn btnNovoCliente right">CADASTRAR NOVO
+      CLIENTE</a>
+  </div>
+  <h4>Usuários encontrados ({{empresa.length}})</h4>
+  <div  *ngFor="let emp of empresa" class="card card-meio">
+    <div class="content-texto">
+      <div class="alinhar">
+        <div class="empresa">
+          <img class="responsive-img iconePredio" src="./../../../../../../assets/icon-component/empresa.svg" alt="">
+        </div>
+        
+        <div>
+          <div class="linha-1">
+            <span class="span">{{emp.razaoSocial}}</span>
+            <span>Nome Fantasia: {{emp.nomeFantasia}}</span>
+            <span>CNPJ: {{emp.cnpj | cnpj}}</span>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        
+        <a class="editar btn">
+          <img class="responsive-img icone" src="./../../../../../../assets/icon-component/lapisEditar.svg" alt="icon" routerLink="">
+        </a>
+        <a class="visualizar btn">
+          <img class="responsive-img icone" src="./../../../../../../assets/icon-component/visualizar.svg" alt="icon"
+            routerLink="/visualizar-cliente">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>

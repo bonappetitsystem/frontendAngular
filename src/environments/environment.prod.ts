@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  USER_URL: 'https://usuario-bonapt.herokuapp.com/',
 };

@@ -1,0 +1,125 @@
+h6,h5, h4, .btn {
+
+    font-family: 'Agrandir';
+}
+label{
+    font-family: 'Manrope-SemiBold';
+
+}
+
+main{
+  margin-top: 60px;
+}
+
+.titulo {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-input input.form-input {
+  color: rgba(0, 0, 0, .87);
+  background: #D9D9D9;
+}
+
+.form-input{
+  margin-bottom: 20px;
+}
+
+input.form-input {
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding: 8px 24px 8px 24px;
+  transition: all .2s ease;
+  border-radius: 3px;
+  outline: 0;
+  border: none;
+  appearance: textfield;
+}
+
+.form-input input.form-input[type=text]:focus {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.button-content{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.buttons-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons{
+  height: 58px;
+  width: 324px;
+  cursor: pointer;
+  border: none;
+}
+
+.button-venda, .button-salvar{
+  background: #00796B;
+  color: #fff;
+  height: 50px;
+  width: 220px;
+  text-transform: uppercase;
+  padding-top: 5px;
+  border-radius: 2px;
+}
+
+.button-cancelar{
+  height: 50px;
+  width: 220px;
+  text-transform: uppercase;
+  background: #ff5722;
+  color: #fff;
+  padding-top: 5px;
+  border-radius: 2px;
+}
+
+.button-cancelar:hover{
+  background: #ffccbc;
+  color: #000;
+}
+
+label{
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+}
+
+.select{
+  margin-bottom: 20px;
+}
+select{
+  color: rgba(0, 0, 0, .87);
+  background: #D9D9D9;
+  border: none;
+}
+
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after{
+
+  border: 2px solid #000;
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after{
+  background-color: #000;
+}
+
+.button-salvar:hover, .button-venda:hover{
+  background: #B2DFDB ;
+  color: black;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 10px;
+  border: 1px solid #000;
+}
+

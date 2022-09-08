@@ -1,0 +1,60 @@
+<app-header></app-header>
+<main class="container">
+
+    <div class="titulo">
+        <img class="responsive-img icone" src="../../../assets/icon-menu/cozinha.svg">
+        <h4>
+            Receitas
+        </h4>
+    </div>
+
+    <div class="row">
+        <form autocomplete="off" (ngSubmit)="filtrarReceitas()">
+            <div class="col s6  form-input">
+                <div>
+                    <label for="receita">Buscar receitas</label>
+                    <input id="receita" class="form-input z-depth-2" type="text" required [(ngModel)]="titulo" name="nome">
+                </div>
+            </div>
+                <div class="col s1">
+                    <button class="waves-effect waves-light btn search"><i class="material-icons centered white-text">search</i></button>
+                </div>
+        </form>
+        <div class="col s5">
+            <a routerLink="/cadastrar-receita" class="waves-effect waves-light btn btnNovo search">Nova receita</a>
+        </div>
+    </div>
+
+    <div class="row">
+         <div class="col s12 m12 l12">
+            <div *ngFor="let receita of receitas" class="col s6 m3 l3">
+                <article class="card">
+                    <div class="card-image">
+                      <img src="../../../assets/fotos/comida/croissant.jpg">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title upper center-align">{{receita.titulo}}</span>
+                    </div>
+                    <div class="card-action">
+                        <a [routerLink]="['/visualizar-receita', receita.id]"
+                          class="waves-effect waves-light btn center-align btnTotal">Visualizar</a>
+                      </div>
+                  </article>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- <ul class="pagination">
+        <li class="waves-effect"><a href=""><i class="material-icons">chevron_left</i></a></li>
+        <li class="waves-effect active"><a href="">1</a></li>
+        <li class="waves-effect"><a href=""><i class="material-icons">chevron_right</i></a></li>   
+        
+    </ul> -->
+
+    <div class="row">
+        <div class="col s12 m12 l12 buttons-content">
+            <button (click)="back()" class="waves-effect waves-light btn button-voltar">Voltar</button>
+        </div>
+    </div>
+</main>

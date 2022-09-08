@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<div class="container">
+
+    <div class="row" style="margin-top: -80px; margin-bottom: 30px;">
+        <img alt="user" class="responsive-img icone left" src="../../../../../assets/icon-component/cadastro_funcionario.svg">
+        <h4 class=" col s12 m10 l10">Cadastro de administrador</h4>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="registerAdmin(f.value)">
+        <div class="row">
+            <div class="col s12 m8 l8  card">
+                <h4>Dados pessoais</h4>
+
+                <div class="col s12 m12 l12">
+                    <div class="form-input">
+                        <label for="nome">Nome</label>
+                        <input id="nome" class="form-input z-depth-2" type="text" required ngModel name="nome">
+                    </div>
+                </div>
+
+                <div class="col s12 m4 l4">
+                    <div class="form-input">
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" class="form-input z-depth-2" type="text" required ngModel name="cpf">
+                    </div>
+                </div>
+
+                <div class="col s12 m8 l8">
+                    <div class="form-input">
+                        <label for="email">email</label>
+                        <input id="email" class="form-input z-depth-2" required ngModel
+                            name="email">
+                    </div>
+                </div>
+                <div class="col s12 m2 l6">
+                    <div class="form-input">
+                        <label for="senha">senha</label>
+                        <input id="senha" class="form-input z-depth-2" type="password" required ngModel
+                            name="senha">
+                    </div>
+                </div>
+                <div class="col s12">
+                        <a routerLink="/admin" class="btn-cancelar btn-large voltar">CANCELAR</a>
+                        <button  class="btn-salvar btn-large right editar">SALVAR</button>
+                </div>
+
+
+            </div>
+           
+            
+
+        </div>
+
+        
+    </form>
+</div>

@@ -1,0 +1,217 @@
+<app-header></app-header>
+<main class="container">
+    <div class="titulo">
+        <img class="responsive-img icone" src="../../../assets/icon-component/carrinho.svg">
+        <h4>Nova venda</h4>
+    </div>
+
+    <form #form="ngForm" (ngSubmit)="addVenda(form.value)">
+
+        <div class="row">
+            <div class="col s12 m3 l3 select">
+    
+                <label>Tipo de Venda</label>
+                <select class="browser-default" [(ngModel)]="selectedValue" name="tipoDaVenda">
+                    <option value="COMUM" selected>Comum</option>
+                    <option value="ENCOMENDA">Encomenda</option>
+                </select>
+            </div>
+
+
+            <div class="col s12 m6 l6 select">
+    
+                <label>Nome do produto</label>
+                <select class="browser-default" name="nomeProduto" [(ngModel)]="idProduto" (change)="addQuantidade()" >
+                    <option *ngFor="let produto of produtos" [ngValue]="produto">{{produto.receitas.titulo}}</option>
+                </select>
+            </div>
+
+            <div class="col s12 m3 l3 select">
+    
+                <label>Quantidade</label>
+                <select class="browser-default" [(ngModel)]="quant" name="quant">
+                    <option *ngFor="let quant of quantidade; index as i" [ngValue]="quant">{{quant}}</option>
+                </select>
+            </div>
+
+            
+            <div class="form-input col s12 m3 l3">
+                    <label>Valor unitário do produto</label>
+                    <input class="form-input z-depth-2" type="text" readonly
+                        required  name="valorUnitario" ngModel="{{idProduto.preco | currency: 'BRL'}}">
+            </div>
+
+            <div class="form-input col s12 m3 l3">
+                <label>Valor total do Item</label>
+                <input class="form-input z-depth-2" type="text" readonly
+                    required name="valorTotal" ngModel="{{quant  * idProduto.preco}}" appOnlyNumbers>
+            </div>
+
+            <div class="col m8 l6">
+                <div class="form-input">
+                    <label>Nome do Vendedor</label>
+                    <input class="form-input z-depth-2" type="text" required name="vendedor" ngModel="{{vendedor.nome}}">
+                </div>
+            </div>
+
+            <div class="col s12 m3 l3 select">
+    
+                <label>Forma de pagamento</label>
+                <select class="browser-default" (change)="formatarValor()"  [(ngModel)]="selectPagamento" name="pagamento">
+                    <option value="CARTAO">Cartão</option>
+                    <option value="DINHEIRO">Dinheiro</option>
+                </select>
+            </div>
+
+            <div *ngIf="selectPagamento == 'DINHEIRO'">
+                <div class="form-input col s12 m3 l3">
+                    <label>Valor recebido</label>
+                    <input class="form-input z-depth-2" type="text"
+                        required name="valorRecebido" [ngModel]="money" (ngModelChange)="money = $event">
+                </div>
+
+                <div class="form-input col s12 m3 l3">
+                    <label>Valor do troco</label>
+                    <input class="form-input z-depth-2" type="text"
+                        required name="valorTroco" ngModel="{{money - (quant  * idProduto.preco ) | currency: 'BRL'}}">
+                
+                </div>
+
+            </div>
+
+
+    
+            <div *ngIf="selectedValue == 'ENCOMENDA'">
+    
+                <div class="col m6 l6">
+                    <div class="form-input">
+                        <label>Nome do Cliente</label>
+                        <input class="form-input z-depth-2" type="text" required>
+                    </div>
+                </div>
+                <div class="col s12 m3 l3">
+                    <div class="form-input">
+                        <label>Telefone</label>
+                        <input class="form-input z-depth-2" type="text" required>
+                    </div>
+                </div>
+                <div class="col m3 l3">
+                    <div class="form-input">
+                        <label>Data de Entrega</label>
+                        <input class="form-input z-depth-2" type="text" required>
+                    </div>
+                </div>
+                <div class="col m3 l3">
+                    <div class="form-input">
+                        <label>Horário da entrega</label>
+                        <input class="form-input z-depth-2" type="text" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12 l12 buttons-content"  *ngIf="selectedValue == 'ENCOMENDA'">
+                <button routerLink="/vendas" class="button-cancelar btn buttons">Cancelar ENCOMENDA</button>
+                <button type="submit" class="button-venda btn buttons">Aceitar ENCOMENDA</button>
+            </div>
+            <div class="col s12 m12 l12 buttons-content"  *ngIf="selectedValue == 'COMUM'">
+                <button routerLink="/vendas" class="button-cancelar btn buttons">Cancelar venda</button>
+                <button type="submit" class="button-venda btn buttons">Finalizar venda</button>
+            </div>
+        </div>
+    
+      
+    </form>
+
+    <!-- <div *ngIf="selectedValue == 'ENCOMENDA'">
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <label>
+                    <input class="with-gap" name="group3" type="radio" checked [(ngModel)]="selectedRadius"
+                        value="balcao" />
+                    <span>Retirada no balcão</span>
+                </label>
+    
+                <label>
+                    <input class="with-gap" name="group3" type="radio" checked [(ngModel)]="selectedRadius"
+                        value="delivery" />
+                    <span>Delivery</span>
+                </label>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="row">
+        <div *ngIf="selectedRadius == 'delivery' && selectedValue == 'ENCOMENDA'">
+
+            <div class="col m8 l8">
+                <div class="form-input">
+                    <label>Logradouro</label>
+                    <input class="form-input z-depth-2" type="text" required>
+                </div>
+            </div>
+            <div class="col m4 l4">
+                <div class="form-input">
+                    <label>Número</label>
+                    <input class="form-input z-depth-2" type="text" required>
+                </div>
+            </div>
+            <div class="col m8 l8">
+                <div class="form-input">
+                    <label>Bairro</label>
+                    <input class="form-input z-depth-2" type="text" required>
+                </div>
+            </div>
+            <div class="col m4 l4">
+                <div class="form-input">
+                    <label>CEP</label>
+                    <input class="form-input z-depth-2" type="text" required>
+                </div>
+            </div>
+            <div class="col m8 l8">
+                <div class="form-input">
+                    <label>Complemento</label>
+                    <input class="form-input z-depth-2" type="text"  required>
+                </div>
+            </div>
+            <div class="col m4 l4">
+                <div class="form-input">
+                    <label>Moradia</label>
+                    <select class="browser-default" [(ngModel)]="selectMoradia">
+                        <option value="residencial" selected>Residencial</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="apartamento">Apartamento</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+<!-- 
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h5>Demonstrativo da compra</h5>
+                <table class="striped responsive-table centered">
+                    <thead>
+                        <tr>
+                            <th>Item<br/>&nbsp;</th>
+                            <th>Quantidade<br/>&nbsp;</th>
+                            <th>Valor unitário<br/>&nbsp;</th>
+                            <th>Valor total<br/>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        
+                    </tbody>
+                </table>
+
+        </div>
+
+    </div> -->
+
+  
+
+</main>

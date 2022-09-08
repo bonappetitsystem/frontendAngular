@@ -3,98 +3,116 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { DashboardComponent } from './gerencia/dashboard/dashboard.component';
-import { AdicionarReceitasComponent } from './cozinha/adicionar-receitas/adicionar-receitas.component';
-import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { GerenciaComponent } from './components/pages/gerencia/gerencia/gerencia.component';
+import { AdminComponent } from './components/pages/admin/admin/admin.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { EquipeComponent } from './gerencia/usuarios/equipe/equipe.component';
-import { LoginComponent } from './login/login.component';
-import { RelatoriosComponent } from './gerencia/relatorios/relatorios.component';
-import { CadastrofuncionarioComponent } from './gerencia/usuarios/cadastrofuncionario/cadastrofuncionario.component';
-import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
-import { VisualizarReceitasComponent } from './cozinha/visualizar-receitas/visualizar-receitas.component';
-import { EditarReceitaComponent } from './cozinha/editar-receita/editar-receita.component';
-import { VendasComponent } from './venda/vendas/vendas.component';
-import { NovaVendaComponent } from './venda/nova-venda/nova-venda.component';
-import { AlterarVendaComponent } from './venda/alterar-venda/alterar-venda.component';
-import { VisualizarUsuarioComponent } from './gerencia/usuarios/visualizar-usuario/visualizar-usuario.component';
-import { CadastroEstoqueComponent } from './gerencia/estoque/cadastro-estoque/cadastro-estoque.component';
-import { EstoqueComponent } from './gerencia/estoque/estoque/estoque.component';
-import { MovimentacaoEstoqueComponent } from './gerencia/estoque/movimentacao-estoque/movimentacao-estoque.component';
-import { CancelarVendaComponent } from './venda/cancelar-venda/cancelar-venda.component';
-import { DashboardCozinhaComponent } from './cozinha/dashboard-cozinha/dashboard-cozinha.component';
-import { FinalizarVendaComponent } from './venda/finalizar-venda/finalizar-venda.component';
-import { GestaoDeClientesComponent } from './master/clientes/gestao-de-clientes/gestao-de-clientes.component';
-import { CadastroClienteComponent } from './master/clientes/cadastro-cliente/cadastro-cliente.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { EditarUsuarioComponent } from './gerencia/usuarios/editar-usuario/editar-usuario.component';
-import { FinanceiroComponent } from './gerencia/financeiro/financeiro.component';
-import { ExecucaoReceitaComponent } from './cozinha/execucao-receita/execucao-receita.component';
-import { PedidosPendentesComponent } from './cozinha/pedidos-pendentes/pedidos-pendentes.component';
-import { ButtonMenuComponent } from './button-menu/button-menu.component';
-import { PedidosAndamentoComponent } from './cozinha/pedidos-andamento/pedidos-andamento.component';
-import { PedidosFinalizadosComponent } from './cozinha/pedidos-finalizados/pedidos-finalizados.component';
-import { AtualizarEstoqueComponent } from './gerencia/estoque/atualizar-estoque/atualizar-estoque.component';
-import { ConsultarEstoqueComponent } from './gerencia/estoque/consultar-estoque/consultar-estoque.component';
-import { DashboardAdminComponent } from './master/dashboard-admin/dashboard-admin.component';
-import { SidebarAdminComponent } from './master/sidebar-admin/sidebar-admin.component';
-import { VisualizarClienteComponent } from './master/clientes/visualizar-cliente/visualizar-cliente.component';
+import { FormsModule } from '@angular/forms';
+import { SidebarAdminComponent } from './components/sidebar-admin/sidebar-admin.component';
+import { CadastroAdminComponent } from './components/pages/admin/cadastro-admin/cadastro-admin.component';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { NovoAccessTokenInterceptor } from './core/interceptors/novo-access-token.interceptor';
-import { ReceitasComponent } from './cozinha/receitas/receitas.component';
+import { GestaoDeClientesComponent } from './components/pages/admin/clientes/clientes/clientes.component';
+import { CadastroClienteComponent } from './components/pages/admin/clientes/cadastro-cliente/cadastro-cliente.component';
+import { PhonePipe } from './core/pipes/phone.pipe';
+import { CpfPipe } from './core/pipes/cpf.pipe';
+import { OnlyNumbersDirective } from './core/directive/only-numbers.directive';
+import { CadastroRepresentanteComponent } from './components/pages/admin/clientes/cadastro-representante/cadastro-representante.component';
+import { CnpjPipe } from './core/pipes/cnpj.pipe';
+import { VendasComponent } from './components/pages/vendas/vendas/vendas.component';
+import { NovaVendaComponent } from './components/pages/vendas/nova-venda/nova-venda.component';
+import { VisualizarVendaComponent } from './components/pages/vendas/visualizar-venda/visualizar-venda.component';
+import { CancelarVendaComponent } from './components/pages/vendas/cancelar-venda/cancelar-venda.component';
+import { FinalizarVendaComponent } from './components/pages/vendas/finalizar-venda/finalizar-venda.component';
+import { CozinhaComponent } from './components/pages/cozinha/cozinha/cozinha.component';
+import { PedidosPendentesComponent } from './components/pages/cozinha/pedidos-pendentes/pedidos-pendentes.component';
+import { PedidosAndamentoComponent } from './components/pages/cozinha/pedidos-andamento/pedidos-andamento.component';
+import { PedidosFinalizadosComponent } from './components/pages/cozinha/pedidos-finalizados/pedidos-finalizados.component';
+import { ReceitasComponent } from './components/pages/cozinha/receitas/receitas.component';
+import { ExecucaoReceitaComponent } from './components/pages/cozinha/execucao-receita/execucao-receita.component';
+import { VisualizarReceitaComponent } from './components/pages/cozinha/visualizar-receita/visualizar-receita.component';
+import { EditarReceitaComponent } from './components/pages/cozinha/editar-receita/editar-receita.component';
+import { ButtonMenuComponent } from './components/button-menu/button-menu.component';
+import { EquipeComponent } from './components/pages/gerencia/usuarios/equipe/equipe.component';
+import { VisualizarUsuarioComponent } from './components/pages/gerencia/usuarios/visualizar-usuario/visualizar-usuario.component';
+import { EditarUsuarioComponent } from './components/pages/gerencia/usuarios/editar-usuario/editar-usuario.component';
+import { CadastrarUsuarioComponent } from './components/pages/gerencia/usuarios/cadastrar-usuario/cadastrar-usuario.component';
+import { EstoqueComponent } from './components/pages/gerencia/estoque/estoque/estoque.component';
+import { CadastroEstoqueComponent } from './components/pages/gerencia/estoque/cadastro-estoque/cadastro-estoque.component';
+import { MovimentacaoEstoqueComponent } from './components/pages/gerencia/estoque/movimentacao-estoque/movimentacao-estoque.component';
+import { ConsultarEstoqueComponent } from './components/pages/gerencia/estoque/consultar-estoque/consultar-estoque.component';
+import { CadastrarReceitaComponent } from './components/pages/cozinha/cadastrar-receita/cadastrar-receita.component';
+import { MovimentarMateriaPrimaComponent } from './components/pages/gerencia/estoque/movimentar-materia-prima/movimentar-materia-prima.component';
+import { MovimentarProdutosAcabadosComponent } from './components/pages/gerencia/estoque/movimentar-produtos-acabados/movimentar-produtos-acabados.component';
+import { ConsultarMateriaPrimaComponent } from './components/pages/gerencia/estoque/consultar-materia-prima/consultar-materia-prima.component';
+import { ConsultarProdutosAcabadosComponent } from './components/pages/gerencia/estoque/consultar-produtos-acabados/consultar-produtos-acabados.component';
+import { FinanceiroComponent } from './components/pages/gerencia/financeiro/financeiro.component';
+import { RelatoriosComponent } from './components/pages/gerencia/relatorios/relatorios.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DashboardComponent,
-    ReceitasComponent,
-    AdicionarReceitasComponent,
-    EquipeComponent,
     LoginComponent,
-    RelatoriosComponent,
-    CadastrofuncionarioComponent,
-    AlterarSenhaComponent,
-    VisualizarReceitasComponent,
-    EditarReceitaComponent,
-    VendasComponent,
-    NovaVendaComponent,
-    AlterarVendaComponent,
-    VisualizarUsuarioComponent,
-    CadastroEstoqueComponent,
-    EstoqueComponent,
-    MovimentacaoEstoqueComponent,
-    CancelarVendaComponent,
-    DashboardCozinhaComponent,
-    FinalizarVendaComponent,
+    GerenciaComponent,
+    AdminComponent,
+    SidebarComponent,
+    SidebarAdminComponent,
+    CadastroAdminComponent,
     GestaoDeClientesComponent,
     CadastroClienteComponent,
-    SidebarComponent,
-    EditarUsuarioComponent,
-    FinanceiroComponent,
-    ExecucaoReceitaComponent,
+    PhonePipe,
+    CpfPipe,
+    OnlyNumbersDirective,
+    CadastroRepresentanteComponent,
+    CnpjPipe,
+    VendasComponent,
+    NovaVendaComponent,
+    VisualizarVendaComponent,
+    CancelarVendaComponent,
+    FinalizarVendaComponent,
+    CozinhaComponent,
     PedidosPendentesComponent,
-    ButtonMenuComponent,
     PedidosAndamentoComponent,
-    AtualizarEstoqueComponent,
-    ConsultarEstoqueComponent,
     PedidosFinalizadosComponent,
-    DashboardAdminComponent,
-    SidebarAdminComponent,
-    VisualizarClienteComponent
+    ReceitasComponent,
+    ExecucaoReceitaComponent,
+    VisualizarReceitaComponent,
+    EditarReceitaComponent,
+    ButtonMenuComponent,
+    EquipeComponent,
+    VisualizarUsuarioComponent,
+    EditarUsuarioComponent,
+    CadastrarUsuarioComponent,
+    EstoqueComponent,
+    CadastroEstoqueComponent,
+    MovimentacaoEstoqueComponent,
+    ConsultarEstoqueComponent,
+    CadastrarReceitaComponent,
+    MovimentarMateriaPrimaComponent,
+    MovimentarProdutosAcabadosComponent,
+    ConsultarMateriaPrimaComponent,
+    ConsultarProdutosAcabadosComponent,
+    FinanceiroComponent,
+    RelatoriosComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [
-     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-     { provide: HTTP_INTERCEPTORS, useClass: NovoAccessTokenInterceptor, multi: true }
-  ],
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: NovoAccessTokenInterceptor, multi: true },
+
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
