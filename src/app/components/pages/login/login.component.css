@@ -1,0 +1,197 @@
+main {
+    font-family: 'Agrandir', sans-serif;
+  }
+  
+  .wrapper {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  
+  .verde-escuro {
+    background-color: #00796B;
+  }
+  
+  .verde-claro {
+    background-color: #B2DFDB;
+  }
+  
+  .content-1 {
+    height: 100vh;
+    /* width: 60%; */
+    /* float: left; */
+    background-color: #00796B;
+  }
+
+  /* posicionar visibility button password*/
+  #visibility {
+    /* position: absolute; */
+    margin-left: -30px;
+    
+    transform: translateY(25%);
+    cursor: pointer;
+  }
+  
+  
+  .logotipo, .content-wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  
+  }
+  
+  
+  img {
+    display: block;
+    margin: 0px auto;
+    width: 40%;
+  }
+  
+  .content-2 {
+    height: 100vh;
+    background-color: #B2DFDB;
+  }
+  
+  .content-wrapper {
+    padding: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+  
+  }
+  
+  /* esqueceu sua senha */
+  .esqueceu-senha {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: start;
+  
+  }
+  
+  /* CSS - INPUTS */
+  .form-input input.form-input {
+    color: rgba(0, 0, 0, .87);
+    background: #fff;
+  }
+  
+  .form-input {
+    margin-bottom: 20px;
+  }
+  
+  input.form-input {
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 8px 24px 8px 24px;
+    transition: all .2s ease;
+    border-radius: 3px;
+    outline: 0;
+    border: none;
+    appearance: textfield;
+  }
+  
+  .form-input input.form-input[type=text]:focus {
+    border-bottom: none;
+    box-shadow: none;
+  }
+  
+  label,
+  .esqueceu-senha>a {
+    color: #000;
+    font-size: 12px;
+    font-family: 'Agrandir-Regular';
+  }
+  
+  .btn {
+    width: 130px;
+    background-color: #00796B;
+  }
+  
+  /* Centralizar span login dentro da div*/
+  .login {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  
+  
+  span {
+    font-family: 'Agrandir';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 83px;
+    color: #00796B;
+  }
+  
+  
+  
+  /* FIM - CSS INPUT */
+  
+  /* CSS - BUTTONS */
+  .form-button {
+    background: #00796B;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 8px 24px 8px 24px;
+    transition: all .2s ease;
+    border-radius: 3px;
+    outline: 0;
+    border: none;
+    appearance: button;
+  }
+  
+  .form-button:hover {
+    background: #4DB6AC;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 8px 24px 8px 24px;
+    transition: all .2s ease;
+    border-radius: 3px;
+    outline: 0;
+    border: none;
+    appearance: button;
+  }
+  
+  
+  
+  
+  /* FIM - CSS BUTTONS */
+  
+  
+  /* Responsivo para tablets e celular */
+  @media (max-width: 600px) {
+    .content-1 {
+        width: 100%;
+    }
+    .content-2 {
+        width: 100%;
+    }
+    .content-wrapper {
+        width: 100%;
+        padding: 40px;
+    }
+    .logotipo {
+        width: 100%;
+    }
+    .login {
+        width: 100%;
+    }
+    .form-input {
+        width: 100%;
+    }
+    .form-button {
+        width: 100%;
+    }
+  }
+  
+  

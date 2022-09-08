@@ -1,0 +1,63 @@
+<app-header></app-header>
+<main class="container">
+
+    <div class="titulo">
+        <img class="responsive-img icone" src="../../../../../assets/icon-component/Group.svg">
+        <h4>
+            Finalizar venda
+        </h4>
+    </div>
+
+    <label>Código da venda</label>
+    <div class="row codigoDaVenda">
+            <div class="col s4  form-input">
+                <input class="form-input z-depth-2" type="text" required ngModel name="codigoDaVenda">
+            </div>
+            <div class="col s1">
+                <a class="waves-effect waves-light btn search"><i class="material-icons centered white-text">search</i></a>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h5>Dados da venda</h5>
+
+            <div class="">
+                <table class="striped responsive-table centered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Cod. Venda</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Nome do vendedor</th>
+                            <th>Nome do cliente</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody class="descricaoTable">
+                        <tr>
+                            <td>1</td>
+                            <td>06948472</td>
+                            <td>07/08/2022</td>
+                            <td>13:57</td>
+                            <td>Sheldon Lee Cooper</td>
+                            <td>Sheldon Lee</td>
+                            <td>
+                                <a class="btn bi_check">
+                                    <img src="../../../../../assets/icon-component/bi_check-all.svg" alt="bi check all">
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l12 buttons-content">
+            <button routerLink="" class="waves-effect waves-light btn button-voltar" (click)="back()">Voltar</button>
+        </div>
+    </div>
+</main>

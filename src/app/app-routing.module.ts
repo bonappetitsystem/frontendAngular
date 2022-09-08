@@ -1,81 +1,82 @@
-import { AdicionarReceitasComponent } from './cozinha/adicionar-receitas/adicionar-receitas.component';
-import { DashboardComponent } from './gerencia/dashboard/dashboard.component';
-import { Component, NgModule } from '@angular/core';
-import { EquipeComponent } from './gerencia/usuarios/equipe/equipe.component';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { RelatoriosComponent } from './gerencia/relatorios/relatorios.component';
-import { AuthguardGerenteService } from './gerencia/authguard-gerente.service';
-import { CadastrofuncionarioComponent } from './gerencia/usuarios/cadastrofuncionario/cadastrofuncionario.component';
-import { AlterarSenhaComponent } from './alterar-senha/alterar-senha.component';
-import { VisualizarReceitasComponent } from './cozinha/visualizar-receitas/visualizar-receitas.component';
-import { EditarReceitaComponent } from './cozinha/editar-receita/editar-receita.component';
-import { VendasComponent } from './venda/vendas/vendas.component';
-import { NovaVendaComponent } from './venda/nova-venda/nova-venda.component';
-import { AuthguardCozinheiroService } from './cozinha/authguard-cozinheiro.service';
-import { AuthguardVendedorService } from './venda/authguard-vendedor.service';
-import { VisualizarUsuarioComponent } from './gerencia/usuarios/visualizar-usuario/visualizar-usuario.component';
-import { CadastroEstoqueComponent } from './gerencia/estoque/cadastro-estoque/cadastro-estoque.component';
-import { EstoqueComponent } from './gerencia/estoque/estoque/estoque.component';
-import { MovimentacaoEstoqueComponent } from './gerencia/estoque/movimentacao-estoque/movimentacao-estoque.component';
-import { CancelarVendaComponent } from './venda/cancelar-venda/cancelar-venda.component';
-import { DashboardCozinhaComponent } from './cozinha/dashboard-cozinha/dashboard-cozinha.component';
-import { FinalizarVendaComponent } from './venda/finalizar-venda/finalizar-venda.component';
-import { GestaoDeClientesComponent } from './master/clientes/gestao-de-clientes/gestao-de-clientes.component';
-import { CadastroClienteComponent } from './master/clientes/cadastro-cliente/cadastro-cliente.component';
-import { FinanceiroComponent } from './gerencia/financeiro/financeiro.component';
-import { EditarUsuarioComponent } from './gerencia/usuarios/editar-usuario/editar-usuario.component';
-import { ExecucaoReceitaComponent } from './cozinha/execucao-receita/execucao-receita.component';
-import { PedidosPendentesComponent } from './cozinha/pedidos-pendentes/pedidos-pendentes.component';
-import { AlterarVendaComponent } from './venda/alterar-venda/alterar-venda.component';
-import { PedidosAndamentoComponent } from './cozinha/pedidos-andamento/pedidos-andamento.component';
-import { PedidosFinalizadosComponent } from './cozinha/pedidos-finalizados/pedidos-finalizados.component';
-import { AtualizarEstoqueComponent } from './gerencia/estoque/atualizar-estoque/atualizar-estoque.component';
-import { ConsultarEstoqueComponent } from './gerencia/estoque/consultar-estoque/consultar-estoque.component';
-import { DashboardAdminComponent } from './master/dashboard-admin/dashboard-admin.component';
-import { AuthguardAdminService } from './master/authguard-admin.service';
-import { VisualizarClienteComponent } from './master/clientes/visualizar-cliente/visualizar-cliente.component';
-import { ReceitasComponent } from './cozinha/receitas/receitas.component';
-
-
+import { AdminComponent } from './components/pages/admin/admin/admin.component';
+import { CadastroAdminComponent } from './components/pages/admin/cadastro-admin/cadastro-admin.component';
+import { CadastroClienteComponent } from './components/pages/admin/clientes/cadastro-cliente/cadastro-cliente.component';
+import { CadastroRepresentanteComponent } from './components/pages/admin/clientes/cadastro-representante/cadastro-representante.component';
+import { GestaoDeClientesComponent } from './components/pages/admin/clientes/clientes/clientes.component';
+import { CozinhaComponent } from './components/pages/cozinha/cozinha/cozinha.component';
+import { EditarReceitaComponent } from './components/pages/cozinha/editar-receita/editar-receita.component';
+import { ExecucaoReceitaComponent } from './components/pages/cozinha/execucao-receita/execucao-receita.component';
+import { PedidosAndamentoComponent } from './components/pages/cozinha/pedidos-andamento/pedidos-andamento.component';
+import { PedidosFinalizadosComponent } from './components/pages/cozinha/pedidos-finalizados/pedidos-finalizados.component';
+import { PedidosPendentesComponent } from './components/pages/cozinha/pedidos-pendentes/pedidos-pendentes.component';
+import { ReceitasComponent } from './components/pages/cozinha/receitas/receitas.component';
+import { VisualizarReceitaComponent } from './components/pages/cozinha/visualizar-receita/visualizar-receita.component';
+import { CadastrarUsuarioComponent } from './components/pages/gerencia/usuarios/cadastrar-usuario/cadastrar-usuario.component';
+import { EditarUsuarioComponent } from './components/pages/gerencia/usuarios/editar-usuario/editar-usuario.component';
+import { EquipeComponent } from './components/pages/gerencia/usuarios/equipe/equipe.component';
+import { GerenciaComponent } from './components/pages/gerencia/gerencia/gerencia.component';
+import { VisualizarUsuarioComponent } from './components/pages/gerencia/usuarios/visualizar-usuario/visualizar-usuario.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { CancelarVendaComponent } from './components/pages/vendas/cancelar-venda/cancelar-venda.component';
+import { FinalizarVendaComponent } from './components/pages/vendas/finalizar-venda/finalizar-venda.component';
+import { NovaVendaComponent } from './components/pages/vendas/nova-venda/nova-venda.component';
+import { VendasComponent } from './components/pages/vendas/vendas/vendas.component';
+import { VisualizarVendaComponent } from './components/pages/vendas/visualizar-venda/visualizar-venda.component';
+import { RoleGuard } from './core/guards/role-guard.service';
+import { EstoqueComponent } from './components/pages/gerencia/estoque/estoque/estoque.component';
+import { CadastroEstoqueComponent } from './components/pages/gerencia/estoque/cadastro-estoque/cadastro-estoque.component';
+import { MovimentacaoEstoqueComponent } from './components/pages/gerencia/estoque/movimentacao-estoque/movimentacao-estoque.component';
+import { ConsultarEstoqueComponent } from './components/pages/gerencia/estoque/consultar-estoque/consultar-estoque.component';
+import { CadastrarReceitaComponent } from './components/pages/cozinha/cadastrar-receita/cadastrar-receita.component';
+import { MovimentarMateriaPrimaComponent } from './components/pages/gerencia/estoque/movimentar-materia-prima/movimentar-materia-prima.component';
+import { MovimentarProdutosAcabadosComponent } from './components/pages/gerencia/estoque/movimentar-produtos-acabados/movimentar-produtos-acabados.component';
+import { ConsultarMateriaPrimaComponent } from './components/pages/gerencia/estoque/consultar-materia-prima/consultar-materia-prima.component';
+import { ConsultarProdutosAcabadosComponent } from './components/pages/gerencia/estoque/consultar-produtos-acabados/consultar-produtos-acabados.component';
+import { FinanceiroComponent } from './components/pages/gerencia/financeiro/financeiro.component';
+import { RelatoriosComponent } from './components/pages/gerencia/relatorios/relatorios.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/login", pathMatch: "full" },
-  { path: 'login', component: LoginComponent },
-  { path: 'vendas', canActivate: [AuthguardVendedorService], component: VendasComponent },
-  { path: 'dashboard', canActivate: [AuthguardGerenteService], component: DashboardComponent },
-  { path: 'dashboard-cozinha', canActivate: [AuthguardCozinheiroService], component: DashboardCozinhaComponent },
-  { path: 'receitas', canActivate: [AuthguardCozinheiroService], component: ReceitasComponent },
-  { path: 'adicionar-receitas', component: AdicionarReceitasComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'equipe', component: EquipeComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'relatorios', component: RelatoriosComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'cadastro-funcionario', component: CadastrofuncionarioComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'alterar-senha', component: AlterarSenhaComponent },
-  { path: 'editar-receita/:idreceita', component: EditarReceitaComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'visualizar-receitas/:idreceita', component: VisualizarReceitasComponent, canActivate: [AuthguardCozinheiroService] },
-  { path: 'nova-venda', component: NovaVendaComponent, canActivate: [AuthguardVendedorService] },
-  { path: 'visualizar-usuario/:idusuario', component: VisualizarUsuarioComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'estoque', component: EstoqueComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'movimentacao-estoque', component: MovimentacaoEstoqueComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'cadastro-estoque', component: CadastroEstoqueComponent, canActivate: [AuthguardGerenteService] },
-  { path: 'cancelar-venda', component: CancelarVendaComponent,canActivate: [AuthguardVendedorService] },
-  { path: 'finalizar-venda', component: FinalizarVendaComponent,canActivate: [AuthguardVendedorService] },
-  { path: 'gestao-de-clientes', component: GestaoDeClientesComponent,canActivate: [AuthguardAdminService] },
-  { path: 'cadastro-cliente', component:CadastroClienteComponent,canActivate: [AuthguardAdminService] },
-  {path: 'financeiro', component: FinanceiroComponent, canActivate: [AuthguardGerenteService] },
-  {path:'editar-usuario/:idusuario', component:EditarUsuarioComponent, canActivate: [AuthguardGerenteService]},
-  {path: 'execucao-receita', component: ExecucaoReceitaComponent, canActivate: [AuthguardCozinheiroService] },
-  {path: 'pedidos-pendentes', component: PedidosPendentesComponent, canActivate: [AuthguardCozinheiroService] },
-  {path: 'pedidos-andamento', component: PedidosAndamentoComponent, canActivate: [AuthguardCozinheiroService]},
-  {path: 'pedidos-finalizados', component: PedidosFinalizadosComponent, canActivate: [AuthguardCozinheiroService]},
-  {path: 'atualizar-estoque', component : AtualizarEstoqueComponent, canActivate:[AuthguardGerenteService]},
-  {path: 'consultar-estoque', component: ConsultarEstoqueComponent, canActivate:[AuthguardGerenteService]},
-  {path: 'alterar-venda', component: AlterarVendaComponent, canActivate: [AuthguardVendedorService] },
-  {path: 'atualizar-estoque/:idestoque', component : AtualizarEstoqueComponent, canActivate:[AuthguardGerenteService]},
-  {path: 'consultar-estoque', component: ConsultarEstoqueComponent, canActivate:[AuthguardGerenteService]},
-  {path: 'admin', component:DashboardAdminComponent, canActivate: [AuthguardAdminService] },
-  {path:'visualizar-cliente', component:VisualizarClienteComponent, canActivate: [AuthguardAdminService] },
-  {}
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path:'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [RoleGuard], data: {expectedRole: 'ADMIN'} },
+  { path: 'cadastro-admin', component: CadastroAdminComponent, canActivate: [RoleGuard], data: {expectedRole: 'ADMIN'} },
+  { path: 'clientes', component: GestaoDeClientesComponent, canActivate: [RoleGuard], data: {expectedRole: 'ADMIN'} },
+  { path: 'cadastro-cliente', component: CadastroClienteComponent, canActivate: [RoleGuard], data: {expectedRole: 'ADMIN'} },
+  { path: 'cadastro-representante', component: CadastroRepresentanteComponent, canActivate: [RoleGuard], data: {expectedRole: 'ADMIN'} },
+  { path: 'gerencia', component: GerenciaComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'equipe', component: EquipeComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'visualizar-usuario/:idusuario', component: VisualizarUsuarioComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'editar-usuario/:idusuario', component: EditarUsuarioComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'cadastrar-usuario', component: CadastrarUsuarioComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'estoque', component: EstoqueComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'cadastrar-estoque', component: CadastroEstoqueComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'movimentar-materia-prima', component: MovimentarMateriaPrimaComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'movimentar-produtos-acabados', component: MovimentarProdutosAcabadosComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'movimentar-estoque', component: MovimentacaoEstoqueComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'consultar-estoque', component: ConsultarEstoqueComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'consultar-materia-prima', component: ConsultarMateriaPrimaComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'consultar-produtos-acabados', component: ConsultarProdutosAcabadosComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'financeiro', component: FinanceiroComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'relatorios', component: RelatoriosComponent, canActivate: [RoleGuard], data: {expectedRole: 'GERENCIA'} },
+  { path: 'vendas', component: VendasComponent, canActivate: [RoleGuard], data: {expectedRole: ['VENDA', 'GERENCIA']} },
+  { path: 'nova-venda', component: NovaVendaComponent, canActivate: [RoleGuard], data: {expectedRole: ['VENDA', 'GERENCIA']}},
+  { path: 'visualizar-vendas', component: VisualizarVendaComponent, canActivate: [RoleGuard], data: {expectedRole: ['VENDA','GERENCIA']} },
+  { path: 'cancelar-venda', component: CancelarVendaComponent, canActivate: [RoleGuard], data: {expectedRole: ['VENDA','GERENCIA']} },
+  { path: 'finalizar-venda', component: FinalizarVendaComponent, canActivate: [RoleGuard], data: {expectedRole: ['VENDA','GERENCIA']} },
+  { path: 'cozinha', component: CozinhaComponent, canActivate: [RoleGuard], data: {expectedRole: ['COZINHA', 'GERENCIA']} },
+  { path: 'pedidos-pendentes', component: PedidosPendentesComponent, canActivate: [RoleGuard], data: {expectedRole: ['COZINHA', 'GERENCIA']} },
+  { path: 'pedidos-finalizados', component: PedidosFinalizadosComponent, canActivate: [RoleGuard], data: {expectedRole: ['COZINHA', 'GERENCIA']} },
+  { path: 'pedidos-andamento', component: PedidosAndamentoComponent, canActivate: [RoleGuard], data: {expectedRole: ['COZINHA', 'GERENCIA']} },
+  { path: 'receitas', component: ReceitasComponent, canActivate: [RoleGuard], data: {expectedRole: ['COZINHA', 'GERENCIA']} },
+  { path: 'execucao-receita', component: ExecucaoReceitaComponent, canActivate: [RoleGuard], data: {expectedRole: ['COZINHA', 'GERENCIA']} },
+  { path:'visualizar-receita/:idreceita', component: VisualizarReceitaComponent, canActivate: [RoleGuard], data: {expectedRole: ['COZINHA', 'GERENCIA']} },
+  { path: 'editar-receita/:idreceita', component: EditarReceitaComponent, canActivate: [RoleGuard], data: {expectedRole: ['COZINHA', 'GERENCIA']} },
+  { path: 'cadastrar-receita', component: CadastrarReceitaComponent, canActivate: [RoleGuard], data: {expectedRole: ['COZINHA', 'GERENCIA']} },
+
+
+
 ];
 
 @NgModule({

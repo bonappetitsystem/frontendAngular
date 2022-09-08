@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<main class="container">
+    <div class="row">
+        <div class="col s12 m12 l12">
+
+            <div class="card banner-func">
+
+                <div class="img">
+                    <img src="../../assets/fotos/pessoas.webp" id="foto">
+
+                </div>
+                <div class="text-banner">
+                    <h4>{{ usuario.nome }}</h4>
+                    <a routerLink="/cadastro-funcionario" class="waves-effect waves-light btn right"
+                        (click)="deletarUsuario()"><img src="../../assets/icon-component/delete.svg" id="delete"></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6 l6">
+
+            <div class="card dados-pessoais">
+                <h5>Dados Pessoais</h5>
+                <div>
+                    <p><b>Nome: </b> {{ usuario.nome }}</p>
+                    <p><b>CPF: </b> {{ usuario.cpf | cpf }}</p>
+                    <p><b>Data de Nascimento: </b> {{ usuario.dataNascimento  | date:'dd/MM/yyyy'}}</p>
+                    <p><b>Gênero: </b> {{ usuario.genero }}</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col s12 m6 l6">
+
+            <div class="card dados-funcionais">
+                <h5>Dados Funcionais</h5>
+                <div>
+                    <p><b>Usuário: </b> {{ usuario.cpf | cpf}}</p>
+                    <p><b>Perfil: </b> {{ usuario.perfil }}</p>
+                    <p><b>Matrícula: </b> {{ usuario.matricula }}</p>
+                    <p><b>Data de cadastro: </b> {{ usuario.dataCadastro *1000  | date:'dd/MM/yyyy'}}</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col s12 buttons">
+            <a class="btn-voltar btn-large voltar" (click)="voltar()">VOLTAR</a>
+            <a class="btn-editar btn-large right editar" [routerLink]="['/editar-usuario', usuario.id]">EDITAR</a>
+        </div>
+    </div>
+
+</main>

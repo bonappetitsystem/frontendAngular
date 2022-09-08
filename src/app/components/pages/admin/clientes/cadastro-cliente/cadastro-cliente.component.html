@@ -1,0 +1,131 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row" style="margin-top: -60px;">
+        <img alt="icon" class="responsive-img icone left" src="../../../../../../assets/icon-component/cadastroCliente.svg">
+        <h4 class="col s12 m10">CADASTRO DE CLIENTE</h4>
+    </div>
+    
+        <div class="containerCadastro" style="margin-top: 60px;">
+            <form #f="ngForm" (ngSubmit)="registerCompany(f.value)">
+            <div class="row">
+                <h6>Dados da Empresa</h6>
+                <div class="form-input col s12 m4 l4">
+                    <label>CNPJ/Código de registro</label>
+                    <input class="form-input z-depth-2" type="text" required ngModel name="cnpj" [ngModel]="cnpj | cnpj"
+                    (ngModelChange)="cnpj = $event" placeholder="XX.XXX.XXX/0001-XX" maxlength="18" appOnlyNumbers>
+                </div>
+                <div class="col s10 m8 l8">
+                    <div class="form-input">
+                        <label>Razão Social</label>
+                        <input class="form-input z-depth-2" type="text" required ngModel name="razaoSocial">
+                    </div>
+                </div>
+                <div class="col s10 m8 l8">
+                    <div class="form-input">
+                        <label>Nome Fantasia:</label>
+                        <input class="form-input z-depth-2" type="text" required ngModel name="nomeFantasia">
+                    </div>
+                </div>
+                <div class="col s10 m4 l4">
+                    <div class="form-input">
+                        <label>Inscrição Estadual:</label>
+                        <input class="form-input z-depth-2" type="text" required ngModel name="inscricaoEstadual">
+                    </div>
+                </div>
+                <div class="col s10 m5 l5">
+                    <div class="form-input">
+                        <label>Inscrição Municipal:</label>
+                        <input class="form-input z-depth-2" type="text" required ngModel name="inscricaoMunicipal">
+                    </div>
+                </div>
+                <div class="col s10 m2 l2">
+                    <div class="form-input">
+                        <label>Sigla:</label>
+                        <input class="form-input z-depth-2" type="text" required ngModel name="sigla">
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <h6 class="endereco">Endereço</h6>
+                    <div class="form-input col s12 m6 l6">
+                        <label>Logradouro:</label>
+                        <input class="form-input z-depth-2" type="text" required ngModel name="logradouro">
+                    </div>
+                    <div class="col s10 m3 l3">
+                        <div class="form-input">
+                            <label>Número:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="numero">
+                        </div>
+                    </div>
+                    <div class="col s10 m3 l3">
+                        <div class="form-input">
+                            <label>Bairro:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="bairro">
+                        </div>
+                    </div>
+                    <div class="col s10 m3 l3">
+                        <div class="form-input">
+                            <label>CEP:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="cep">
+                        </div>
+                    </div>
+                    <div class="col s10 m4 l4">
+                        <div class="form-input">
+                            <label>Cidade:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="cidade">
+                        </div>
+                    </div>
+                    <div class="col s10 m2 l2">
+                        <div class="form-input">
+                            <label>UF:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="uf">
+                        </div>
+                    </div>
+                    <div class="col s10 m3 l3">
+                        <div class="form-input">
+                            <label>Complemento:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="complemento">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h6 class="">Informações de Contato</h6>
+                    <div class="form-input col s12 m6 l6">
+                        <label>Email:</label>
+                        <input class="form-input z-depth-2" type="text" required ngModel name="email">
+                    </div>
+                    <div class="col s10 m3 l3">
+                        <div class="form-input">
+                            <label>Telefone:</label>
+                            <input class="form-input z-depth-2" type="tel" required ngModel name="telefone" [ngModel]="telefone | phone"
+                            (ngModelChange)="telefone = $event" placeholder="+XX (XX) XXXX-XXXX" maxlength="19" appOnlyNumbers>
+                        </div>
+                    </div>
+                    <div class="col s10 m3 l3">
+                        <div class="form-input">
+                            <label>Celular/WhatsApp:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="celular" [ngModel]="celular | phone"
+                            (ngModelChange)="celular = $event" placeholder="+XX (XX) XXXX-XXXX" maxlength="19" appOnlyNumbers>
+                        </div>
+                    </div>
+                    <div class="col s10 m6 l6">
+                        <div class="form-input">
+                            <label>Site:</label>
+                            <input class="form-input z-depth-2" type="text" required ngModel name="site">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col s12 m12 l12 buttons-content">
+                        <button type="reset" class="button-cancelar btn buttons" (click)="back()" >CANCELAR</button>
+                        <button type="submit" class="button-cadastrar btn buttons">CADASTRAR</button>
+                    </div>
+                </div>
+            </form>
+                
+            
+        
+
+
+</div>

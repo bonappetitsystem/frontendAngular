@@ -1,0 +1,86 @@
+<app-header></app-header>
+<main class="container">
+
+    <div class="titulo">
+        <img class="responsive-img icone" src="../../../assets/icon-component/lupa.svg">
+        <h4>Movimentação de estoque (matéria-prima)</h4>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="cadastrarEstoque(f.value)">
+
+        <div class="row">
+
+            <div class="col s12 m6 l6 select">
+                <label for="nome-produto">Nome do produto</label>
+
+                <select id="id_produto" name="id_produto" class="browser-default" ngModel>
+                    <option *ngFor=" let produto of produtos" value="{{produto.id}}">{{produto.descricao}}</option>
+                </select>
+            </div>
+
+            <div class="col s12 m3 l3">
+                <div class="form-input">
+                    <label for="quantidade-de-medida">Quant. de medida por un.</label>
+                    <input id="quantidade" class="form-input z-depth-2" type="number" required ngModel
+                        name="quantidade">
+                </div>
+            </div>
+
+            <div class="col s12 m3 l3">
+                <label for="unidade-medida">Un. de medida</label>
+                <select id="unidade_medida" name="unidade_medida" class="browser-default" ngModel>
+                    <option value="KG">kg</option>
+                    <option value="G">g</option>
+                    <option value="L">l</option>
+                    <option value="ML">ml</option>
+                    <option value="UN">un</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+
+            <div class="col s12 m3 l3">
+                <div class="form-input">
+                    <label for="N-do-lote">Nº do lote </label>
+               
+                    <input class="form-input z-depth-2" type="text" ngModel name="lote">
+                </div>
+            </div>
+
+            <div class="col s12 m3 l3">
+                <div class="form-input">
+                    <label for="quantidade_unitaria">Quant. unitária</label>
+                    <input class="form-input z-depth-2" type="text" required ngModel name="quantidade_unitaria" appOnlyNumbers>
+                </div>
+            </div>
+
+            <div class="col s12 m2 l3">
+                <div class="form-input">
+                    <label for="validade">Data de validade</label>
+                    <input id="validade" class="form-input z-depth-2" type="date" required ngModel
+                        name="validade">
+                </div>
+            </div>
+
+            <div class="col s12 m2 l3">
+                <div class="form-input">
+                    <label for="preco">Preço unitário do produto</label>
+                    
+                    <input class="form-input z-depth-2" type="text" ngModel required name="preco">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12 l12 buttons-content">
+                <button type="button" class="button-voltar buttons left" (click)="back()">VOLTAR</button>
+                <button type="submit" class="button-salvar buttons right submit">SALVAR PRODUTO</button>
+            </div>
+        </div>
+    </form>
+
+
+</main>

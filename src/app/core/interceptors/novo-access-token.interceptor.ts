@@ -6,7 +6,8 @@ import {
   HttpInterceptor
 } from '@angular/common/http';
 import { from, mergeMap, Observable } from 'rxjs';
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from '../services/auth.service';
+
 
 @Injectable()
 export class NovoAccessTokenInterceptor implements HttpInterceptor {
@@ -14,10 +15,10 @@ export class NovoAccessTokenInterceptor implements HttpInterceptor {
   constructor(private auth: AuthService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if(!request.url.includes('oauth/token') && this.auth.isAccessTokenInvalido()){
-      return from(this.auth.obterNovoAccessToken()).pipe(
+    if(!request.url.includes('oauth/token') && this.auth.isAccessTokenInvalid()){
+      return from(this.auth.getNewAccessToken()).pipe(
         mergeMap(() => {
-          if(this.auth.isAccessTokenInvalido()){
+          if(this.auth.isAccessTokenInvalid()){
             throw new Error('Não foi possível renovar o token');
           }
           request = request.clone({

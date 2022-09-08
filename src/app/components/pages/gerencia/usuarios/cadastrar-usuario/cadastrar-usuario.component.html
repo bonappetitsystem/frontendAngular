@@ -1,0 +1,113 @@
+<app-header></app-header>
+
+<div class="container">
+
+    <div class="row" style="margin-top: -80px; margin-bottom: 30px;">
+        <img class="responsive-img icone left" src="../../assets/icon-component/cadastro_funcionario.svg">
+        <h4 class=" col s12 m10 l10">Cadastro de usuários</h4>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="cadastrar(f.value)">
+        <div class="row card">
+            <div class="col s12 m6 l6">
+                <h4>Dados pessoais</h4>
+
+                <div class="col s12 m12 l12">
+                    <div class="form-input">
+                        <label for="nome">Nome</label>
+                        <input id="nome" class="form-input z-depth-2" type="text" required ngModel name="nome">
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l7">
+                    <div class="form-input">
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" class="form-input z-depth-2" type="text" required ngModel name="cpf" [ngModel]="cpf|cpf"
+                        (ngModelChange)="cpf = $event" required maxlength="14" minlength="14" appOnlyNumbers>
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l5">
+                    <div class="form-input">
+                        <label for="genero">Gênero</label>
+                        <select ngModel name="genero" class="browser-default">
+                            <option value="FEMININO">FEMININO</option>
+                            <option value="MASCULINO">MASCULINO</option>
+                            <option value="NAO_BINARIO">NÃO-BINÁRIO</option>
+                            <option value="OUTROS">OUTROS</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col s12 m2 l6">
+                    <div class="form-input">
+                        <label for="dataNascimento">Data de Nascimento</label>
+                        <input id="dataNascimento" class="form-input z-depth-2" type="date" required ngModel
+                            name="dataNascimento">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col s12 m6 l6">
+                <h4>Dados funcionais</h4>
+
+                <div class="col s12 m12 l6">
+                    <div class="form-input">
+                        <label for="nome">Código da empresa</label>
+                        <input id="codigoEmpresa" class="form-input z-depth-2" type="text" readonly required ngModel [(ngModel)] ="codigoEmpresa"  name="codigoEmpresa">
+                            
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l6">
+                    <div class="form-input">
+                        <label for="matricula">Matrícula</label>
+                        <input id="matricula" class="form-input z-depth-2" type="text" required ngModel
+                            name="matricula">
+                    </div>
+                </div>
+
+
+                <div class="col s12 m6 l6">
+                    <label for="perfil">Perfil</label>
+                    <select id="perfil" ngModel name="perfil" class="browser-default">
+                        <option value="GERENCIA">GERENCIA</option>
+                        <option value="COZINHA">COZINHA</option>
+                        <option value="VENDA">VENDA</option>
+                    </select>
+
+                </div>
+
+                <div class="col s12 m6 l6">
+                    <div class="inputfile-box">
+                        <label for="cpf">Foto/Avatar:</label>
+                        <input type="file" id="file" class="inputfile" onchange='uploadFile(this)'>
+                        <label for="file">
+                          <span id="file-name" class="file-box"></span>
+                          <span class="file-button">
+                            <i class="fa fa-upload" aria-hidden="true"></i>
+                            <img src="../../assets/icon-component/upload.svg">
+                          </span>
+                        </label>
+                      </div>
+                </div>
+
+                <div class="col s12 m12 l6">
+                    <div class="form-input">
+                        <label for="senha">Senha</label>
+                        <input id="senha" class="form-input z-depth-2" type="{{type}}" id="senha" required ngModel name="senha">
+                        <i class="material-icons" id="visibility" (click)="toggleShow()">{{icon}}</i>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <div class="col s12 buttons">
+            <a class="btn-cancelar btn-large voltar" (click)="cancelar()">CANCELAR</a>
+            <button  class="btn-salvar btn-large right editar">SALVAR</button>
+        </div>
+    </form>
+</div>

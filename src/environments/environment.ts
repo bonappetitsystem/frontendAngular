@@ -3,8 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
-  BASE_URL:'http://localhost:8080/'
+  production: false,
+  BASE_URL: 'http://localhost:8080/',
+  USER_URL: 'https://usuario-bonapt.herokuapp.com/'
 };
 
 /*

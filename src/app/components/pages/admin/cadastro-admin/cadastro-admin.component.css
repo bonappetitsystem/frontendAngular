@@ -1,0 +1,106 @@
+h3, h4{
+    font-family: 'Agrandir';
+}
+label {
+  font-family: 'Manrope-SemiBold';
+  color: rgb(43, 30, 30);
+}
+
+.card{
+    background-color: #F2F2F2;
+    height: 400px;
+}
+  .card .row{
+    margin-bottom: 0;
+  }
+
+/* botôes */
+
+.buttons{
+  margin-top: 80px;
+}
+
+.btn-large{
+  width: 200px;
+}
+
+.btn img{
+  display: block;
+  width: 100%;
+}
+
+.btn-cancelar{
+  background-color: #FF5722;
+}
+
+.btn-salvar{
+  background-color: #00796B;
+}
+
+.form-input input.form-input, .file-box{
+  color: rgba(0, 0, 0, .87);
+  background: #fff;
+}
+
+.form-input{
+  margin-bottom: 20px;
+}
+
+input.form-input {
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding: 5px 24px 5px 24px;
+  transition: all .2s ease;
+  border-radius: 3px;
+  outline: 0;
+  border: none;
+  appearance: textfield;
+  height: 35px;
+}
+select{
+  height: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.form-input input.form-input[type=text]:focus {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+
+.inputfile-box {
+  position: relative;
+}
+
+.inputfile {
+  display: none;
+}
+
+.file-box {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0px 5px 5px;
+  box-sizing: border-box;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.file-button {
+  background: #FF5722;
+  padding: 5px;
+  position: absolute;
+  top: 22px;
+  right: 0px;
+  height: 35px;
+  width: 35px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.file-button img{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
