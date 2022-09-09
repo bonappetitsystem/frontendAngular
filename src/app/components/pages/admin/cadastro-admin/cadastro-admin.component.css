@@ -1,8 +1,8 @@
 h3, h4{
-    font-family: 'Agrandir', 'sans-serif';
+    font-family: 'Agrandir', sans-serif;
 }
 label {
-  font-family: 'Manrope-SemiBold';
+  font-family: 'Manrope-SemiBold', sans-serif;
   color: rgb(43, 30, 30);
 }
 

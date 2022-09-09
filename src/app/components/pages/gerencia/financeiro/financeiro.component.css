@@ -4,14 +4,14 @@
   }
   
   h1 {
-    font-family: 'Agrandir', 'sans-serif';
+    font-family: 'Agrandir', sans-serif;
     font-size: 1em;
     color: #000;
     margin-top: 20%;
   }
   
   h3 {
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
     text-align: center;
     color: white;
     

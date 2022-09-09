@@ -1,5 +1,5 @@
 *{
-    font-family: 'Manrope', 'sans-serif';
+    font-family: 'Manrope', sans-serif;
 }
 
 .card-topo{
@@ -17,7 +17,7 @@
 }
 
 .card-topo span{
-    font-family: 'Manrope-Bold';
+    font-family: 'Manrope-Bold', sans-serif;
     font-style: normal;
     font-size: 40px;
     line-height: 55px;
