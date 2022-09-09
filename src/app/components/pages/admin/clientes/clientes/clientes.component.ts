@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { EmpresaFilter, EmpresaService } from 'src/app/core/services/empresa.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { EmpresaFilter, EmpresaService } from 'src/app/core/services/empresa.ser
   templateUrl: './clientes.component.html',
   styleUrls: ['./clientes.component.css']
 })
-export class GestaoDeClientesComponent implements OnInit {
+export class GestaoDeClientesComponent {
 
   cnpj: string = '';
   razaoSocial: string = '';
@@ -16,11 +16,6 @@ export class GestaoDeClientesComponent implements OnInit {
   empresa: any = []
 
   constructor(private service: EmpresaService, private location:Location) { }
-
-  ngOnInit(): void {
-
-
-  }
 
   pesquisar(){
 

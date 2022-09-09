@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmpresaService } from 'src/app/core/services/empresa.service';
 
@@ -10,7 +10,7 @@ declare const M: any;
   templateUrl: './cadastro-cliente.component.html',
   styleUrls: ['./cadastro-cliente.component.css']
 })
-export class CadastroClienteComponent implements OnInit {
+export class CadastroClienteComponent {
 
   constructor(private service:EmpresaService, private router: Router, private location:Location) { }
 
@@ -18,9 +18,6 @@ export class CadastroClienteComponent implements OnInit {
   celular = '';
   cnpj = '';
 
-  ngOnInit(): void {
-    
-  }
 
   registerCompany(dados:any){
     console.log(dados);

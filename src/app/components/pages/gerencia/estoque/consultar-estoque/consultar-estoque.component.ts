@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { EstoqueFilter, EstoqueService } from 'src/app/core/services/estoque.service';
 
 
