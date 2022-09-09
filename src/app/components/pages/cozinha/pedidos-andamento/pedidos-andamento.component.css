@@ -54,14 +54,15 @@ h4{
     line-height: 30px;
 }
 .visualizar{
-    margin-left: 380px;
     width: 15%;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-} 
+    background: #00796B;
+    margin-left: 20px;
+}
 .btn {
     background: #00796B;
     padding: 0%;
@@ -123,10 +124,7 @@ h4{
 }
 
 
-.visualizar{
-    background: #00796B;
-    margin-left: 20px;
-}
+
 
 .editar img, .visualizar img{
     display: block;
