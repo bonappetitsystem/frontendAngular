@@ -1,8 +1,8 @@
 h4,.buttons{
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', 'sans-serif';
 }
 label{
-    font-family: 'Manrope-SemiBold';
+    font-family: 'Manrope-SemiBold', 'sans-serif';
     color: rgb(43, 30, 30);
 }
 main{

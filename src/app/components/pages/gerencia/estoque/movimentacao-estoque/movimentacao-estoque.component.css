@@ -4,7 +4,7 @@ main{
 h1, h5,
 .tabs-personal,
 .btn {
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', 'sans-serif';
     color: #000;
 
 }
