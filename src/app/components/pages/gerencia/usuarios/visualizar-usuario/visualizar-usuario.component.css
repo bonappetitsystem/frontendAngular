@@ -28,7 +28,7 @@
 }
 
 h4, h5{
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
   
 }
 
@@ -37,7 +37,7 @@ h4{
 }
 
 b{
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
 }
 .text-banner{
     display: flex;
@@ -78,10 +78,10 @@ b{
 
 .btn-voltar{
     background-color: #FF5722;
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
 }
 
 .btn-editar{
     background-color: #00796B;
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
 }

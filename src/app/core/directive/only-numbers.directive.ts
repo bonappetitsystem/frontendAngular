@@ -9,7 +9,7 @@ export class OnlyNumbersDirective {
 
   @HostListener('input', ['$event']) onInputChange(event:any) {
     const initalValue = this._el.nativeElement.value;
-    this._el.nativeElement.value = initalValue.replace(/[^0-9]*/g, '');
+    this._el.nativeElement.value = initalValue.replace(/D*/g, '');
     if ( initalValue !== this._el.nativeElement.value) {
       event.stopPropagation();
     }
