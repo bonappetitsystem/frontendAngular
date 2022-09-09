@@ -26,12 +26,8 @@
   }
   
   .card-menu img {
-    width: 4em;
     height: 4em;
     margin-top: 40px;
-  }
-  
-  .card-menu img {
     display: block;
     width: 35%;
   }

@@ -5,6 +5,9 @@ h6,h5,h4
 }
 label{
     font-family: 'Manrope-SemiBold';
+    color: #000;
+    font-size: medium;
+    margin-left: 20px;
 }
 
 .titulo {
@@ -45,12 +48,6 @@ h4 {
 .search i {
     margin: 15%;
     font-size: 300%;
-}
-
-label {
-    color: #000;
-    font-size: medium;
-    margin-left: 20px;
 }
 
 .form-input input.form-input {
@@ -156,11 +153,7 @@ textarea.materialize-textarea {
     color: rgba(0, 0, 0, .87);
     background: #D9D9D9;
   }
-  
-  .form-input{
-    margin-bottom: 20px;
-  }
-  
+    
   textarea.form-input {
     font-size: 16px;
     font-weight: 400;

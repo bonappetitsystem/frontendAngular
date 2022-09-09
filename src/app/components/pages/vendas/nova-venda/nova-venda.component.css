@@ -4,7 +4,9 @@ h6,h5, h4, .btn {
 }
 label{
     font-family: 'Manrope-SemiBold';
-
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
 }
 
 main{
@@ -84,12 +86,6 @@ input.form-input {
 
 .button-cancelar:hover{
   background: #ffccbc;
-  color: #000;
-}
-
-label{
-  font-size: 12px;
-  font-weight: 400;
   color: #000;
 }
 
