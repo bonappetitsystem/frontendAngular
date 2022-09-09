@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EstoqueService, produtoFilter } from 'src/app/core/services/estoque.service';
+import { EstoqueService, ProdutoFilter } from 'src/app/core/services/estoque.service';
 import { Location } from '@angular/common';
 
 declare const M: any;
@@ -31,7 +31,7 @@ export class MovimentarMateriaPrimaComponent implements OnInit {
 
   pesquisar() {
 
-    const filtro: produtoFilter = {
+    const filtro: ProdutoFilter = {
       descricao: this.descricao
     }
 

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 
 
-export interface produtoFilter {
+export interface ProdutoFilter {
   descricao: string;
 }
 
@@ -19,7 +19,7 @@ export class EstoqueService {
 
   constructor(private http: HttpClient) { }
 
-  filtrarProdutos(filter: produtoFilter) {
+  filtrarProdutos(filter: ProdutoFilter) {
     let params = new HttpParams();
 
     if (filter.descricao) {
