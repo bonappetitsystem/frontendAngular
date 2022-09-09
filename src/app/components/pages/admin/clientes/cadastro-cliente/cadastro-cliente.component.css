@@ -5,7 +5,7 @@ h4, h6,
 
 label {
     font-family: 'Manrope-SemiBold';
-
+    color: rgb(49, 45, 45);
 }
 input.form-input {
     font-size: 16px;
@@ -41,9 +41,7 @@ input.form-input {
     padding-left: 20px;
     padding-right: 20px;
 }
-label{
-    color: rgb(49, 45, 45);
-}
+
 .endereco{
     width: 500px;
     overflow-wrap: break-word;
