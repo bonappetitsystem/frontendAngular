@@ -27,7 +27,6 @@
   }
   
   .card-menu img {
-    width: 4em;
     height: 4em;
     margin-top: 40px;
     display: block;
@@ -75,7 +74,6 @@
   
   .content-painel-encomendas {
     display: flex;
-    flex-direction: column;
     flex: 1;
     flex-direction: row;
   }
