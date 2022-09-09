@@ -1,16 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button-menu',
   templateUrl: './button-menu.component.html',
   styleUrls: ['./button-menu.component.css']
 })
-export class ButtonMenuComponent implements OnInit {
+export class ButtonMenuComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   @Input() showSidebar: boolean = false;
   @Output() situationSidebar = new EventEmitter();

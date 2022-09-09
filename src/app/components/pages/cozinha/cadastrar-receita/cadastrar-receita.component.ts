@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ReceitaService } from 'src/app/core/services/receita.service';
 import { Location } from '@angular/common';
 
@@ -10,12 +10,9 @@ declare const M: any;
   styleUrls: ['./cadastrar-receita.component.css']
 })
 
-export class CadastrarReceitaComponent implements OnInit {
+export class CadastrarReceitaComponent {
 
   constructor(private service: ReceitaService, private location: Location) { }
-
-  ngOnInit(): void {
-  }
 
   addReceita(dados:any) {
     this.service.addReceita(dados).subscribe(

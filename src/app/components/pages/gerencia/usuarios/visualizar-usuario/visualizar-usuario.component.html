@@ -26,10 +26,10 @@
             <div class="card dados-pessoais">
                 <h5>Dados Pessoais</h5>
                 <div>
-                    <p><b>Nome: </b> {{ usuario.nome }}</p>
-                    <p><b>CPF: </b> {{ usuario.cpf | cpf }}</p>
-                    <p><b>Data de Nascimento: </b> {{ usuario.dataNascimento  | date:'dd/MM/yyyy'}}</p>
-                    <p><b>Gênero: </b> {{ usuario.genero }}</p>
+                    <p><strong>Nome: </strong> {{ usuario.nome }}</p>
+                    <p><strong>CPF: </strong> {{ usuario.cpf | cpf }}</p>
+                    <p><strong>Data de Nascimento: </strong> {{ usuario.dataNascimento  | date:'dd/MM/yyyy'}}</p>
+                    <p><strong>Gênero: </strong> {{ usuario.genero }}</p>
                 </div>
             </div>
 
@@ -39,10 +39,10 @@
             <div class="card dados-funcionais">
                 <h5>Dados Funcionais</h5>
                 <div>
-                    <p><b>Usuário: </b> {{ usuario.cpf | cpf}}</p>
-                    <p><b>Perfil: </b> {{ usuario.perfil }}</p>
-                    <p><b>Matrícula: </b> {{ usuario.matricula }}</p>
-                    <p><b>Data de cadastro: </b> {{ usuario.dataCadastro *1000  | date:'dd/MM/yyyy'}}</p>
+                    <p><strong>Usuário: </strong> {{ usuario.cpf | cpf}}</p>
+                    <p><strong>Perfil: </strong> {{ usuario.perfil }}</p>
+                    <p><strong>Matrícula: </strong> {{ usuario.matricula }}</p>
+                    <p><strong>Data de cadastro: </strong> {{ usuario.dataCadastro *1000  | date:'dd/MM/yyyy'}}</p>
                 </div>
             </div>
         </div>

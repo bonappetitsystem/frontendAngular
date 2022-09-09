@@ -6,12 +6,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pedidos-finalizados.component.html',
   styleUrls: ['./pedidos-finalizados.component.css']
 })
-export class PedidosFinalizadosComponent implements OnInit {
+export class PedidosFinalizadosComponent {
 
   constructor(private location:Location) { }
-
-  ngOnInit(): void {
-  }
 
   back(){
     this.location.back();

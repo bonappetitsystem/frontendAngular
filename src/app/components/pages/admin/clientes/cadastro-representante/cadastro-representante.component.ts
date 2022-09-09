@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 declare const M: any;
 
@@ -8,12 +8,9 @@ declare const M: any;
   templateUrl: './cadastro-representante.component.html',
   styleUrls: ['./cadastro-representante.component.css']
 })
-export class CadastroRepresentanteComponent implements OnInit {
+export class CadastroRepresentanteComponent {
 
   constructor(private location:Location) { }
-
-  ngOnInit(): void {
-  }
 
   back(){
     this.location.back();

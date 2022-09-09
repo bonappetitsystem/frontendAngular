@@ -38,9 +38,9 @@ export class VisualizarReceitaComponent implements OnInit {
 
 
       //capture word between \n and :
-      this.receita.ingredientes = this.receita.ingredientes.replace(/(\n)(.*?)(:)/g, '<br/><b>$2</b>:');
+      this.receita.ingredientes = this.receita.ingredientes.replace(/(\n)(.*?)(:)/g, '<br/><strong>$2</strong>:');
 
-      this.receita.modoDePreparo = this.receita.modoDePreparo.replace(/(\n)(.*?)(:)/g, '<br/><b>$2</b>:');
+      this.receita.modoDePreparo = this.receita.modoDePreparo.replace(/(\n)(.*?)(:)/g, '<br/><strong>$2</strong>:');
 
       
       
