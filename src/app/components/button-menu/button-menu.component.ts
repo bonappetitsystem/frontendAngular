@@ -7,8 +7,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ButtonMenuComponent {
 
-  constructor() { }
-
   @Input() showSidebar: boolean = false;
   @Output() situationSidebar = new EventEmitter();
 
