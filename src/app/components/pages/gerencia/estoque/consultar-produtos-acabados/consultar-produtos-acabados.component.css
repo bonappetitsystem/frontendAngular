@@ -117,7 +117,7 @@ input::placeholder {
 }
 
 .linha-1 .span {
-    font-family: 'Manrope-Bold';
+    font-family: 'Manrope-Bold', sans-serif;
     font-style: normal;
     font-size: 18px;
     line-height: 30px;

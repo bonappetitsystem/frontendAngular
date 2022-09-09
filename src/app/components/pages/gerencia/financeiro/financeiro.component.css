@@ -75,7 +75,7 @@
   }
   
   .indicador {
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
     text-align: right;
     margin-top: 60px;
   }
@@ -108,7 +108,7 @@
   
   label{
     color: #000;
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
   }
   
   @media screen and (max-width: 768px) {

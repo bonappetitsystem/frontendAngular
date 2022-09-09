@@ -28,7 +28,7 @@
 }
 
 h4, h5{
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
 }
 
 h4{
@@ -36,7 +36,7 @@ h4{
 }
 
 .negrito{
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
 }
 
 .text-banner{
@@ -77,12 +77,12 @@ h4{
 
 .btn-voltar{
     background-color: #FF5722;
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
 }
 
 .btn-editar{
     background-color: #00796B;
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
 }
 
 /* Input */
@@ -161,5 +161,5 @@ h4{
 
   .label{
     width: 100%;
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
   }

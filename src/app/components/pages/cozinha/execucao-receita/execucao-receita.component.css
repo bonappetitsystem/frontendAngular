@@ -62,14 +62,14 @@
 }
 
 .linha-1 span{
-    font-family: 'Manrope-Bold';
+    font-family: 'Manrope-Bold', sans-serif;
     font-style: normal;
     font-size: 20px;
     line-height: 30px;
 }
 
 .span{
-    font-family: 'Manrope-Bold';
+    font-family: 'Manrope-Bold', sans-serif;
 }
 
 .linha-1 img{
@@ -92,6 +92,6 @@
 }
 
 th{
-    font-family: 'Manrope-Bold';
+    font-family: 'Manrope-Bold', sans-serif;
     font-size: 18px;
 }

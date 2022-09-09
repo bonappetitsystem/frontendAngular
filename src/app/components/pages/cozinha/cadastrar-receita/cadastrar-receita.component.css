@@ -56,13 +56,13 @@
 }
 
 .linha-1 span{
-    font-family: 'Manrope-Bold';
+    font-family: 'Manrope-Bold', sans-serif;
     font-size: 30px;
   
 }
 
 .span{
-    font-family: 'Manrope-Bold';
+    font-family: 'Manrope-Bold', sans-serif;
 }
 .upper{
     text-transform: uppercase;
@@ -96,12 +96,12 @@
 }
 
 th{
-    font-family: 'Manrope-Bold';
+    font-family: 'Manrope-Bold', sans-serif;
     font-size: 18px;
 }
 
 .negrito{
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
 }
 
 .form-input input.form-input {

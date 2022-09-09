@@ -48,7 +48,7 @@ h4{
 }
 
 .linha-1 .span{
-    font-family: 'Manrope-Bold';
+    font-family: 'Manrope-Bold', sans-serif;
     font-style: normal;
     font-size: 18px;
     line-height: 30px;
@@ -93,7 +93,7 @@ h4{
     width: 200px;
     text-transform: uppercase;
     border: none;
-    font-family: 'Agrandir';
+    font-family: 'Agrandir', sans-serif;
     background: #FF5722;
     color: #fff;
     margin-left: -10px;
