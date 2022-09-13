@@ -1,32 +1,31 @@
+.card-1 {
 
-.card-1{
-    
-    transition: 0.3s;
-    width: 100%;
-    border-radius: 5px;
-    background-color: #fff;
-    height: 170px;
-    padding: 10px;
-    margin-bottom: 10px; 
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 170px;
+  padding: 10px;
+  margin-bottom: 10px;
 
-    
+
 }
 
-.card-2{
-    
-    transition: 0.3s;
-    width: 100%;
-    border-radius: 5px;
-    background-color: #fff;
-    height: 357px;
-    padding: 10px;
-    margin-bottom: 10px;
+.card-2 {
 
-    
-} 
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 357px;
+  padding: 10px;
+  margin-bottom: 10px;
 
 
-.conteudo{
+}
+
+
+.conteudo {
   padding-left: 70px;
   margin-left: 80px;
   margin-right: 50px;
@@ -34,12 +33,39 @@
 }
 
 @media screen and (max-width: 768px) {
-  .conteudo{
+  .conteudo {
     padding-left: 0px;
     margin-left: 0px;
     margin-right: 0px;
     margin-top: -50px;
   }
-  
+
 }
-  
+
+p {
+  font-family: 'Agrandir', sans-serif;
+}
+
+.titulo-card1 {
+  color: #00796B;
+  font-size: 0.8em;
+  text-align: center;
+
+}
+
+.titulo-card2 {
+  color: #00796B;
+  text-align: center;
+}
+
+.titulo-card3 {
+  color: #00796B;
+
+}
+
+h3 {
+  font-family: 'Agrandir', sans-serif;
+  text-align: center;
+  color: gray;
+
+}
