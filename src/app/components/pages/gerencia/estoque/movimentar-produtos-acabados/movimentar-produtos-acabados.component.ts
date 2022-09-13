@@ -15,6 +15,7 @@ export class MovimentarProdutosAcabadosComponent implements OnInit {
   receitas: any = []
   selectedValue = 'diferente';
   descricao: any = '';
+  titulo: any = {};
 
   constructor(private service:EstoqueService, private location:Location, private receita: ReceitaService) { }
 
@@ -27,20 +28,23 @@ export class MovimentarProdutosAcabadosComponent implements OnInit {
   consultarReceitas() {
     this.receita.getReceitas().subscribe(data => {
       this.receitas = data
+      console.log(this.receitas);
     })
   }
+
+
 
 
 
   addEstoqueAcabado(dados:any) {
     let data = new Date(dados.dataDeValidade);
     let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
-    console.log(dados);
+
     let obj = {
       descricao: dados.descricao,
       quantidade: dados.quantidade,
-      receitas: {
-        id: dados.receitas
+      receita: {
+        id: dados.receitas,
       },
       preco: dados.preco,
       dataDeValidade: dataFormatada,

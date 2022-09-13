@@ -50,7 +50,6 @@ export class MovimentarMateriaPrimaComponent implements OnInit {
     let data = new Date(dados.validade)
     let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
 
-    console.log(dados)
     let objeto = {
       produto: {
         id: dados.id_produto
@@ -65,7 +64,7 @@ export class MovimentarMateriaPrimaComponent implements OnInit {
     this.service.addEstoque(objeto).subscribe(data => 
       M.toast({html: 'Estoque cadastrado com sucesso!'})
       )
-      // window.location.reload()
+       window.location.reload()
   }
 
   back(){

@@ -22,7 +22,7 @@
     
                 <label>Nome do produto</label>
                 <select class="browser-default" name="nomeProduto" [(ngModel)]="idProduto" (change)="addQuantidade()" >
-                    <option *ngFor="let produto of produtos" [ngValue]="produto">{{produto.receitas.titulo}}</option>
+                    <option *ngFor="let produto of produtos" [ngValue]="produto">{{produto.nomeProduto}}</option>
                 </select>
             </div>
 
