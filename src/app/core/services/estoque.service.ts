@@ -4,8 +4,10 @@ import { Injectable } from '@angular/core';
 
 
 
+
 export interface ProdutoFilter {
-  descricao: string;
+  nome: string;
+
 }
 
 export interface EstoqueFilter{
@@ -22,8 +24,8 @@ export class EstoqueService {
   filtrarProdutos(filter: ProdutoFilter) {
     let params = new HttpParams();
 
-    if (filter.descricao) {
-      params = params.set('descricao', filter.descricao);
+    if (filter.nome) {
+      params = params.set('nome', filter.nome);
     }
 
     return this.http.get('http://localhost:8080/produtos', { params })
@@ -47,7 +49,7 @@ export class EstoqueService {
   }
 
   getEstoque() {
-    return this.http.get('http://localhost:8080/estoques');
+    return this.http.get('http://localhost:8080/estoque');
   }
 
   addProduto(produto: any) {
@@ -55,7 +57,7 @@ export class EstoqueService {
   }
 
   addEstoque(estoque: any) {
-    return this.http.post('http://localhost:8080/estoques', estoque);
+    return this.http.post('http://localhost:8080/estoque', estoque);
   }
 
   deleteProduto(id: number) {
@@ -63,7 +65,7 @@ export class EstoqueService {
   }
 
   deleteEstoque(id: number) {
-    return this.http.delete(`http://localhost:8080/estoques/${id}`);
+    return this.http.delete(`http://localhost:8080/estoque/${id}`);
   }
 
   updateProduto(produto: any) {
@@ -71,27 +73,27 @@ export class EstoqueService {
   }
 
   updateEstoque(estoque: any) {
-    return this.http.put(`http://localhost:8080/estoques/${estoque.id}`, estoque);
+    return this.http.put(`http://localhost:8080/estoque/${estoque.id}`, estoque);
   }
 
   addEstoqueAcabado(estoque: any) {
-    return this.http.post('http://localhost:8080/estoquesAcabados', estoque);
+    return this.http.post('http://localhost:8080/estoqueAcabado', estoque);
   }
 
   getEstoqueAcabado() {
-    return this.http.get('http://localhost:8080/estoquesAcabados');
+    return this.http.get('http://localhost:8080/estoqueAcabado');
   }
 
   deleteEstoqueAcabado(id: number) {
-    return this.http.delete(`http://localhost:8080/estoquesAcabados/${id}`);
+    return this.http.delete(`http://localhost:8080/estoqueAcabado/${id}`);
   }
 
   updateEstoqueAcabado(estoque: any) {
-    return this.http.put(`http://localhost:8080/estoquesAcabados/${estoque.id}`, estoque);
+    return this.http.put(`http://localhost:8080/estoqueAcabado/${estoque.id}`, estoque);
   }
 
   getEstoqueAcabadoPorId(id: number) {
-    return this.http.get(`http://localhost:8080/estoquesAcabados/${id}`);
+    return this.http.get(`http://localhost:8080/estoqueAcabado/${id}`);
   }
   
 

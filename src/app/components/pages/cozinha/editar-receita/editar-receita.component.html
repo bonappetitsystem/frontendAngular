@@ -26,10 +26,39 @@
         </div>
 
         <div class="row">
-
+            <form action=""></form>
             <div class=" col s12 m12 l12 form-input">
                 <span class="negrito">Ingredientes: </span>
-                <textarea class="form-input z-depth-2" type="text" [(ngModel)]="receita.ingredientes"></textarea>
+                <!-- Editar Receita com *ngFor-->
+                <section *ngFor="let ingrediente of receita.ingredientes; let i = index">
+                    <div class="row">
+                        <div class=" col s5 m3 l3 form-input">
+                            <span class="negrito">Quantidade</span>
+                            <input class="form-input z-depth-2" type="text" [(ngModel)]="ingrediente.quantidadeDeMedida" name="quantidadeDeMedida_{{i}}"/>
+                        </div>
+
+                        <div class=" col s5 m3 l3 form-input">
+                            <span class="negrito">Unidade de medida</span>
+                            <select id="unidade_medida"   class="browser-default"[(ngModel)]="ingrediente.unidadeDeMedida" name="unidadeDeMedida_{{i}}">
+                                <option value="G">g</option>
+                                <option value="ML">ml</option>
+                                <option value="UN">un</option>
+                            </select>
+                        </div>
+
+                        <div class=" col s5 m3 l3 form-input">
+                            <span class="negrito">Ingrediente</span>
+                            <select id="id_produto" class="browser-default" ngModel [(ngModel)]="ingrediente.produto.id" name="produto_{{i}}">
+                                <option *ngFor=" let produto of produtos" value="{{produto.id}}">{{produto.nome}}</option>
+                            </select>
+                        </div>
+
+                        <div class=" col s5 m3 l3 form-input">
+                            <button class="btn btn-small" (click)="removeIngrediente(i)">Remover</button>
+                        </div>
+                    </div>
+                </section>
+                <button class="btn btn-small btn-add" (click)="addIngrediente()">Adicionar Ingrediente</button>
             </div>
         </div>
 

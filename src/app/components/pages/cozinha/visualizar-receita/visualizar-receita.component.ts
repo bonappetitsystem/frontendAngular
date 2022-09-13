@@ -15,6 +15,7 @@ export class VisualizarReceitaComponent implements OnInit {
 
   idreceita: number = 0
   receita: any = {}
+  ingredientes: any = []
 
 
 
@@ -26,27 +27,18 @@ export class VisualizarReceitaComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap;
     this.idreceita = Number(routeParams.get('idreceita'))
     this.service.getReceitaporId(this.idreceita).subscribe( data => {
+      console.log(data)
       
       this.receita = data
-
-      //add \n before the text
-
-      //add \n before beginning of text
-      this.receita.ingredientes = this.receita.ingredientes.replace(/^(.)/g, " \n$1");
-
-      this.receita.modoDePreparo = this.receita.modoDePreparo.replace(/^(.)/g, " \n$1");
+      this.ingredientes = this.receita.ingredientes
 
 
-      //capture word between \n and :
-      this.receita.ingredientes = this.receita.ingredientes.replace(/(\n)(.*?)(:)/g, '<br/><strong>$2</strong>:');
+       this.receita.modoDePreparo = this.receita.modoDePreparo.replace(/(\n)(.*?)(:)/g, '<br/><b>$2</b>:');
 
       this.receita.modoDePreparo = this.receita.modoDePreparo.replace(/(\n)(.*?)(:)/g, '<br/><strong>$2</strong>:');
 
+       this.receita.modoDePreparo = this.receita.modoDePreparo.replace(/\n/g, '<br>');
       
-      
-      this.receita.modoDePreparo = this.receita.modoDePreparo.replace(/\n/g, '<br>');
-      
-      this.receita.ingredientes = this.receita.ingredientes.replace(/\n/g, '<br>');
  
     }
     )

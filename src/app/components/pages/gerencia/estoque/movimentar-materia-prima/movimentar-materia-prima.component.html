@@ -14,7 +14,7 @@
                 <label for="nome-produto">Nome do produto</label>
 
                 <select id="id_produto" name="id_produto" class="browser-default" ngModel>
-                    <option *ngFor=" let produto of produtos" value="{{produto.id}}">{{produto.descricao}}</option>
+                    <option *ngFor=" let produto of produtos" value="{{produto.id}}">{{produto.nome}}</option>
                 </select>
             </div>
 
@@ -22,16 +22,16 @@
                 <div class="form-input">
                     <label for="quantidade-de-medida">Quant. de medida por un.</label>
                     <input id="quantidade" class="form-input z-depth-2" type="number" required ngModel
-                        name="quantidade">
+                        name="quantidadeDeMedida">
                 </div>
             </div>
 
             <div class="col s12 m3 l3">
                 <label for="unidade-medida">Un. de medida</label>
-                <select id="unidade_medida" name="unidade_medida" class="browser-default" ngModel>
-                    <option value="KG">kg</option>
+                <select id="unidade_medida" name="unidadeDeMedida" class="browser-default" ngModel>
+                    <!-- <option value="KG">kg</option> -->
                     <option value="G">g</option>
-                    <option value="L">l</option>
+                    <!-- <option value="L">l</option> -->
                     <option value="ML">ml</option>
                     <option value="UN">un</option>
                 </select>
@@ -53,7 +53,7 @@
             <div class="col s12 m3 l3">
                 <div class="form-input">
                     <label for="quantidade_unitaria">Quant. unitária</label>
-                    <input class="form-input z-depth-2" type="text" required ngModel name="quantidade_unitaria" appOnlyNumbers>
+                    <input class="form-input z-depth-2" type="text" required ngModel name="quantidadeUnitaria" appOnlyNumbers>
                 </div>
             </div>
 

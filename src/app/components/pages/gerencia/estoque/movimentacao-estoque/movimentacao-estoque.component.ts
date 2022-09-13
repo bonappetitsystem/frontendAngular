@@ -17,7 +17,7 @@ export class MovimentacaoEstoqueComponent implements OnInit {
  
   produtos: any = []
   selectedValue = 'diferente';
-  descricao: any = '';
+  nome: any = '';
 
   constructor(private service: EstoqueService) { }
 
@@ -34,8 +34,10 @@ export class MovimentacaoEstoqueComponent implements OnInit {
 
   pesquisar() {
 
+
     const filtro: ProdutoFilter = {
-      descricao: this.descricao
+      nome: this.nome
+
     }
 
     this.service.filtrarProdutos(filtro).subscribe(data => {

@@ -13,9 +13,11 @@ export class MovimentarMateriaPrimaComponent implements OnInit {
 
   produtos: any = []
   selectedValue = 'diferente';
-  descricao: any = '';
+  nome: any = '';
 
   constructor(private service: EstoqueService, private location: Location) { }
+
+  
 
   ngOnInit(): void {
     M.AutoInit();
@@ -31,8 +33,10 @@ export class MovimentarMateriaPrimaComponent implements OnInit {
 
   pesquisar() {
 
+
     const filtro: ProdutoFilter = {
-      descricao: this.descricao
+      nome: this.nome
+
     }
 
     this.service.filtrarProdutos(filtro).subscribe(data => {
@@ -42,6 +46,7 @@ export class MovimentarMateriaPrimaComponent implements OnInit {
   }
 
   cadastrarEstoque(dados: any) {
+
     let data = new Date(dados.validade)
     let dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
 
@@ -51,20 +56,23 @@ export class MovimentarMateriaPrimaComponent implements OnInit {
         id: dados.id_produto
       },
       lote: dados.lote,
-      quantidadeDeMedida: dados.quantidade,
-      quantidadeUnitaria: dados.quantidade_unitaria,
-      unidadeMedida: dados.unidade_medida,
+      quantidadeDeMedida: dados.quantidadeDeMedida,
+      quantidadeUnitaria: dados.quantidadeUnitaria,
+      unidadeDeMedida: dados.unidadeDeMedida,
       dataDeValidade: dataFormatada,
-      valorUnitario: dados.preco
+      preco: dados.preco
     }
     this.service.addEstoque(objeto).subscribe(data => 
       M.toast({html: 'Estoque cadastrado com sucesso!'})
       )
-      window.location.reload()
+      // window.location.reload()
   }
 
   back(){
     this.location.back()
   }
+
+  
+  
 
 }

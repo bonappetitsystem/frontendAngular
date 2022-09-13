@@ -4,36 +4,78 @@
         <img class="img-topo" src="../../assets/icon-menu/cozinha.svg" alt="cozinha">
         <span class="upper">Cadastrar uma nova Receita</span>
     </div>
+    
+    
     <div class="card card-panel">
-        <form #f="ngForm" (ngSubmit)="addReceita(f.value)">
-        <div class="row">
+        <!-- <form #f="ngForm" (ngSubmit)="addReceita(f.value)"> -->
 
-            <div class=" col s5 m5 l4 form-input">
-                <span class="negrito">Título: </span>
-                <input class="form-input z-depth-2" type="text" ngModel name="titulo">
+            <div class="row">
+
+                <div class=" col s5 m5 l4 form-input">
+                    <span class="negrito">Título: </span>
+                    <input class="form-input z-depth-2" type="text" ngModel name="titulo">
+                </div>
+    
+                <div class=" col s5 m5 l4 form-input">
+                    <span class="negrito">Rendimento: </span>
+                    <div class="spacer"></div>
+                    <input class="form-input z-depth-2" type="text" ngModel name="rendimento">
+                </div>
+                <div class=" col s5 m5 l4 form-input">
+                    <span class="negrito">Tempo de Preparo: </span>
+                    <div class="spacer"></div>
+                    <input class="form-input z-depth-2" type="text" ngModel name="tempoDePreparo">
+                </div>
+                <div class=" col s5 m5 l4"  style="margin-bottom: 30px;">
+                    <span class="negrito">Ingredientes: </span>
+                </div>
+
+                
+                    <section *ngFor="let ingrediente of ingredientes; let i = index">
+                        
+                        <div class="col s12">
+
+                            <div class=" col s5 m3 l3 form-input">
+                                <span class="negrito">Quantidade</span>
+                            <input class="form-input z-depth-2" type="text" [(ngModel)]="ingrediente.quantidadeDeMedida" name="quantidadeDeMedida_{{i}}"/>
+                            </div>
+        
+                            <div class=" col s5 m3 l3 form-input">
+                                <span class="negrito">Unidade de medida</span>
+                                <select id="unidade_medida"   class="browser-default"[(ngModel)]="ingrediente.unidadeDeMedida" name="unidadeDeMedida_{{i}}">
+                                    <option value="G">g</option>
+                                    <option value="ML">ml</option>
+                                    <option value="UN">un</option>
+                                </select>
+                            </div>
+        
+                            <div class=" col s5 m3 l3 form-input">
+                                <span class="negrito">Ingrediente</span>
+                                <select id="id_produto" class="browser-default" ngModel [(ngModel)]="ingrediente.produto.id" name="produto_{{i}}">
+                                    <option *ngFor=" let produto of produtos" value="{{produto.id}}">{{produto.nome}}</option>
+                                </select>
+                            </div>
+                        
+                        
+    
+                        <div class=" col s5 m3 l3">
+                            <button class="btn btn-small btn-flat" (click)="removeIngrediente(i)">Remover</button>
+                        </div>
+                        </div>
+                        
+            
+                    </section>
+                
             </div>
-
-            <div class=" col s5 m5 l4 form-input">
-                <span class="negrito">Rendimento: </span>
-                <div class="spacer"></div>
-                <input class="form-input z-depth-2" type="text" ngModel name="rendimento">
+            <div class="row">
+                <div class=" col s5 m5 l4">
+                    <button class="btn-small btn-add" type="button" (click)="addIngrediente()">Add ingrediente</button>
+                </div>
             </div>
-            <div class=" col s5 m5 l4 form-input">
-                <span class="negrito">Tempo de Preparo: </span>
-                <div class="spacer"></div>
-                <input class="form-input z-depth-2" type="text" ngModel name="tempoDePreparo">
-            </div>
-        </div>
+            
 
-        <div class="row">
 
-            <div class=" col s12 m12 l12 form-input">
-                <span class="negrito">Ingredientes: </span>
-                <textarea class="form-input z-depth-2" type="text" ngModel name="ingredientes"></textarea>
-            </div>
-        </div>
-
-        <div class="row">
+         <div class="row">
 
             <div class=" col s12 m12 l12 form-input">
                 <span class="negrito">Modo de Preparo: </span>
@@ -41,19 +83,17 @@
             </div>
         </div>
 
+
         <div class="row">
             <div class="col s12 m12 l12 buttons-content">
-                <button class="waves-effect waves-light btn button-voltar" (click)="back()">Voltar</button>
+                <button class="waves-effect waves-light btn button-voltar" type="reset" (click)="back()">Voltar</button>
                 <button class="waves-effect waves-light btn right button-cancelar" type="submit">Salvar</button>
             </div>
         </div>
 
         
-    </form>
+    <!-- </form> -->
     </div>
-
-
-
 
     
 </div>
