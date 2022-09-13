@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ReceitaService } from 'src/app/core/services/receita.service';
 import { Location } from '@angular/common';
 import { EstoqueService } from 'src/app/core/services/estoque.service';
-import * as uuid from 'uuid';
 
 declare const M: any;
 
@@ -41,10 +40,6 @@ export class CadastrarReceitaComponent implements OnInit {
       id: '',
     }
   }];
-
-  logvalue(){
-
-  }
 
   addIngrediente() {
     this.ingredientes.push({

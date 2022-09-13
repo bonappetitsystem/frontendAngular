@@ -26,7 +26,6 @@ export class EditarReceitaComponent implements OnInit {
     this.estoque.getProdutos().subscribe(
       (res) => {
         this.produtos = res;
-        // console.log(this.ingredientes)
       }
     )
 
@@ -59,9 +58,6 @@ export class EditarReceitaComponent implements OnInit {
       id: '',
     }
   }];
-
-  logvalue(){
-  }
 
   addIngrediente() {
     this.ingredientes.push({
