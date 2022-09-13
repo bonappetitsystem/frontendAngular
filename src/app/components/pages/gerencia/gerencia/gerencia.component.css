@@ -4,10 +4,9 @@
   width: 100%;
   border-radius: 5px;
   background-color: #fff;
-  height: 170px;
+  height: 150px;
   padding: 10px;
   margin-bottom: 10px;
-
 
 }
 
@@ -17,13 +16,23 @@
   width: 100%;
   border-radius: 5px;
   background-color: #fff;
-  height: 357px;
+  height: 369px;
   padding: 10px;
   margin-bottom: 10px;
 
-
 }
 
+.card-3 {
+
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  
+}
 
 .conteudo {
   padding-left: 70px;
@@ -50,18 +59,18 @@ p {
   color: #00796B;
   font-size: 0.8em;
   text-align: center;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 .titulo-card2 {
   color: #00796B;
   text-align: center;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 .titulo-card3 {
   color: #00796B;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 h3 {
@@ -77,13 +86,17 @@ h3 {
 }
 
 .grafico1{
-  width: 70%;
+  margin-left: 20px;
+  width: 90%;
 }
 
 .grafico2{
   width: 70%;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .grafico3{
-  width: 98%;
+  margin-top: 20px;
+  width: 100%;
 }
