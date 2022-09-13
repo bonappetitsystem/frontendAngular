@@ -50,22 +50,40 @@ p {
   color: #00796B;
   font-size: 0.8em;
   text-align: center;
-
+  margin-top: -10px;
 }
 
 .titulo-card2 {
   color: #00796B;
   text-align: center;
+  margin-top: -10px;
 }
 
 .titulo-card3 {
   color: #00796B;
-
+  margin-top: -10px;
 }
 
 h3 {
   font-family: 'Agrandir', sans-serif;
   text-align: center;
   color: gray;
+  margin-top: 40px;
+}
 
+.calendario {
+  margin-top: 10px;
+  width: 98%;
+}
+
+.grafico1{
+  width: 70%;
+}
+
+.grafico2{
+  width: 70%;
+}
+
+.grafico3{
+  width: 98%;
 }
