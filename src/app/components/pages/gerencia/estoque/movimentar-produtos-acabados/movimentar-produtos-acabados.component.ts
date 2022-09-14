@@ -53,7 +53,7 @@ export class MovimentarProdutosAcabadosComponent implements OnInit {
     console.log(obj);
     this.service.addEstoqueAcabado(obj).subscribe(data => {
       M.toast({html: 'Estoque adicionado com sucesso!'});
-      window.location.reload();
+      setTimeout(() => { window.location.reload(); }, 1500);
     })
   }
 

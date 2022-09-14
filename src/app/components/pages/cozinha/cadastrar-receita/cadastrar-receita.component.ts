@@ -71,7 +71,7 @@ export class CadastrarReceitaComponent implements OnInit {
     this.service.addReceita(obj).subscribe(
       (res) => {
         M.toast({html: 'Receita cadastrada com sucesso!'});
-         window.location.reload();
+        setTimeout(() => { window.location.reload(); }, 1500);
       }
     )
 

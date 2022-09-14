@@ -64,7 +64,8 @@ export class MovimentarMateriaPrimaComponent implements OnInit {
     this.service.addEstoque(objeto).subscribe(data => 
       M.toast({html: 'Estoque cadastrado com sucesso!'})
       )
-       window.location.reload()
+      setTimeout(() => { window.location.reload(); }, 1000);
+       
   }
 
   back(){

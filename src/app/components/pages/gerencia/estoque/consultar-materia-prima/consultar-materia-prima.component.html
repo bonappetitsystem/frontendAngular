@@ -33,8 +33,9 @@
                     <div>
                       <div class="linha-1">
                         <span class="span">{{produto.produto.descricao}}</span>
+                        <span>Estoque: {{produto.produto.nome}}</span>
                         <span>Lote: {{produto.lote | uppercase}}</span>
-                        <span>Quantidade: {{produto.quantidadeUnitaria}}</span>
+                        <span>Quantidade: {{produto.quantidadeTotal}} {{produto.unidadeDeMedida}}</span>
                     
                       </div>
                     </div>

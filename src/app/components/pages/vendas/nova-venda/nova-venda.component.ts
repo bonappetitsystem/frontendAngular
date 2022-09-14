@@ -16,14 +16,49 @@ export class NovaVendaComponent implements OnInit {
 
   produtos: any = [];
 
-  selectedValue = 'COMUM';
-  selectPagamento = 'CARTAO';
+  selectedValue = '';
+  selectPagamento = '';
   idProduto: any = {};
   quantidade: any = [];
   vendedor: any = {};
   quant: number = 0;
   money: any = 0;
   nome: any = '';
+
+
+
+  public item: any [] = []
+
+  addItem(dados:any){
+    this.item.push({
+      estoqueAcabado: {
+        id: dados.produto.id,
+        nomeProduto: dados.produto.nomeProduto,
+        preco: dados.produto.preco,
+        quantidade: dados.produto.quantidade
+      },
+      quantidade: dados.quantidade,
+      valorUnitario: dados.produto.preco,
+      valorTotal: dados.produto.preco * dados.quantidade,
+      nomeItem: dados.produto.nomeProduto,
+    })
+    
+    console.log(this.item)
+    this.idProduto.quantidade = dados.produto.quantidade - dados.quantidade;
+    //limpar os campos do form de venda no html
+    this.quant = 0;
+    this.idProduto = {};
+    this.money = 0;
+    this.addQuantidade();
+    
+    
+  }
+
+  removeItem(uId: number){
+    const index = this.item.findIndex((item) => item.id === uId);
+    this.item.splice(index, 1);
+  }
+
 
 
   formatarValor(){
@@ -62,24 +97,14 @@ export class NovaVendaComponent implements OnInit {
     this.vendedor = this.auth.dataToken();
     }
 
-  addVenda(dados: any){
-    console.log(dados);
-    console.log(this.idProduto);
+  addVenda(){
+    
     let obj = {
-      estoqueAcabado:{
-        id: this.idProduto.id
-      },
-      quantidade: this.quant,
-      valorTotalDaVenda: dados.valorTotal,
-      formaDePagamento: dados.pagamento,
+      itens: this.item,
+      formaDePagamento: this.selectPagamento,
       vendedor: this.vendedor.nome,
-      troco: dados.troco,
-      statusVenda: dados.tipoDaVenda != "COMUM" ? "PENDENTE": "FINALIZADA",
-      dadosCliente: {
-        nome: dados.nome,
-        telefone: dados.telefone
-      },
-      tipoVenda: dados.tipoDaVenda
+      tipoVenda: this.selectedValue,
+      valorTotalPago: this.money
 
 
   }

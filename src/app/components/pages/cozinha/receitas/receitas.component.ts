@@ -31,7 +31,6 @@ export class ReceitasComponent implements OnInit {
 
     this.service.filtrarReceitas(filtro).subscribe((data:any)=>{
       this.receitas = data;
-      console.log(data);
     })
   }
 

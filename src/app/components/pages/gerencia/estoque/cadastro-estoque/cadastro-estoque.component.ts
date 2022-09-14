@@ -21,7 +21,7 @@ export class CadastroEstoqueComponent implements OnInit {
     this.service.addProduto(produto)
       .subscribe(response => {
         M.toast({ html: 'Produto adicionado com sucesso!' });
-        window.location.reload();
+        setTimeout(() => { window.location.reload(); }, 1000);
       });
   }
 
